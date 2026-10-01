@@ -31,6 +31,9 @@ export const SupportModal: React.FC<SupportModalProps> = ({
 
   // Close on Escape key press
   useEffect(() => {
+    if (!isOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape" && onClose) {
@@ -39,10 +42,10 @@ export const SupportModal: React.FC<SupportModalProps> = ({
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [onClose]);
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 

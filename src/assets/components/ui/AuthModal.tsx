@@ -142,9 +142,9 @@ export const AuthModal: React.FC = () => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in select-none">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4 animate-fade-in select-none">
       <div
-        className="relative bg-gradient-to-br from-[#EAF4FF] to-[#FFF0F0] rounded-[2.5rem] shadow-2xl border border-blue-100 w-full max-w-xl overflow-hidden transition-all transform animate-in fade-in zoom-in-95 duration-300"
+        className="relative flex max-h-[calc(100dvh-1.5rem)] sm:max-h-[calc(100dvh-2rem)] w-full max-w-xl flex-col overflow-hidden bg-gradient-to-br from-[#EAF4FF] to-[#FFF0F0] rounded-[2.5rem] shadow-2xl border border-blue-100 transition-all transform animate-in fade-in zoom-in-95 duration-300"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Floating Animated Close Button */}
@@ -157,7 +157,7 @@ export const AuthModal: React.FC = () => {
           <X size={18} />
         </button>
 
-        <div className="relative p-6 sm:p-8 bg-gradient-to-br from-[#DCEEFF] to-[#FCE4E5] text-blue-950 overflow-hidden border-b border-blue-100">
+        <div className="relative shrink-0 p-6 sm:p-8 bg-gradient-to-br from-[#DCEEFF] to-[#FCE4E5] text-blue-950 overflow-hidden border-b border-blue-100">
           <div className="relative z-10 flex items-center gap-4 mb-5">
             <div className="p-3.5 bg-white/80 border border-white text-blue-700 rounded-2xl shadow-sm">
               <Building size={24} />
@@ -209,7 +209,7 @@ export const AuthModal: React.FC = () => {
         </div>
 
         {/* Body Content */}
-        <div className="p-6 sm:p-8 bg-stone-50/50 transition-all duration-300">
+        <div className="min-h-0 flex-1 overflow-y-auto p-4 sm:p-8 bg-stone-50/50 transition-all duration-300">
           {authModalTab === "login" ? (
             <form
               onSubmit={handleLoginSubmit}
@@ -313,7 +313,7 @@ export const AuthModal: React.FC = () => {
           ) : (
             <form
               onSubmit={handleRegisterSubmit}
-              className="space-y-4 max-h-[62vh] overflow-y-auto pr-1 animate-fade-in"
+              className="space-y-4 pr-1 animate-fade-in"
             >
               {regError && (
                 <div className="p-4 bg-red-50 border border-red-200 rounded-2xl text-xs text-red-700 leading-snug font-medium">
