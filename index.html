@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Keep this corporate copy light from the first paint. -->
+    <script>
+      (function () {
+        document.documentElement.classList.remove("dark");
+      })();
+    </script>
+
+    <script>
+      // Restore a client-side route redirected here by GitHub Pages' 404 fallback.
+      (function (location) {
+        if (location.search[1] === "/") {
+          const route = location.search
+            .slice(1)
+            .split("&")
+            .map((part) => part.replace(/~and~/g, "&"))
+            .join("?");
+          window.history.replaceState(
+            null,
+            "",
+            location.pathname.slice(0, -1) + route + location.hash,
+          );
+        }
+      })(window.location);
+    </script>
+    <title>Siddhi Eshop — Industrial Electrical & Automation Catalog</title>
+    <meta
+      name="description"
+      content="Authorised Distributors of Lapp Kabel Germany, Eaton Moeller, Partex Sweden, Mennekes Germany & Industrial Electrical Products in India."
+    />
+    <meta
+      property="og:title"
+      content="Siddhi Eshop — Industrial Electrical & Automation Catalog"
+    />
+    <meta
+      property="og:description"
+      content="Authorised Distributors of Lapp Kabel Germany, Eaton Moeller, Partex Sweden, Mennekes Germany & Industrial Electrical Products in India."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "Siddhi Eshop",
+  "description": "Authorised Distributors of Lapp Kabel Germany, Eaton Moeller, Partex Sweden, Mennekes Germany & Industrial Electrical Products in India.",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
