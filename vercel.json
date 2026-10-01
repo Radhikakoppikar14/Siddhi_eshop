@@ -1,22 +1,27 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "installCommand": "npm ci",
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "app": {
+      "root": ".",
+      "framework": "vite"
+    },
+    "server": {
+      "root": "server",
+      "framework": "express"
+    }
+  },
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ],
-  "headers": [
+      "source": "/api/(.*)",
+      "destination": {
+        "service": "server"
+      }
+    },
     {
-      "source": "/index.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
-      ]
+      "source": "/(.*)",
+      "destination": {
+        "service": "app"
+      }
     }
   ]
 }
