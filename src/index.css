@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap");
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-cream-white: #FAF7F2;
+    --color-warm-beige: #E8D5C4;
+    --color-light-mocha: #A67C63;
+    --color-soft-brown: #6F5144;
+    --color-dark-brown: #2D211B;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #FAF7F2;
+    color: #2D211B;
+  }
+
+  /* Font pairing: Playfair Display for main headings, Inter for everything else */
+  h1, h2, .font-editorial {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  h3, h4, h5, h6, button, input, select, textarea {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Unlayered so these always win over Tailwind's font-* utilities */
+.font-editorial, .font-serif {
+  font-family: 'Playfair Display', Georgia, serif !important;
+}
+.font-mono, .font-sans {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+}
+.font-mono { font-variant-numeric: tabular-nums; }
+
+/* Custom Scrollbar - Warm Beige & Soft Brown */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #E8D5C4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A67C63;
+}
+
+/* =====================================================================
+   LIVE EFFECTS LAYER  (animations, hover effects, transitions)
+   Uses the independent `translate` / `scale` CSS properties so it never
+   fights with Framer Motion (which uses `transform`).
+   ===================================================================== */
+
+@keyframes liveRise {
+  from { opacity: 0; translate: 0 32px; scale: 0.985; }
+  to   { opacity: 1; translate: 0 0;    scale: 1; }
+}
+@keyframes liveLeft {
+  from { opacity: 0; translate: -42px 0; }
+  to   { opacity: 1; translate: 0 0; }
+}
+@keyframes liveRight {
+  from { opacity: 0; translate: 42px 0; }
+  to   { opacity: 1; translate: 0 0; }
+}
+@keyframes liveZoom {
+  from { opacity: 0; scale: 1.18; }
+  to   { opacity: 1; scale: 1; }
+}
+@keyframes liveFloat {
+  0%, 100% { translate: 0 0; }
+  50%      { translate: 0 -8px; }
+}
+@keyframes liveRipple {
+  from { opacity: 0.55; scale: 0; }
+  to   { opacity: 0;    scale: 1; }
+}
+@keyframes liveGradientPan {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes livePulseRing {
+  0%   { box-shadow: 0 0 0 0 rgba(166, 124, 99, 0.45); }
+  100% { box-shadow: 0 0 0 16px rgba(166, 124, 99, 0); }
+}
+@keyframes liveDropdown {
+  from { opacity: 0; translate: 0 -8px; scale: 0.97; }
+  to   { opacity: 1; translate: 0 0;    scale: 1; }
+}
+
+@layer components {
+  /* ---------- Scroll reveal states (added by LiveEffects) ---------- */
+  .live-pre { opacity: 0; }
+  .live-in        { animation: liveRise  0.85s cubic-bezier(0.22, 1, 0.36, 1) backwards; animation-delay: var(--live-delay, 0s); }
+  .live-in-left   { animation: liveLeft  0.85s cubic-bezier(0.22, 1, 0.36, 1) backwards; animation-delay: var(--live-delay, 0s); }
+  .live-in-right  { animation: liveRight 0.85s cubic-bezier(0.22, 1, 0.36, 1) backwards; animation-delay: var(--live-delay, 0s); }
+  .live-in-zoom   { animation: liveZoom  1.1s  cubic-bezier(0.22, 1, 0.36, 1) backwards; animation-delay: var(--live-delay, 0s); }
+
+  /* Helpers you can add to any element */
+  .live-float { animation: liveFloat 4.5s ease-in-out infinite; }
+  .live-pulse-ring { animation: livePulseRing 2.2s ease-out infinite; }
+  .live-gradient-text {
+    background-image: linear-gradient(90deg, #6F5144, #A67C63, #E8D5C4, #A67C63, #6F5144);
+    background-size: 250% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: liveGradientPan 7s ease-in-out infinite;
+  }
+
+  /* ---------- Buttons & links: lift, glow, press ---------- */
+  :is(main, header, footer) :is(button, a)[class*="rounded"]:not(:disabled) {
+    transition: translate 0.25s cubic-bezier(0.22, 1, 0.36, 1), scale 0.2s ease, box-shadow 0.3s ease,
+      background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  }
+  :is(main, header, footer) :is(button, a)[class*="rounded"]:not(:disabled):hover {
+    translate: 0 -2px;
+    box-shadow: 0 12px 26px -10px rgba(111, 81, 68, 0.55);
+  }
+  :is(main, header, footer) :is(button, a)[class*="rounded"]:not(:disabled):active {
+    translate: 0 0;
+    scale: 0.96;
+    box-shadow: 0 3px 8px -4px rgba(111, 81, 68, 0.5);
+  }
+  :is(main, header, footer) :is(button, a):focus-visible {
+    outline: 2px solid #A67C63;
+    outline-offset: 3px;
+  }
+
+  /* Arrow / icon inside buttons nudges on hover */
+  :is(main, header, footer) :is(button, a):hover > svg:last-child,
+  :is(main, header, footer) :is(button, a):hover > span + svg:last-child {
+    translate: 3px 0;
+  }
+  :is(main, header, footer) :is(button, a) > svg { transition: translate 0.25s ease, rotate 0.3s ease; }
+
+  /* Shine sweep + ripple on solid call-to-action buttons (class added by LiveEffects) */
+  .live-shine { position: relative; overflow: hidden; isolation: isolate; }
+  .live-shine::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.38) 50%, transparent 70%);
+    translate: -130% 0;
+    transition: translate 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+  }
+  .live-shine:hover::after { translate: 130% 0; }
+  .live-ripple {
+    position: absolute;
+    z-index: 2;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.55);
+    pointer-events: none;
+    animation: liveRipple 0.65s ease-out forwards;
+  }
+
+  /* ---------- Images: smooth zoom inside clipped frames ---------- */
+  :is(main, footer) [class*="overflow-hidden"] > img,
+  :is(main, footer) [class*="overflow-hidden"] > picture > img {
+    transition: scale 0.9s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s ease;
+    will-change: scale;
+  }
+  :is(main, footer) [class*="overflow-hidden"]:hover > img:not(.no-zoom):not([class*="object-contain"]),
+  :is(main, footer) [class*="overflow-hidden"]:hover > picture > img:not(.no-zoom) {
+    scale: 1.07;
+    filter: saturate(1.1) contrast(1.03);
+  }
+  /* Logos / contained images get a gentle pop instead */
+  :is(main, footer) img[class*="object-contain"] { transition: scale 0.35s ease, filter 0.35s ease; }
+  :is(main, footer) img[class*="object-contain"]:hover { scale: 1.06; }
+
+  /* ---------- Cards: lift + warm glow (white bordered cards) ---------- */
+  :is(main) :is(div, article, li)[class*="bg-white"][class*="border"][class*="rounded-"]:not([class*="max-w-"]):not([class*="fixed"]):not(:has(input, textarea, select)) {
+    transition: translate 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, border-color 0.3s ease, background-color 0.3s ease;
+  }
+  :is(main) :is(div, article, li)[class*="bg-white"][class*="border"][class*="rounded-"]:not([class*="max-w-"]):not([class*="fixed"]):not(:has(input, textarea, select)):hover {
+    translate: 0 -4px;
+    box-shadow: 0 22px 40px -22px rgba(111, 81, 68, 0.45), 0 0 0 1px rgba(166, 124, 99, 0.25);
+  }
+
+  /* Icon tiles wiggle when their card is hovered */
+  :is(main) .group:hover > [class*="rounded-2xl"] > svg,
+  :is(main) .group:hover > [class*="rounded-xl"] > svg {
+    rotate: -8deg;
+    scale: 1.12;
+  }
+  :is(main) .group > [class*="rounded-2xl"] > svg,
+  :is(main) .group > [class*="rounded-xl"] > svg { transition: rotate 0.35s ease, scale 0.35s ease; }
+
+  /* ---------- Footer links slide ---------- */
+  footer ul li a { display: inline-flex; transition: translate 0.25s ease, color 0.25s ease; }
+  footer ul li a:hover { translate: 5px 0; }
+  footer a[href^="tel"], footer a[href^="mailto"] { transition: translate 0.25s ease, color 0.25s ease; display: inline-block; }
+  footer a[href^="tel"]:hover, footer a[href^="mailto"]:hover { translate: 4px 0; }
+
+  /* ---------- Header social / contact links ---------- */
+  header a[aria-label], .live-social a[aria-label] { transition: scale 0.25s ease, color 0.25s ease; display: inline-block; }
+  header a[aria-label]:hover { scale: 1.25; }
+
+  /* ---------- Dropdowns ---------- */
+  .live-dropdown { animation: liveDropdown 0.25s cubic-bezier(0.22, 1, 0.36, 1) both; transform-origin: top left; }
+
+  /* ---------- Scroll progress bar + cursor glow ---------- */
+  .live-progress {
+    position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 70;
+    background: linear-gradient(90deg, #6F5144, #A67C63, #E8D5C4);
+    transform-origin: 0 50%; transform: scaleX(0);
+    pointer-events: none;
+    box-shadow: 0 0 10px rgba(166, 124, 99, 0.6);
+  }
+  .live-glow {
+    position: fixed; top: 0; left: 0; width: 520px; height: 520px; z-index: 30;
+    margin: -260px 0 0 -260px; border-radius: 9999px; pointer-events: none;
+    background: radial-gradient(circle, rgba(166, 124, 99, 0.16) 0%, rgba(166, 124, 99, 0) 62%);
+    opacity: 0; transition: opacity 0.4s ease;
+    will-change: transform;
+  }
+  .live-glow.is-on { opacity: 1; }
+  @media (hover: none), (pointer: coarse) { .live-glow { display: none; } }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-pre { opacity: 1 !important; }
+  .live-in, .live-in-left, .live-in-right, .live-in-zoom,
+  .live-float, .live-pulse-ring, .live-gradient-text, .live-dropdown { animation: none !important; }
+  .live-progress, .live-glow { display: none; }
+}
