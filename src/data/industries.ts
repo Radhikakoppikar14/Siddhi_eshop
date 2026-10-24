@@ -4,7 +4,7 @@ export interface IndustryItem {
   image: string; // drop a relevant photo at this path in /public
 }
 
-// One relevant, high-resolution photo per industry (1600px wide or more, JPG).
+// Images live in /public/images/industries (.jpg stills from the hero videos).
 export const INDUSTRIES: IndustryItem[] = [
   { name: 'Automobile & Rail Transport', desc: 'Flexible control and power cables, connectors and glands for assembly lines, robotic cells and vehicle manufacturing plants.', image: '/images/industries/automobile-rail.jpg' },
   { name: 'Automation & Robotics', desc: 'Servo, data and control cabling with industrial plugs and motor protection for conveyor systems and automated material handling.', image: '/images/industries/automation-robotics.jpg' },
@@ -25,3 +25,33 @@ export const INDUSTRIES: IndustryItem[] = [
   { name: 'Marine Engineering', desc: 'Approved cables, glands and plugs for marine and offshore use.', image: '/images/industries/marine.jpg' },
   { name: 'Defense', desc: 'Fire-retardant wiring and precision connectors for defense electronics.', image: '/images/industries/defense.jpg' },
 ];
+
+/**
+ * Which industries each authorised brand serves (keyed by brand id in BRANDS_DATA).
+ * Edit these lists to change what shows under each brand.
+ */
+export const BRAND_INDUSTRIES: Record<string, string[]> = {
+  lapp: [
+    'Automobile & Rail Transport', 'Automation & Robotics', 'Mechanical & Plant Engineering',
+    'OEM & Machine Manufacturers', 'Renewable Energy (Solar & Wind)', 'Food & Beverage',
+    'Packaging Machinery', 'Garment & Textile', 'Marine Engineering', 'Medical Equipment', 'Defense',
+  ],
+  eaton: [
+    'Panel Builders & System Integrators', 'Automation & Robotics', 'OEM & Machine Manufacturers',
+    'Steel & Cement', 'Renewable Energy (Solar & Wind)', 'Pharmaceutical & Bio Tech',
+    'Food & Beverage', 'Research & Development', 'Packaging Machinery',
+  ],
+  partex: [
+    'Panel Builders & System Integrators', 'OEM & Machine Manufacturers', 'Automobile & Rail Transport',
+    'Contractors & Projects Management', 'Marine Engineering', 'Defense', 'Renewable Energy (Solar & Wind)',
+  ],
+  mennekes: [
+    'Construction Industry', 'Contractors & Projects Management', 'Oil, Gas, Chemical & Paint',
+    'Food & Beverage', 'Steel & Cement', 'Marine Engineering', 'Mechanical & Plant Engineering',
+  ],
+};
+
+export const getIndustriesForBrand = (brandId: string): IndustryItem[] =>
+  (BRAND_INDUSTRIES[brandId] ?? [])
+    .map((name) => INDUSTRIES.find((i) => i.name === name))
+    .filter((i): i is IndustryItem => Boolean(i));

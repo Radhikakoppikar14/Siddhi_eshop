@@ -9,7 +9,7 @@ export const ContactPage: React.FC = () => {
         title="Contact"
         breadcrumb="Contact-us"
         category="Siddhi Kabel LTD."
-        bgVideo="/assets/aistudio/demoo1.mp4"
+        bgVideo="/assets/videos/hero-1.mp4"
       />
 
       {/* Exact Head Office Details & Send Message Form */}

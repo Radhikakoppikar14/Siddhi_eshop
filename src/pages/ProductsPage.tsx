@@ -1,7 +1,6 @@
 import React from 'react';
 import { PageHeader } from '../components/PageHeader';
 import { BrandSelector } from '../components/BrandSelector';
-import { ProductExplorer } from '../components/ProductExplorer';
 import { ProductItem } from '../data/siddhiData';
 
 interface ProductsPageProps {
@@ -11,33 +10,18 @@ interface ProductsPageProps {
   onGoToContact: (productName?: string) => void;
 }
 
-export const ProductsPage: React.FC<ProductsPageProps> = ({
-  selectedBrandId,
-  onSelectBrand,
-  onOpenSpecs,
-  onGoToContact,
-}) => {
+export const ProductsPage: React.FC<ProductsPageProps> = ({ onSelectBrand, onGoToContact }) => {
   return (
     <div>
       <PageHeader
         title="Products"
         breadcrumb="Products"
         category="Siddhi Kabel LTD."
-        bgVideo="/assets/aistudio/demoo1.mp4"
+        bgVideo="/assets/videos/hero-1.mp4"
       />
 
-      {/* Brand Selector */}
-      <BrandSelector
-        onSelectBrand={onSelectBrand}
-        onOpenRfq={onGoToContact}
-      />
-
-      {/* Product Explorer Catalog with Search & Filter */}
-      <ProductExplorer
-        selectedBrandId={selectedBrandId}
-        onOpenSpecs={onOpenSpecs}
-        onOpenRfq={(name) => onGoToContact(name)}
-      />
+      {/* Brand partners + industries each brand serves */}
+      <BrandSelector onSelectBrand={onSelectBrand} onOpenRfq={onGoToContact} />
     </div>
   );
 };

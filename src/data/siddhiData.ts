@@ -110,7 +110,7 @@ export const BRANDS_DATA: BrandInfo[] = [
     origin: "Germany",
     color: "#FF6A00",
     colorDark: "#B34700",
-    colorTint: "#FFF3E8",
+    colorTint: "#FFF0E3",
   },
   {
     id: "eaton",
@@ -123,9 +123,9 @@ export const BRANDS_DATA: BrandInfo[] = [
     categories: ["Motor Protection (PKZ/PKE)", "Contactors & Relays", "Pilot Devices (RMQ 22.5)"],
     productCount: "Full Industrial Line",
     origin: "Germany / USA",
-    color: "#0057B8",
-    colorDark: "#003F87",
-    colorTint: "#EAF2FC",
+    color: "#2F7BFF",
+    colorDark: "#1B3CB0",
+    colorTint: "#E6F0FF",
   },
   {
     id: "partex",
@@ -138,9 +138,9 @@ export const BRANDS_DATA: BrandInfo[] = [
     categories: ["Wire & Cable Markers", "Marking Sleeves", "Labels & Marking Printers"],
     productCount: "Marking Systems",
     origin: "Sweden",
-    color: "#E30613",
-    colorDark: "#A8040E",
-    colorTint: "#FDECEE",
+    color: "#64748B",
+    colorDark: "#1F2937",
+    colorTint: "#EEF1F5",
   },
   {
     id: "mennekes",
@@ -153,9 +153,9 @@ export const BRANDS_DATA: BrandInfo[] = [
     categories: ["CEE Plugs & Sockets (16A–125A)", "Interlocked Combinations", "Distribution Units"],
     productCount: "IP44 / IP67 Rated",
     origin: "Germany",
-    color: "#D6001C",
-    colorDark: "#9E0015",
-    colorTint: "#FCEAEC",
+    color: "#F0283A",
+    colorDark: "#A8001A",
+    colorTint: "#FDE8EA",
   },
 ];
 

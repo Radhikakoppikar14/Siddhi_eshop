@@ -13,7 +13,7 @@ export const OffersPage: React.FC<OffersPageProps> = ({ onGoToContact }) => {
         title="Check our RFQ site"
         breadcrumb="RFQ Site & Special Offers"
         category="Siddhi Kabel LTD."
-        bgVideo="/assets/aistudio/demoo1.mp4"
+        bgVideo="/assets/videos/hero-1.mp4"
       />
 
       {/* Main Special Offers Table with Direct Contact Routing */}

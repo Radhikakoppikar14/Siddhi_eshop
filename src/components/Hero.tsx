@@ -21,22 +21,22 @@ interface SlideItem {
 const SLIDES: SlideItem[] = [
   {
     type: 'video',
-    src: '/assets/aistudio/demo1_97642c15.mp4',
-    tag: 'Industrial Cable & Automation',
-    headline: 'Precision Industrial Wiring, Assemblies & Patch Panels',
+    src: '/assets/videos/hero-1.mp4',
+    tag: 'Cables & Switchgear for Every Industry',
+    headline: 'Industrial Cables, Control Gear & Connectors for Every Production Line',
     subtext:
-      'Authorised engineering solutions and direct distribution for Lapp, Eaton, Mennekes, and world-class industrial automation lines across India.',
+      'From machine tools and robotic cells to pharma, rail and renewable energy: authorised supply of Lapp, Eaton, Partex and Mennekes with ex-stock availability.',
     badge: 'AUTHORISED INDUSTRIAL DISTRIBUTOR',
     accent: '#F1D9CA',
-    rotatingWords: ['Precision Harnessing', 'High-Speed Bus Lines', 'Zero Downtime', 'German Quality'],
+    rotatingWords: ['Precision Harnessing', 'Motor Protection', 'Zero Downtime', 'German Quality'],
   },
   {
     type: 'video',
-    src: '/assets/aistudio/demo2_9522fcbe.mp4',
-    tag: 'Warehouse & Logistics Hub',
-    headline: 'High-Capacity Cable Drum Stock & Express Pan-India Dispatch',
+    src: '/assets/videos/hero-2.mp4',
+    tag: 'Process Plants & Heavy Industry',
+    headline: 'Chemical-Resistant Cables, Glands & Plugs for Process Plants',
     subtext:
-      'Direct ex-stock availability of control, flexible, optical, and heavy-duty industrial cables with same-day dispatch from our central Bangalore warehouse.',
+      'Heavy-duty cabling, CEE plugs and protection gear built for oil, gas, chemical and steel plants, dispatched same day from our Bangalore warehouse.',
     badge: 'CENTRAL BANGALORE WAREHOUSE',
     accent: '#FFF1E8',
     rotatingWords: ['Ex-Stock Drums', 'Same-Day Dispatch', 'Banashankari Hub', '500+ Clients'],
@@ -140,6 +140,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRfq }) => {
             >
               {s.type === 'video' ? (
                 <video
+                  poster={idx === 0 ? '/assets/videos/hero-1-poster.jpg' : '/assets/videos/hero-2-poster.jpg'}
                   ref={(el) => {
                     videoRefs.current[idx] = el;
                   }}

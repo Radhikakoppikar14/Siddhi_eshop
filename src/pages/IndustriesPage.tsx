@@ -11,7 +11,7 @@ export const IndustriesPage: React.FC = () => {
         title="Industries"
         breadcrumb="Industries"
         category="Siddhi Kabel LTD."
-        bgVideo="/assets/aistudio/demoo1.mp4"
+        bgVideo="/assets/videos/hero-1.mp4"
       />
 
       <section className="py-16 sm:py-20 bg-[#FFFAF6] border-b border-[#F1D9CA]">

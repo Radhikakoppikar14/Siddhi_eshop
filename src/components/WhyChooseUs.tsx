@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Target, Shield, Award, Users, Warehouse, FileCheck, HeartHandshake, CheckCircle2, Sparkles, ZoomIn, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Target, Shield, Award, Users, Warehouse, FileCheck, HeartHandshake, Sparkles } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const REASONS = [
   {
@@ -118,8 +118,6 @@ const AnimatedCounterCard: React.FC<{
 };
 
 export const WhyChooseUs: React.FC = () => {
-  const [isImageZoomed, setIsImageZoomed] = useState(false);
-
   return (
     <section id="about" className="py-8 sm:py-12 bg-white border-b border-[#F1D9CA] relative overflow-hidden">
       {/* Decorative ambient glowing circles */}
@@ -134,7 +132,7 @@ export const WhyChooseUs: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0 }}
             transition={{ duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
-            className="lg:col-span-7 space-y-6"
+            className="lg:col-span-12 space-y-6"
           >
             <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-[#5F524C] px-3.5 py-1.5 rounded-full bg-[#FFF1E8] border border-[#F1D9CA]">
               <Sparkles className="w-3.5 h-3.5 text-[#D2430F]" />
@@ -173,44 +171,6 @@ export const WhyChooseUs: React.FC = () => {
                 label="Customers served"
                 subLabel="Pan-India Corporate Clients"
               />
-            </div>
-          </motion.div>
-
-          {/* Image with 3D Float Angle & Click to Zoom */}
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0 }}
-            transition={{ duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
-            className="lg:col-span-5 relative group"
-          >
-            <div
-              onClick={() => setIsImageZoomed(true)}
-              className="relative rounded-3xl overflow-hidden border border-[#F1D9CA] shadow-xl hover:shadow-2xl transition-all duration-500 bg-[#FFF1E8] cursor-zoom-in group/img"
-            >
-              <motion.img
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.6 }}
-                src="/images/resource/why-choose-us.jpg"
-                alt="Siddhi Kabel Industrial Electrical Excellence"
-                className="w-full h-88 sm:h-96 object-cover opacity-90 transition-transform duration-700"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#FFFAF6] via-[#FFFAF6]/40 to-transparent pointer-events-none" />
-
-              <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#FFFAF6]/90 backdrop-blur-xs text-[11px] font-medium text-[#231815] flex items-center gap-1.5 opacity-0 group-hover/img:opacity-100 transition-opacity border border-[#F1D9CA]">
-                <ZoomIn className="w-3 h-3 text-[#5F524C]" />
-                <span>Zoom</span>
-              </div>
-
-              <div className="absolute bottom-6 left-6 right-6 text-[#231815] space-y-1">
-                <span className="text-xs uppercase tracking-widest text-[#5F524C] font-semibold block">
-                  Quality Commitment
-                </span>
-                <p className="text-sm font-light text-[#5F524C] leading-snug">
-                  "Delivering on time if not earlier, with quality as our first priority in all activities."
-                </p>
-              </div>
             </div>
           </motion.div>
         </div>
@@ -280,49 +240,6 @@ export const WhyChooseUs: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* Lightbox for why-choose-us image */}
-      <AnimatePresence>
-        {isImageZoomed && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setIsImageZoomed(false)}
-            className="fixed inset-0 z-50 bg-[#FFF1E8] backdrop-blur-sm backdrop-blur-md flex items-center justify-center p-4"
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              onClick={(e) => e.stopPropagation()}
-              className="relative max-w-3xl w-full bg-[#FFFAF6] rounded-3xl overflow-hidden shadow-2xl border border-[#F1D9CA]"
-            >
-              <div className="relative">
-                <img
-                  src="/images/resource/why-choose-us.jpg"
-                  alt="Quality Commitment"
-                  className="w-full max-h-[70vh] object-cover"
-                />
-                <button
-                  onClick={() => setIsImageZoomed(false)}
-                  className="absolute top-4 right-4 p-2 bg-white/80 hover:bg-white text-[#231815] rounded-full transition-colors cursor-pointer"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
-              <div className="p-6 bg-[#FFFAF6] space-y-1">
-                <h4 className="text-lg font-medium text-[#231815] font-editorial">
-                  Siddhi Kabel Quality Commitment
-                </h4>
-                <p className="text-xs text-[#5F524C]/80 font-light">
-                  Delivering on time if not earlier, with quality as our first priority in all activities.
-                </p>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 };

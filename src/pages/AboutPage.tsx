@@ -42,8 +42,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <video
-            src="/assets/aistudio/demoo1.mp4"
-            poster="/assets/aistudio/image_bf77cdd3.png"
+            src="/assets/videos/hero-1.mp4"
+            poster="/assets/videos/hero-1-poster.jpg"
             autoPlay
             muted
             loop
@@ -200,7 +200,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
                   <img
                     src="/images/resource/about.jpg"
                     alt="Siddhi Kabel Core Strengths Tree Graphic"
-                    className="w-full max-h-[460px] object-contain transition-transform duration-500 group-hover:scale-105"
+                    className="w-full max-h-[460px] object-contain transition-transform duration-500 group-hover:scale-100"
                   />
                   <div className="absolute inset-0 bg-white/0 group-hover:bg-[#FFF1E8] transition-colors flex items-center justify-center">
                     <span className="opacity-0 group-hover:opacity-100 transition-opacity px-4 py-2 bg-white/90 text-[#231815] rounded-xl text-xs font-semibold backdrop-blur-xs flex items-center gap-1.5 border border-[#F1D9CA]/30">
