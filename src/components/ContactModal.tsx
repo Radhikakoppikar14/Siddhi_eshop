@@ -64,7 +64,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-[#2D211B]/80 backdrop-blur-md overflow-y-auto"
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-[#F3EFFE] backdrop-blur-sm backdrop-blur-md overflow-y-auto"
           onClick={onClose}
         >
           <motion.div
@@ -72,17 +72,17 @@ export const ContactModal: React.FC<ContactModalProps> = ({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.94, y: 20 }}
             transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
-            className="relative bg-[#2D211B] rounded-3xl shadow-2xl border border-[#6F5144]/60 max-w-3xl w-full my-auto overflow-hidden text-[#2D211B]"
+            className="relative bg-[#F3EFFE] rounded-3xl shadow-2xl border border-[#E6DEFA] max-w-3xl w-full my-auto overflow-hidden text-[#1E1B2E]"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Top Bar - Dark Theme with Contact Title & Subtext */}
-            <div className="bg-[#241A15] px-6 sm:px-8 py-5 border-b border-[#6F5144]/40 flex items-center justify-between">
+            {/* Top Bar with Contact Title & Subtext */}
+            <div className="bg-[#F3EFFE] px-6 sm:px-8 py-5 border-b border-[#E6DEFA] flex items-center justify-between">
               <div>
-                <span className="text-sm sm:text-base font-bold uppercase tracking-widest text-[#FAF7F2] flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#E8D5C4]" />
+                <span className="text-sm sm:text-base font-bold uppercase tracking-widest text-[#1E1B2E] flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#6D3FD6]" />
                   CONTACT SIDDHI KABEL
                 </span>
-                <p className="text-[11px] sm:text-xs text-[#E8D5C4] font-light mt-1">
+                <p className="text-[11px] sm:text-xs text-[#55516B] font-light mt-1">
                   Get in touch with us for any questions about our products or solutions.
                 </p>
               </div>
@@ -91,7 +91,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                 whileTap={{ scale: 0.9 }}
                 transition={{ duration: 0.2 }}
                 onClick={onClose}
-                className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-[#FAF7F2] transition-colors cursor-pointer"
+                className="p-2 rounded-full bg-white hover:bg-[#F3EFFE] text-[#1E1B2E] transition-colors cursor-pointer"
                 aria-label="Close modal"
               >
                 <X className="w-5 h-5" />
@@ -99,40 +99,40 @@ export const ContactModal: React.FC<ContactModalProps> = ({
             </div>
 
             {/* Modal Body */}
-            <div className="p-4 sm:p-6 max-h-[82vh] overflow-y-auto space-y-4 bg-[#2D211B]">
+            <div className="p-4 sm:p-6 max-h-[82vh] overflow-y-auto space-y-4 bg-[#F3EFFE]">
               {/* Head Office Quick Info Strip */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 p-4 bg-white/5 rounded-2xl border border-[#6F5144]/40 text-xs text-[#FAF7F2]">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 p-4 bg-white rounded-2xl border border-[#E6DEFA] text-xs text-[#1E1B2E]">
                 <div className="flex items-start gap-2.5">
-                  <MapPin className="w-4 h-4 text-[#E8D5C4] shrink-0 mt-0.5" />
+                  <MapPin className="w-4 h-4 text-[#6D3FD6] shrink-0 mt-0.5" />
                   <div>
-                    <strong className="block font-semibold text-[#FAF7F2]">Head Office:</strong>
-                    <span className="text-[#E8D5C4] font-light text-[11px] leading-snug">
+                    <strong className="block font-semibold text-[#1E1B2E]">Head Office:</strong>
+                    <span className="text-[#55516B] font-light text-[11px] leading-snug">
                       No.3, 1st Main Rd, Banashankari 3rd Stage, Bangalore 560 085
                     </span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-2.5">
-                  <Phone className="w-4 h-4 text-[#E8D5C4] shrink-0 mt-0.5" />
+                  <Phone className="w-4 h-4 text-[#6D3FD6] shrink-0 mt-0.5" />
                   <div>
-                    <strong className="block font-semibold text-[#FAF7F2]">Call Support:</strong>
-                    <span className="text-[#E8D5C4] font-light text-[11px] block">
+                    <strong className="block font-semibold text-[#1E1B2E]">Call Support:</strong>
+                    <span className="text-[#55516B] font-light text-[11px] block">
                       080 – 2672 0440
                     </span>
-                    <span className="text-[#FAF7F2] font-medium text-[11px] block">
+                    <span className="text-[#1E1B2E] font-medium text-[11px] block">
                       096200 00947, 098860 58511
                     </span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-2.5">
-                  <Mail className="w-4 h-4 text-[#E8D5C4] shrink-0 mt-0.5" />
+                  <Mail className="w-4 h-4 text-[#6D3FD6] shrink-0 mt-0.5" />
                   <div>
-                    <strong className="block font-semibold text-[#FAF7F2]">Email Us:</strong>
-                    <span className="text-[#E8D5C4] font-light text-[11px] block">
+                    <strong className="block font-semibold text-[#1E1B2E]">Email Us:</strong>
+                    <span className="text-[#55516B] font-light text-[11px] block">
                       info@siddhikabel.com
                     </span>
-                    <span className="text-[#E8D5C4] font-light text-[11px] block">
+                    <span className="text-[#55516B] font-light text-[11px] block">
                       guru@siddhikabel.com
                     </span>
                   </div>
@@ -144,21 +144,21 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="py-8 px-6 bg-[#FAF7F2] rounded-2xl border border-[#E8D5C4] text-center space-y-4 shadow-xl"
+                  className="py-8 px-6 bg-[#FCFBFF] rounded-2xl border border-[#E6DEFA] text-center space-y-4 shadow-xl"
                 >
-                  <div className="w-14 h-14 bg-[#E8D5C4]/50 text-[#6F5144] rounded-full mx-auto flex items-center justify-center">
+                  <div className="w-14 h-14 bg-[#E6DEFA]/50 text-[#55516B] rounded-full mx-auto flex items-center justify-center">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h4 className="text-2xl font-normal text-[#2D211B] font-editorial">
+                  <h4 className="text-2xl font-normal text-[#1E1B2E] font-editorial">
                     Message Successfully Sent!
                   </h4>
-                  <p className="text-xs sm:text-sm text-[#6F5144]/80 font-light max-w-md mx-auto leading-relaxed">
-                    Thank you, <strong className="font-semibold text-[#2D211B]">{formState.name}</strong>. An application sales engineer from Siddhi Kabel Bangalore will review your inquiry and get in touch with you shortly.
+                  <p className="text-xs sm:text-sm text-[#55516B]/80 font-light max-w-md mx-auto leading-relaxed">
+                    Thank you, <strong className="font-semibold text-[#1E1B2E]">{formState.name}</strong>. An application sales engineer from Siddhi Kabel Bangalore will review your inquiry and get in touch with you shortly.
                   </p>
                   <div className="pt-2">
                     <button
                       onClick={onClose}
-                      className="px-6 py-2.5 text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] bg-[#6F5144] hover:bg-[#5C4337] rounded-xl transition-colors shadow-sm cursor-pointer"
+                      className="px-6 py-2.5 text-xs font-semibold uppercase tracking-wider text-[#FCFBFF] bg-[#6D3FD6] hover:bg-[#4F2AB0] rounded-xl transition-colors shadow-sm cursor-pointer"
                     >
                       Close Window
                     </button>
@@ -166,14 +166,14 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                 </motion.div>
               ) : (
                 /* Contact Message Form in Crisp Light Contrast Container */
-                <div className="bg-[#FAF7F2] rounded-2xl p-5 sm:p-6 border border-[#E8D5C4] shadow-xl space-y-4">
+                <div className="bg-[#FCFBFF] rounded-2xl p-5 sm:p-6 border border-[#E6DEFA] shadow-xl space-y-4">
                   <form onSubmit={handleSubmit} className="space-y-4 text-xs">
-                    <div className="flex items-center justify-between pb-2 border-b border-[#E8D5C4]">
-                      <h4 className="text-xs sm:text-sm font-bold text-[#2D211B] uppercase tracking-wider">
+                    <div className="flex items-center justify-between pb-2 border-b border-[#E6DEFA]">
+                      <h4 className="text-xs sm:text-sm font-bold text-[#1E1B2E] uppercase tracking-wider">
                         Send an Inquiry Message
                       </h4>
                       {prefilledItem && (
-                        <span className="text-[11px] text-[#6F5144] bg-[#E8D5C4]/40 px-2.5 py-0.5 rounded-full font-medium border border-[#E8D5C4]">
+                        <span className="text-[11px] text-[#55516B] bg-[#F3EFFE] px-2.5 py-0.5 rounded-full font-medium border border-[#E6DEFA]">
                           Item: {prefilledItem}
                         </span>
                       )}
@@ -181,7 +181,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                       <div>
-                        <label className="block font-semibold text-[#2D211B] mb-1">
+                        <label className="block font-semibold text-[#1E1B2E] mb-1">
                           Your Name *
                         </label>
                         <input
@@ -190,11 +190,11 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                           placeholder="Enter your name"
                           value={formState.name}
                           onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                          className="w-full px-3.5 py-2.5 bg-white border border-[#E8D5C4] rounded-xl focus:outline-hidden focus:border-[#6F5144] focus:ring-2 focus:ring-[#6F5144]/20 text-[#2D211B] transition-all"
+                          className="w-full px-3.5 py-2.5 bg-white border border-[#E6DEFA] rounded-xl focus:outline-hidden focus:border-[#E6DEFA] focus:ring-2 focus:ring-[#55516B]/20 text-[#1E1B2E] transition-all"
                         />
                       </div>
                       <div>
-                        <label className="block font-semibold text-[#2D211B] mb-1">
+                        <label className="block font-semibold text-[#1E1B2E] mb-1">
                           Phone Number *
                         </label>
                         <input
@@ -203,14 +203,14 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                           placeholder="Enter your mobile number"
                           value={formState.phone}
                           onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
-                          className="w-full px-3.5 py-2.5 bg-white border border-[#E8D5C4] rounded-xl focus:outline-hidden focus:border-[#6F5144] focus:ring-2 focus:ring-[#6F5144]/20 text-[#2D211B] transition-all"
+                          className="w-full px-3.5 py-2.5 bg-white border border-[#E6DEFA] rounded-xl focus:outline-hidden focus:border-[#E6DEFA] focus:ring-2 focus:ring-[#55516B]/20 text-[#1E1B2E] transition-all"
                         />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                       <div>
-                        <label className="block font-semibold text-[#2D211B] mb-1">
+                        <label className="block font-semibold text-[#1E1B2E] mb-1">
                           Email Address *
                         </label>
                         <input
@@ -219,11 +219,11 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                           placeholder="name@company.com"
                           value={formState.email}
                           onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                          className="w-full px-3.5 py-2.5 bg-white border border-[#E8D5C4] rounded-xl focus:outline-hidden focus:border-[#6F5144] focus:ring-2 focus:ring-[#6F5144]/20 text-[#2D211B] transition-all"
+                          className="w-full px-3.5 py-2.5 bg-white border border-[#E6DEFA] rounded-xl focus:outline-hidden focus:border-[#E6DEFA] focus:ring-2 focus:ring-[#55516B]/20 text-[#1E1B2E] transition-all"
                         />
                       </div>
                       <div>
-                        <label className="block font-semibold text-[#2D211B] mb-1">
+                        <label className="block font-semibold text-[#1E1B2E] mb-1">
                           Subject / Requirement
                         </label>
                         <input
@@ -231,13 +231,13 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                           placeholder="e.g. Lapp Cable Quote / Switchgear"
                           value={formState.subject}
                           onChange={(e) => setFormState({ ...formState, subject: e.target.value })}
-                          className="w-full px-3.5 py-2.5 bg-white border border-[#E8D5C4] rounded-xl focus:outline-hidden focus:border-[#6F5144] focus:ring-2 focus:ring-[#6F5144]/20 text-[#2D211B] transition-all"
+                          className="w-full px-3.5 py-2.5 bg-white border border-[#E6DEFA] rounded-xl focus:outline-hidden focus:border-[#E6DEFA] focus:ring-2 focus:ring-[#55516B]/20 text-[#1E1B2E] transition-all"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label className="block font-semibold text-[#2D211B] mb-1">
+                      <label className="block font-semibold text-[#1E1B2E] mb-1">
                         Your Message *
                       </label>
                       <textarea
@@ -246,15 +246,15 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                         placeholder="Specify item quantities, technical queries, or project delivery deadline..."
                         value={formState.message}
                         onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                        className="w-full px-3.5 py-2.5 bg-white border border-[#E8D5C4] rounded-xl focus:outline-hidden focus:border-[#6F5144] focus:ring-2 focus:ring-[#6F5144]/20 text-[#2D211B] transition-all"
+                        className="w-full px-3.5 py-2.5 bg-white border border-[#E6DEFA] rounded-xl focus:outline-hidden focus:border-[#E6DEFA] focus:ring-2 focus:ring-[#55516B]/20 text-[#1E1B2E] transition-all"
                       />
                     </div>
 
-                    <div className="pt-2 flex items-center justify-end gap-3 border-t border-[#E8D5C4]">
+                    <div className="pt-2 flex items-center justify-end gap-3 border-t border-[#E6DEFA]">
                       <button
                         type="button"
                         onClick={onClose}
-                        className="px-4 py-2.5 text-xs text-[#6F5144] hover:text-[#2D211B] border border-[#E8D5C4] rounded-xl transition-colors cursor-pointer bg-white"
+                        className="px-4 py-2.5 text-xs text-[#55516B] hover:text-[#1E1B2E] border border-[#E6DEFA] rounded-xl transition-colors cursor-pointer bg-white"
                       >
                         Cancel
                       </button>
@@ -263,7 +263,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                         whileTap={{ scale: 0.98 }}
                         type="submit"
                         disabled={isSending}
-                        className="inline-flex items-center gap-2 px-7 py-2.5 text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] bg-[#6F5144] hover:bg-[#5C4337] rounded-xl transition-colors shadow-sm disabled:opacity-50 cursor-pointer"
+                        className="inline-flex items-center gap-2 px-7 py-2.5 text-xs font-semibold uppercase tracking-wider text-[#FCFBFF] bg-[#6D3FD6] hover:bg-[#4F2AB0] rounded-xl transition-colors shadow-sm disabled:opacity-50 cursor-pointer"
                       >
                         {isSending ? (
                           <span>Sending...</span>

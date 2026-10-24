@@ -29,12 +29,12 @@ const REVEAL_SELECTOR = [
 ].join(',');
 
 const SHINE_SELECTOR = [
-  'main button[class*="bg-[#6F5144]"]',
-  'main a[class*="bg-[#6F5144]"]',
-  'main button[class*="bg-[#2D211B]"]',
-  'main a[class*="bg-[#2D211B]"]',
-  'header a[class*="bg-[#6F5144]"]',
-  'footer button[class*="bg-[#6F5144]"]',
+  'main button[class*="bg-[#6D3FD6]"]',
+  'main a[class*="bg-[#6D3FD6]"]',
+  'main button[class*="bg-[#1E1B2E]"]',
+  'main a[class*="bg-[#1E1B2E]"]',
+  'header a[class*="bg-[#6D3FD6]"]',
+  'footer button[class*="bg-[#6D3FD6]"]',
 ].join(',');
 
 const isFramerManaged = (el: Element): boolean => {

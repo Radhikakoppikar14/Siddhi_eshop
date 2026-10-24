@@ -147,7 +147,7 @@ export const InteractiveCard: React.FC<{
         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10"
         style={{
           background:
-            'radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), rgba(232,213,196,0.35), transparent 70%)',
+            'radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), rgba(230, 222, 250,0.35), transparent 70%)',
         }}
       />
       {/* Shimmer sheen on hover */}

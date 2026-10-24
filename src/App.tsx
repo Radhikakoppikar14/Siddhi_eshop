@@ -52,7 +52,7 @@ function AppContent() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#2D211B] relative">
+    <div className="min-h-screen flex flex-col bg-[#FCFBFF] text-[#1E1B2E] relative">
       {/* Starting Logo Intro Splash Reveal (as requested) */}
       {showIntro && <IntroSplash onFinish={() => setShowIntro(false)} />}
 

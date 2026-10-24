@@ -11,18 +11,18 @@ const DesktopNavLink: React.FC<{ to: string; children: React.ReactNode; end?: bo
     end={end}
     className={({ isActive }) =>
       `relative group whitespace-nowrap py-1 transition-colors duration-200 ${
-        isActive ? 'text-[#6F5144] font-semibold' : 'text-[#2D211B]/80 hover:text-[#6F5144]'
+        isActive ? 'text-[#55516B] font-semibold' : 'text-[#1E1B2E]/80 hover:text-[#55516B]'
       }`
     }
   >
     {({ isActive }) => (
       <>
         <span className="inline-block transition-transform duration-200 group-hover:-translate-y-px">{children}</span>
-        <span className="absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-[#A67C63] transition-transform duration-300 ease-out group-hover:scale-x-100" />
+        <span className="absolute left-0 -bottom-1 h-0.5 w-full origin-left scale-x-0 bg-[#6D3FD6] transition-transform duration-300 ease-out group-hover:scale-x-100" />
         {isActive && (
           <motion.span
             layoutId="nav-active-underline"
-            className="absolute left-0 -bottom-1 h-0.5 w-full rounded-full bg-[#6F5144]"
+            className="absolute left-0 -bottom-1 h-0.5 w-full rounded-full bg-[#6D3FD6]"
             transition={{ type: 'spring', stiffness: 380, damping: 30 }}
           />
         )}
@@ -65,20 +65,20 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContactModal, onReplayIntr
 
   return (
     <>
-      {/* Utility Top Bar - Soft Brown (#6F5144) with Warm Beige (#E8D5C4) & Cream White (#FAF7F2) */}
-      <div className="bg-[#6F5144] text-[#FAF7F2] text-xs py-1.5 px-4 sm:px-8 border-b border-[#5C4337] overflow-hidden">
+      {/* Utility Top Bar - Soft Brown (#55516B) with Warm Beige (#E6DEFA) & Cream White (#FCFBFF) */}
+      <div className="bg-[#6D3FD6] text-white text-xs py-1.5 px-4 sm:px-8 border-b border-white/15 overflow-hidden">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-3 text-[11px] sm:text-xs">
           {/* Left: Tagline & Social Links */}
           <div className="flex items-center gap-3 min-w-0">
-            <span className="font-light text-[#FAF7F2] truncate max-w-[220px] sm:max-w-xs md:max-w-md lg:max-w-none">
+            <span className="font-light text-white truncate max-w-[220px] sm:max-w-xs md:max-w-md lg:max-w-none">
               {COMPANY_INFO.tagline}
             </span>
-            <div className="hidden lg:flex items-center gap-2.5 text-[#E8D5C4]/80 border-l border-[#8C6857] pl-3 shrink-0">
+            <div className="hidden lg:flex items-center gap-2.5 text-white/80 border-l border-white/25 pl-3 shrink-0">
               <a
                 href={COMPANY_INFO.socials.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
+                className="hover:text-[#E4D9FF] transition-colors"
                 aria-label="Facebook"
               >
                 <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
@@ -89,7 +89,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContactModal, onReplayIntr
                 href={COMPANY_INFO.socials.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
+                className="hover:text-[#E4D9FF] transition-colors"
                 aria-label="Twitter"
               >
                 <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
@@ -100,7 +100,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContactModal, onReplayIntr
                 href={COMPANY_INFO.socials.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
+                className="hover:text-[#E4D9FF] transition-colors"
                 aria-label="LinkedIn"
               >
                 <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
@@ -111,32 +111,32 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContactModal, onReplayIntr
           </div>
 
           {/* Right: Phone & Email Contacts */}
-          <div className="flex items-center gap-2.5 sm:gap-4 text-[11px] sm:text-xs text-[#E8D5C4] shrink-0 pr-1">
+          <div className="flex items-center gap-2.5 sm:gap-4 text-[11px] sm:text-xs text-white/80 shrink-0 pr-1">
             <a
               href="tel:09620000947"
-              className="flex items-center gap-1 sm:gap-1.5 hover:text-white transition-colors whitespace-nowrap"
+              className="flex items-center gap-1 sm:gap-1.5 hover:text-[#E4D9FF] transition-colors whitespace-nowrap"
             >
-              <Phone className="w-3 h-3 text-[#E8D5C4]" />
-              <span className="font-medium font-mono text-[#FAF7F2]">096200 00947</span>
+              <Phone className="w-3 h-3 text-[#E4D9FF]" />
+              <span className="font-medium font-mono text-white">096200 00947</span>
             </a>
-            <span className="text-[#8C6857] hidden sm:inline" aria-hidden="true">·</span>
+            <span className="text-[#E4D9FF] hidden sm:inline" aria-hidden="true">·</span>
             <a
               href="mailto:info@siddhikabel.com"
-              className="hidden sm:flex items-center gap-1.5 hover:text-white transition-colors whitespace-nowrap"
+              className="hidden sm:flex items-center gap-1.5 hover:text-[#E4D9FF] transition-colors whitespace-nowrap"
             >
-              <Mail className="w-3 h-3 text-[#E8D5C4]" />
+              <Mail className="w-3 h-3 text-[#E4D9FF]" />
               <span>info@siddhikabel.com</span>
             </a>
           </div>
         </div>
       </div>
 
-      {/* Main Header - Cream White (#FAF7F2) with Warm Beige (#E8D5C4) hairline border */}
+      {/* Main Header - Cream White (#FCFBFF) with Warm Beige (#E6DEFA) hairline border */}
       <header
         className={`sticky top-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? 'bg-[#FAF7F2]/95 backdrop-blur-md shadow-sm border-b border-[#E8D5C4]'
-            : 'bg-[#FAF7F2] border-b border-[#E8D5C4]'
+            ? 'bg-[#FCFBFF]/95 backdrop-blur-md shadow-sm border-b border-[#E6DEFA]'
+            : 'bg-[#FCFBFF] border-b border-[#E6DEFA]'
         }`}
       >
         <div className={`max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between transition-all duration-300 ${isScrolled ? 'h-14 sm:h-16' : 'h-16 sm:h-20'}`}>
@@ -155,7 +155,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContactModal, onReplayIntr
           </Link>
 
           {/* Navigation Links (Desktop lg+) */}
-          <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-[#2D211B]">
+          <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-[#1E1B2E]">
             <DesktopNavLink to="/" end>Home</DesktopNavLink>
             <DesktopNavLink to="/about">About us</DesktopNavLink>
 
@@ -171,7 +171,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContactModal, onReplayIntr
                   <motion.span
                     animate={{ rotate: productsDropdownOpen ? 180 : 0 }}
                     transition={{ duration: 0.25 }}
-                    className="text-[10px] text-[#A67C63] inline-block"
+                    className="text-[10px] text-[#6D3FD6] inline-block"
                   >
                     ▾
                   </motion.span>
@@ -187,11 +187,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContactModal, onReplayIntr
                     exit={{ opacity: 0, y: -8, scale: 0.97 }}
                     transition={{ duration: 0.2, ease: 'easeOut' }}
                     style={{ transformOrigin: 'top left' }}
-                    className="absolute top-full left-0 w-60 bg-[#FAF7F2] rounded-xl shadow-xl border border-[#E8D5C4] py-2 z-50"
+                    className="absolute top-full left-0 w-60 bg-[#FCFBFF] rounded-xl shadow-xl border border-[#E6DEFA] py-2 z-50"
                   >
                     <Link
                       to="/products"
-                      className="block px-4 py-2.5 text-xs font-semibold text-[#6F5144] hover:bg-[#E8D5C4]/40 hover:pl-6 border-b border-[#E8D5C4]/60 transition-all duration-200"
+                      className="block px-4 py-2.5 text-xs font-semibold text-[#55516B] hover:bg-[#F3EFFE] hover:pl-6 border-b border-[#E6DEFA]/60 transition-all duration-200"
                     >
                       All Products Catalog
                     </Link>
@@ -204,7 +204,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContactModal, onReplayIntr
                       >
                         <Link
                           to={`/products?brand=${brand.id}`}
-                          className="block px-4 py-2 text-xs text-[#2D211B]/85 hover:text-[#6F5144] hover:bg-[#E8D5C4]/30 hover:pl-6 transition-all duration-200"
+                          className="block px-4 py-2 text-xs text-[#1E1B2E]/85 hover:text-[#55516B] hover:bg-[#6D3FD6]/8 hover:pl-6 transition-all duration-200"
                         >
                           {brand.name}
                         </Link>
@@ -223,14 +223,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContactModal, onReplayIntr
           <div className="hidden lg:flex items-center gap-3 shrink-0">
             <Link
               to="/products-on-offer"
-              className="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 text-xs font-semibold tracking-wider uppercase text-[#FAF7F2] bg-[#6F5144] hover:bg-[#5C4337] rounded-lg transition-all shadow-sm hover:shadow-md whitespace-nowrap"
+              className="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 text-xs font-semibold tracking-wider uppercase text-[#FCFBFF] bg-[#6D3FD6] hover:bg-[#4F2AB0] rounded-lg transition-all shadow-sm hover:shadow-md whitespace-nowrap"
             >
               <motion.span
                 animate={{ rotate: [0, 18, -18, 0], scale: [1, 1.2, 1] }}
                 transition={{ duration: 2.4, repeat: Infinity, repeatDelay: 1.6, ease: 'easeInOut' }}
                 className="inline-flex"
               >
-                <Sparkles className="w-3.5 h-3.5 text-[#E8D5C4]" />
+                <Sparkles className="w-3.5 h-3.5 text-[#F5B83D]" />
               </motion.span>
               <span>Check our RFQ site</span>
             </Link>
@@ -240,7 +240,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContactModal, onReplayIntr
           <div className="flex lg:hidden items-center gap-2">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2.5 text-[#2D211B] hover:bg-[#E8D5C4]/40 rounded-xl transition-colors cursor-pointer"
+              className="p-2.5 text-[#1E1B2E] hover:bg-[#F3EFFE] rounded-xl transition-colors cursor-pointer"
               aria-label="Toggle navigation menu"
             >
               <motion.span
@@ -264,9 +264,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContactModal, onReplayIntr
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.25, ease: 'easeInOut' }}
-              className="lg:hidden bg-[#FAF7F2] border-b border-[#E8D5C4] px-6 py-6 shadow-2xl overflow-hidden"
+              className="lg:hidden bg-[#FCFBFF] border-b border-[#E6DEFA] px-6 py-6 shadow-2xl overflow-hidden"
             >
-              <nav className="flex flex-col gap-2 text-sm font-medium text-[#2D211B]">
+              <nav className="flex flex-col gap-2 text-sm font-medium text-[#1E1B2E]">
                 {MOBILE_LINKS.map((item, i) => (
                   <motion.div
                     key={item.to}
@@ -279,8 +279,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContactModal, onReplayIntr
                       end={item.to === '/'}
                       onClick={() => setMobileMenuOpen(false)}
                       className={({ isActive }) =>
-                        `block py-2.5 border-b border-[#E8D5C4]/60 transition-all duration-200 hover:pl-2 hover:text-[#6F5144] ${
-                          isActive ? 'text-[#6F5144] font-semibold pl-2 border-l-2 border-l-[#6F5144]' : ''
+                        `block py-2.5 border-b border-[#E6DEFA]/60 transition-all duration-200 hover:pl-2 hover:text-[#55516B] ${
+                          isActive ? 'text-[#55516B] font-semibold pl-2 border-l-2 border-l-[#55516B]' : ''
                         }`
                       }
                     >
@@ -294,9 +294,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContactModal, onReplayIntr
                   <Link
                     to="/products-on-offer"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-center gap-2 w-full py-3 text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] bg-[#6F5144] hover:bg-[#5C4337] rounded-xl text-center shadow-xs"
+                    className="flex items-center justify-center gap-2 w-full py-3 text-xs font-semibold uppercase tracking-wider text-[#FCFBFF] bg-[#6D3FD6] hover:bg-[#4F2AB0] rounded-xl text-center shadow-xs"
                   >
-                    <Sparkles className="w-4 h-4 text-[#E8D5C4]" />
+                    <Sparkles className="w-4 h-4 text-[#F5B83D]" />
                     <span>Check our RFQ site</span>
                   </Link>
 
@@ -306,7 +306,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContactModal, onReplayIntr
                         setMobileMenuOpen(false);
                         onOpenContactModal('Mobile Inquiry');
                       }}
-                      className="w-full py-2.5 text-xs font-medium uppercase tracking-wider text-[#6F5144] bg-[#E8D5C4]/40 border border-[#E8D5C4] hover:bg-[#E8D5C4] rounded-xl text-center cursor-pointer"
+                      className="w-full py-2.5 text-xs font-medium uppercase tracking-wider text-[#55516B] bg-[#F3EFFE] border border-[#E6DEFA] hover:bg-[#E6DEFA] rounded-xl text-center cursor-pointer"
                     >
                       Instant Contact Popup
                     </button>

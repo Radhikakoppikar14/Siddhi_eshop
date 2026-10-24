@@ -37,10 +37,10 @@ const NETWORK_BRANDS: NetworkBrandDetail[] = [
     id: 'lapp',
     name: 'LAPP',
     tagline: 'World Leader in Cables & Industrial Connection Technology',
-    color: '#6F5144',
-    badgeBg: 'bg-[#E8D5C4]/40',
-    badgeBorder: 'border-[#E8D5C4]',
-    accentText: 'text-[#6F5144]',
+    color: '#55516B',
+    badgeBg: 'bg-[#F3EFFE]',
+    badgeBorder: 'border-[#E6DEFA]',
+    accentText: 'text-[#55516B]',
     domains: [
       'Comprehensive Range of Electrical Cables & Connectors',
       'Medium Voltage Switchgear & Low Voltage Control Systems',
@@ -57,10 +57,10 @@ const NETWORK_BRANDS: NetworkBrandDetail[] = [
     id: 'eaton',
     name: 'EATON',
     tagline: 'Intelligent Power Management & Industrial LED Solutions',
-    color: '#6F5144',
-    badgeBg: 'bg-[#E8D5C4]/40',
-    badgeBorder: 'border-[#E8D5C4]',
-    accentText: 'text-[#6F5144]',
+    color: '#55516B',
+    badgeBg: 'bg-[#F3EFFE]',
+    badgeBorder: 'border-[#E6DEFA]',
+    accentText: 'text-[#55516B]',
     domains: [
       'Indoor LED Lighting Luminaires & Drivers',
       'Medium Voltage Switchgear & Power Distribution',
@@ -77,10 +77,10 @@ const NETWORK_BRANDS: NetworkBrandDetail[] = [
     id: 'havells',
     name: 'HAVELLS',
     tagline: 'Heavy Industrial Switchgear, Plugs & Commercial Wiring',
-    color: '#6F5144',
-    badgeBg: 'bg-[#E8D5C4]/40',
-    badgeBorder: 'border-[#E8D5C4]',
-    accentText: 'text-[#6F5144]',
+    color: '#55516B',
+    badgeBg: 'bg-[#F3EFFE]',
+    badgeBorder: 'border-[#E6DEFA]',
+    accentText: 'text-[#55516B]',
     domains: [
       'LV Switchboard Components & Enclosures',
       'Explosion-Proof Lighting Fixtures & Hazardous Gear',
@@ -98,10 +98,10 @@ const NETWORK_BRANDS: NetworkBrandDetail[] = [
     id: 'hager',
     name: 'HAGER',
     tagline: 'Smart Electrical Distribution & Cable Management Systems',
-    color: '#6F5144',
-    badgeBg: 'bg-[#E8D5C4]/40',
-    badgeBorder: 'border-[#E8D5C4]',
-    accentText: 'text-[#6F5144]',
+    color: '#55516B',
+    badgeBg: 'bg-[#F3EFFE]',
+    badgeBorder: 'border-[#E6DEFA]',
+    accentText: 'text-[#55516B]',
     domains: [
       'Modular Wiring Systems & Cable Management',
       'Industrial Wiring & Cable Distribution',
@@ -119,10 +119,10 @@ const NETWORK_BRANDS: NetworkBrandDetail[] = [
     id: 'luminis',
     name: 'LUMINIS',
     tagline: 'Engineered Cable Glands, Ties & Grounding Systems',
-    color: '#6F5144',
-    badgeBg: 'bg-[#E8D5C4]/40',
-    badgeBorder: 'border-[#E8D5C4]',
-    accentText: 'text-[#6F5144]',
+    color: '#55516B',
+    badgeBg: 'bg-[#F3EFFE]',
+    badgeBorder: 'border-[#E6DEFA]',
+    accentText: 'text-[#55516B]',
     domains: [
       'Cable Glands, Ties & Accessories',
       'Earthing & Grounding Equipment',
@@ -139,10 +139,10 @@ const NETWORK_BRANDS: NetworkBrandDetail[] = [
     id: 'mennekes',
     name: 'MENNEKES',
     tagline: 'Industrial Plugs, Surge Protection & German CEE Systems',
-    color: '#6F5144',
-    badgeBg: 'bg-[#E8D5C4]/40',
-    badgeBorder: 'border-[#E8D5C4]',
-    accentText: 'text-[#6F5144]',
+    color: '#55516B',
+    badgeBg: 'bg-[#F3EFFE]',
+    badgeBorder: 'border-[#E6DEFA]',
+    accentText: 'text-[#55516B]',
     domains: [
       'Lightning Protection & Surge Arresters',
       'Earthing & Grounding Equipment',
@@ -165,10 +165,10 @@ export const SupplyNetworkSection: React.FC<SupplyNetworkSectionProps> = ({ onOp
   const activeBrand = NETWORK_BRANDS.find((b) => b.id === selectedBrandId) || NETWORK_BRANDS[0];
 
   return (
-    <section className="py-12 sm:py-16 bg-[#FAF7F2] border-b border-[#E8D5C4] relative overflow-hidden">
+    <section className="py-12 sm:py-16 bg-[#FFF6E0] border-b border-[#E6DEFA] relative overflow-hidden">
       {/* Background ambient accents */}
-      <div className="absolute top-0 right-10 w-80 h-80 bg-[#E8D5C4]/40 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-10 w-80 h-80 bg-[#A67C63]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-10 w-80 h-80 bg-[#F3EFFE] rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-10 w-80 h-80 bg-[#6D3FD6]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Heading */}
@@ -179,9 +179,9 @@ export const SupplyNetworkSection: React.FC<SupplyNetworkSectionProps> = ({ onOp
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, amount: 0.05 }}
               transition={{ duration: 0.4 }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E8D5C4]/35 border border-[#E8D5C4] text-xs font-semibold tracking-wider uppercase text-[#6F5144] mb-2"
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F3EFFE] border border-[#E6DEFA] text-xs font-semibold tracking-wider uppercase text-[#55516B] mb-2"
             >
-              <Sparkles className="w-3.5 h-3.5 text-[#A67C63]" />
+              <Sparkles className="w-3.5 h-3.5 text-[#6D3FD6]" />
               <span>Multi-Brand Integration</span>
             </motion.div>
             <motion.h2
@@ -189,7 +189,7 @@ export const SupplyNetworkSection: React.FC<SupplyNetworkSectionProps> = ({ onOp
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.05 }}
               transition={{ duration: 0.45, delay: 0.05 }}
-              className="text-2xl sm:text-3xl lg:text-4xl font-normal text-[#2D211B] font-editorial tracking-tight"
+              className="text-2xl sm:text-3xl lg:text-4xl font-normal text-[#1E1B2E] font-editorial tracking-tight"
             >
               Authorized Integrated Product Supply Network
             </motion.h2>
@@ -199,7 +199,7 @@ export const SupplyNetworkSection: React.FC<SupplyNetworkSectionProps> = ({ onOp
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.05 }}
             transition={{ duration: 0.45, delay: 0.1 }}
-            className="text-xs sm:text-sm text-[#6F5144]/80 font-light max-w-md leading-relaxed"
+            className="text-xs sm:text-sm text-[#55516B]/80 font-light max-w-md leading-relaxed"
           >
             Siddhi Kabel unites 6 global industry leaders under one factory-certified supply chain for integrated industrial projects.
           </motion.p>
@@ -214,22 +214,22 @@ export const SupplyNetworkSection: React.FC<SupplyNetworkSectionProps> = ({ onOp
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, amount: 0.05 }}
             transition={{ duration: 0.55 }}
-            className="lg:col-span-5 bg-white rounded-2xl border border-[#E8D5C4] p-4 sm:p-5 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+            className="lg:col-span-5 bg-white rounded-2xl border border-[#E6DEFA] p-4 sm:p-5 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
           >
             {/* Top Bar */}
-            <div className="flex items-center justify-between pb-3 mb-3 border-b border-[#E8D5C4]">
+            <div className="flex items-center justify-between pb-3 mb-3 border-b border-[#E6DEFA]">
               <div className="flex items-center gap-2">
                 <span className="flex h-2.5 w-2.5 relative">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#6F5144] opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#6F5144]" />
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#6D3FD6] opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#6D3FD6]" />
                 </span>
-                <span className="text-xs font-bold uppercase tracking-wider text-[#2D211B]">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#1E1B2E]">
                   Architecture Matrix
                 </span>
               </div>
               <button
                 onClick={() => setIsLightboxOpen(true)}
-                className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium text-[#6F5144] bg-[#FAF7F2] hover:bg-[#E8D5C4]/30 border border-[#E8D5C4] rounded-lg transition-all cursor-pointer hover:scale-105"
+                className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium text-[#55516B] bg-[#FCFBFF] hover:bg-[#6D3FD6]/8 border border-[#E6DEFA] rounded-lg transition-all cursor-pointer hover:scale-105"
                 title="Zoom into high-resolution diagram"
               >
                 <Maximize2 className="w-3.5 h-3.5" />
@@ -240,7 +240,7 @@ export const SupplyNetworkSection: React.FC<SupplyNetworkSectionProps> = ({ onOp
             {/* Clickable Image Box */}
             <div
               onClick={() => setIsLightboxOpen(true)}
-              className="relative rounded-xl overflow-hidden bg-gradient-to-b from-[#FAF7F2] to-white p-2 border border-[#E8D5C4] cursor-zoom-in group/img flex-1 flex items-center justify-center min-h-[260px] sm:min-h-[300px]"
+              className="relative rounded-xl overflow-hidden bg-gradient-to-b from-[#FCFBFF] to-white p-2 border border-[#E6DEFA] cursor-zoom-in group/img flex-1 flex items-center justify-center min-h-[260px] sm:min-h-[300px]"
             >
               <img
                 src="/assets/aistudio/image_b3c5bf39.png"
@@ -249,30 +249,30 @@ export const SupplyNetworkSection: React.FC<SupplyNetworkSectionProps> = ({ onOp
               />
 
               {/* Hover overlay hint */}
-              <div className="absolute inset-0 bg-[#2D211B]/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 rounded-xl flex items-center justify-center">
-                <span className="px-3 py-1.5 bg-[#FAF7F2] text-[#2D211B] rounded-full text-xs font-semibold shadow-md flex items-center gap-1.5 border border-[#E8D5C4]">
-                  <ZoomIn className="w-3.5 h-3.5 text-[#6F5144]" />
+              <div className="absolute inset-0 bg-white opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 rounded-xl flex items-center justify-center">
+                <span className="px-3 py-1.5 bg-[#FCFBFF] text-[#1E1B2E] rounded-full text-xs font-semibold shadow-md flex items-center gap-1.5 border border-[#E6DEFA]">
+                  <ZoomIn className="w-3.5 h-3.5 text-[#55516B]" />
                   <span>Click to Expand</span>
                 </span>
               </div>
             </div>
 
             {/* Bottom 3 Badges */}
-            <div className="grid grid-cols-3 gap-2 pt-3 mt-3 border-t border-[#E8D5C4] text-center">
-              <div className="p-2 rounded-lg bg-[#FAF7F2] border border-[#E8D5C4]">
-                <Layers className="w-3.5 h-3.5 text-[#6F5144] mx-auto mb-1" />
-                <span className="text-[10px] font-semibold text-[#2D211B] block uppercase">6 Alliances</span>
-                <span className="text-[9px] text-[#A67C63] block">Unified Supply</span>
+            <div className="grid grid-cols-3 gap-2 pt-3 mt-3 border-t border-[#E6DEFA] text-center">
+              <div className="p-2 rounded-lg bg-[#FCFBFF] border border-[#E6DEFA]">
+                <Layers className="w-3.5 h-3.5 text-[#55516B] mx-auto mb-1" />
+                <span className="text-[10px] font-semibold text-[#1E1B2E] block uppercase">6 Alliances</span>
+                <span className="text-[9px] text-[#6D3FD6] block">Unified Supply</span>
               </div>
-              <div className="p-2 rounded-lg bg-[#FAF7F2] border border-[#E8D5C4]">
-                <PackageCheck className="w-3.5 h-3.5 text-[#6F5144] mx-auto mb-1" />
-                <span className="text-[10px] font-semibold text-[#2D211B] block uppercase">Single PO</span>
-                <span className="text-[9px] text-[#A67C63] block">Consolidated</span>
+              <div className="p-2 rounded-lg bg-[#FCFBFF] border border-[#E6DEFA]">
+                <PackageCheck className="w-3.5 h-3.5 text-[#55516B] mx-auto mb-1" />
+                <span className="text-[10px] font-semibold text-[#1E1B2E] block uppercase">Single PO</span>
+                <span className="text-[9px] text-[#6D3FD6] block">Consolidated</span>
               </div>
-              <div className="p-2 rounded-lg bg-[#FAF7F2] border border-[#E8D5C4]">
-                <Building className="w-3.5 h-3.5 text-[#6F5144] mx-auto mb-1" />
-                <span className="text-[10px] font-semibold text-[#2D211B] block uppercase">Bangalore</span>
-                <span className="text-[9px] text-[#A67C63] block">Ready Stock</span>
+              <div className="p-2 rounded-lg bg-[#FCFBFF] border border-[#E6DEFA]">
+                <Building className="w-3.5 h-3.5 text-[#55516B] mx-auto mb-1" />
+                <span className="text-[10px] font-semibold text-[#1E1B2E] block uppercase">Bangalore</span>
+                <span className="text-[9px] text-[#6D3FD6] block">Ready Stock</span>
               </div>
             </div>
           </motion.div>
@@ -283,16 +283,16 @@ export const SupplyNetworkSection: React.FC<SupplyNetworkSectionProps> = ({ onOp
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, amount: 0.05 }}
             transition={{ duration: 0.55 }}
-            className="lg:col-span-7 bg-white rounded-2xl border border-[#E8D5C4] p-4 sm:p-5 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+            className="lg:col-span-7 bg-white rounded-2xl border border-[#E6DEFA] p-4 sm:p-5 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
           >
             <div>
               {/* Header */}
-              <div className="flex items-center justify-between pb-3 mb-3 border-b border-[#E8D5C4]">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#6F5144] flex items-center gap-1.5">
-                  <Zap className="w-3.5 h-3.5 text-[#A67C63]" />
+              <div className="flex items-center justify-between pb-3 mb-3 border-b border-[#E6DEFA]">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#55516B] flex items-center gap-1.5">
+                  <Zap className="w-3.5 h-3.5 text-[#6D3FD6]" />
                   <span>Select OEM Brand Alliance</span>
                 </span>
-                <span className="text-[11px] text-[#A67C63] font-light">
+                <span className="text-[11px] text-[#6D3FD6] font-light">
                   Click to inspect domains
                 </span>
               </div>
@@ -309,17 +309,17 @@ export const SupplyNetworkSection: React.FC<SupplyNetworkSectionProps> = ({ onOp
                       onClick={() => setSelectedBrandId(b.id)}
                       className={`p-2 rounded-xl border text-center transition-all cursor-pointer flex flex-col items-center justify-center ${
                         isSelected
-                          ? 'bg-[#E8D5C4]/40 border-[#6F5144] shadow-xs ring-1 ring-[#6F5144]/30'
-                          : 'bg-white hover:bg-[#FAF7F2] border-[#E8D5C4]'
+                          ? 'bg-[#F3EFFE] border-[#E6DEFA] shadow-xs ring-1 ring-[#55516B]/30'
+                          : 'bg-white hover:bg-[#FCFBFF] border-[#E6DEFA]'
                       }`}
                     >
-                      <span className={`text-xs font-bold ${isSelected ? 'text-[#6F5144]' : 'text-[#2D211B]'}`}>
+                      <span className={`text-xs font-bold ${isSelected ? 'text-[#55516B]' : 'text-[#1E1B2E]'}`}>
                         {b.name}
                       </span>
                       {isSelected && (
                         <motion.div
                           layoutId="compactBrandLine"
-                          className="w-4 h-0.5 bg-[#6F5144] rounded-full mt-1"
+                          className="w-4 h-0.5 bg-[#6D3FD6] rounded-full mt-1"
                         />
                       )}
                     </motion.button>
@@ -335,11 +335,11 @@ export const SupplyNetworkSection: React.FC<SupplyNetworkSectionProps> = ({ onOp
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.25 }}
-                  className="space-y-3 p-3.5 rounded-xl bg-gradient-to-br from-[#FAF7F2] to-white border border-[#E8D5C4]"
+                  className="space-y-3 p-3.5 rounded-xl bg-gradient-to-br from-[#FCFBFF] to-white border border-[#E6DEFA]"
                 >
                   {/* Brand Header */}
                   <div className="flex flex-wrap items-center justify-between gap-2">
-                    <span className="text-lg font-bold font-editorial text-[#2D211B]">
+                    <span className="text-lg font-bold font-editorial text-[#1E1B2E]">
                       {activeBrand.name}
                     </span>
                     <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-semibold border ${activeBrand.badgeBg} ${activeBrand.badgeBorder} ${activeBrand.accentText}`}>
@@ -347,22 +347,22 @@ export const SupplyNetworkSection: React.FC<SupplyNetworkSectionProps> = ({ onOp
                     </span>
                   </div>
 
-                  <p className="text-xs text-[#2D211B]/80 font-light leading-relaxed">
+                  <p className="text-xs text-[#1E1B2E]/80 font-light leading-relaxed">
                     {activeBrand.tagline}
                   </p>
 
                   {/* Domains */}
                   <div className="space-y-1.5 pt-1">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#6F5144] block">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#55516B] block">
                       Supply Network Roles:
                     </span>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {activeBrand.domains.map((dom, i) => (
                         <div
                           key={i}
-                          className="flex items-start gap-1.5 p-2 rounded-lg bg-white border border-[#E8D5C4] text-[11px] font-medium text-[#2D211B]"
+                          className="flex items-start gap-1.5 p-2 rounded-lg bg-white border border-[#E6DEFA] text-[11px] font-medium text-[#1E1B2E]"
                         >
-                          <CheckCircle2 className="w-3.5 h-3.5 text-[#6F5144] shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-3.5 h-3.5 text-[#55516B] shrink-0 mt-0.5" />
                           <span className="leading-tight">{dom}</span>
                         </div>
                       ))}
@@ -371,14 +371,14 @@ export const SupplyNetworkSection: React.FC<SupplyNetworkSectionProps> = ({ onOp
 
                   {/* Capabilities / Products */}
                   <div className="pt-1">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#A67C63] block mb-1.5">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#6D3FD6] block mb-1.5">
                       Supplied Lines &amp; Families:
                     </span>
                     <div className="flex flex-wrap gap-1.5">
                       {activeBrand.capabilities.map((cap, i) => (
                         <span
                           key={i}
-                          className="px-2 py-0.5 rounded-md bg-white border border-[#E8D5C4] text-[10px] text-[#2D211B]/80 font-light"
+                          className="px-2 py-0.5 rounded-md bg-white border border-[#E6DEFA] text-[10px] text-[#1E1B2E]/80 font-light"
                         >
                           {cap}
                         </span>
@@ -390,18 +390,18 @@ export const SupplyNetworkSection: React.FC<SupplyNetworkSectionProps> = ({ onOp
             </div>
 
             {/* Inquire CTA Bar */}
-            <div className="mt-4 pt-3 border-t border-[#E8D5C4] flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div className="mt-4 pt-3 border-t border-[#E6DEFA] flex flex-col sm:flex-row items-center justify-between gap-3">
               <div className="text-left w-full sm:w-auto">
-                <span className="text-xs font-semibold text-[#2D211B] block">
+                <span className="text-xs font-semibold text-[#1E1B2E] block">
                   Need {activeBrand.name} stock or pricing?
                 </span>
-                <span className="text-[10px] text-[#A67C63]">
+                <span className="text-[10px] text-[#6D3FD6]">
                   Direct dispatch from Bangalore central facility.
                 </span>
               </div>
               <button
                 onClick={() => onOpenContact?.(`${activeBrand.name} - Supply Network Inquiry`)}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-2 px-4 text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] bg-[#6F5144] hover:bg-[#5C4337] rounded-xl transition-all shadow-xs cursor-pointer hover:scale-105"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-2 px-4 text-xs font-semibold uppercase tracking-wider text-[#FCFBFF] bg-[#6D3FD6] hover:bg-[#4F2AB0] rounded-xl transition-all shadow-xs cursor-pointer hover:scale-105"
               >
                 <Send className="w-3 h-3" />
                 <span>Inquire {activeBrand.name}</span>
@@ -421,7 +421,7 @@ export const SupplyNetworkSection: React.FC<SupplyNetworkSectionProps> = ({ onOp
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsLightboxOpen(false)}
-            className="fixed inset-0 z-50 bg-[#2D211B]/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-8"
+            className="fixed inset-0 z-50 bg-[#F3EFFE] backdrop-blur-sm backdrop-blur-md flex items-center justify-center p-4 sm:p-8"
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
@@ -429,21 +429,21 @@ export const SupplyNetworkSection: React.FC<SupplyNetworkSectionProps> = ({ onOp
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative max-w-5xl w-full bg-[#FAF7F2] rounded-3xl p-4 sm:p-6 overflow-hidden shadow-2xl border border-[#E8D5C4]"
+              className="relative max-w-5xl w-full bg-[#FCFBFF] rounded-3xl p-4 sm:p-6 overflow-hidden shadow-2xl border border-[#E6DEFA]"
             >
               {/* Header */}
-              <div className="flex items-center justify-between pb-3 mb-3 border-b border-[#E8D5C4]">
+              <div className="flex items-center justify-between pb-3 mb-3 border-b border-[#E6DEFA]">
                 <div>
-                  <h3 className="text-base sm:text-lg font-medium text-[#2D211B] font-editorial">
+                  <h3 className="text-base sm:text-lg font-medium text-[#1E1B2E] font-editorial">
                     Authorized Multi-Brand Integrated Product Supply Network
                   </h3>
-                  <p className="text-xs text-[#A67C63] font-light">
+                  <p className="text-xs text-[#6D3FD6] font-light">
                     Complete Industrial Portfolio &amp; Direct Factory Partnerships
                   </p>
                 </div>
                 <button
                   onClick={() => setIsLightboxOpen(false)}
-                  className="p-1.5 rounded-full bg-[#E8D5C4]/40 hover:bg-[#E8D5C4] text-[#2D211B] transition-colors cursor-pointer"
+                  className="p-1.5 rounded-full bg-[#F3EFFE] hover:bg-[#E6DEFA] text-[#1E1B2E] transition-colors cursor-pointer"
                   aria-label="Close lightbox"
                 >
                   <X className="w-5 h-5" />
@@ -451,7 +451,7 @@ export const SupplyNetworkSection: React.FC<SupplyNetworkSectionProps> = ({ onOp
               </div>
 
               {/* High-Res Image Preview */}
-              <div className="bg-white rounded-2xl p-2 sm:p-4 border border-[#E8D5C4] flex items-center justify-center max-h-[70vh] overflow-auto">
+              <div className="bg-white rounded-2xl p-2 sm:p-4 border border-[#E6DEFA] flex items-center justify-center max-h-[70vh] overflow-auto">
                 <img
                   src="/assets/aistudio/image_b3c5bf39.png"
                   alt="Multi-Brand Supply Network Diagram Full View"
@@ -460,8 +460,8 @@ export const SupplyNetworkSection: React.FC<SupplyNetworkSectionProps> = ({ onOp
               </div>
 
               {/* Bottom Actions */}
-              <div className="flex flex-wrap items-center justify-between gap-4 pt-3 mt-3 border-t border-[#E8D5C4] text-xs">
-                <span className="text-[#6F5144]/80 font-light">
+              <div className="flex flex-wrap items-center justify-between gap-4 pt-3 mt-3 border-t border-[#E6DEFA] text-xs">
+                <span className="text-[#55516B]/80 font-light">
                   Covering Lapp, Eaton, Havells, Hager, Luminis, and Mennekes.
                 </span>
                 <div className="flex items-center gap-3">
@@ -469,7 +469,7 @@ export const SupplyNetworkSection: React.FC<SupplyNetworkSectionProps> = ({ onOp
                     href="/assets/aistudio/image_b3c5bf39.png"
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#E8D5C4] text-[#2D211B] hover:bg-white font-medium"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#E6DEFA] text-[#1E1B2E] hover:bg-white font-medium"
                   >
                     <span>Open Raw File</span>
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -479,7 +479,7 @@ export const SupplyNetworkSection: React.FC<SupplyNetworkSectionProps> = ({ onOp
                       setIsLightboxOpen(false);
                       onOpenContact?.('Complete Supply Network Inquiry');
                     }}
-                    className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-lg bg-[#6F5144] hover:bg-[#5C4337] text-[#FAF7F2] font-semibold transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-lg bg-[#6D3FD6] hover:bg-[#4F2AB0] text-[#FCFBFF] font-semibold transition-colors cursor-pointer"
                   >
                     <span>Inquire for Entire Portfolio</span>
                   </button>

@@ -36,7 +36,7 @@ export const FloatingArrow: React.FC = () => {
           className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40 group"
         >
           {/* Live pulsing ambient ring */}
-          <div className="absolute inset-0 rounded-full bg-[#6F5144] opacity-40 blur-md pointer-events-none" />
+          <div className="absolute inset-0 rounded-full bg-[#6D3FD6] opacity-40 blur-md pointer-events-none" />
 
           {/* Floating object button with continuous bobbing animation */}
           <motion.button
@@ -50,17 +50,17 @@ export const FloatingArrow: React.FC = () => {
             }}
             whileHover={{
               scale: 1.1,
-              boxShadow: '0 8px 24px -2px rgba(111, 81, 68, 0.5), 0 0 16px rgba(166, 124, 99, 0.4)',
+              boxShadow: '0 8px 24px -2px rgba(85, 81, 107, 0.5), 0 0 16px rgba(109, 63, 214, 0.4)',
             }}
             whileTap={{ scale: 0.92 }}
             onClick={scrollToTop}
-            className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#6F5144] hover:bg-[#5C4337] text-[#FAF7F2] flex items-center justify-center shadow-lg border border-[#E8D5C4]/40 backdrop-blur-xs focus:outline-hidden focus:ring-2 focus:ring-[#6F5144] cursor-pointer"
+            className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#6D3FD6] hover:bg-[#4F2AB0] text-[#FCFBFF] flex items-center justify-center shadow-lg border border-[#E6DEFA]/40 backdrop-blur-xs focus:outline-hidden focus:ring-2 focus:ring-[#55516B] cursor-pointer"
             aria-label="Back to top"
           >
-            <ArrowUp className="w-4 h-4 text-[#FAF7F2] transition-transform duration-200 group-hover:-translate-y-0.5" />
+            <ArrowUp className="w-4 h-4 text-[#1E1B2E] transition-transform duration-200 group-hover:-translate-y-0.5" />
 
             {/* Micro Tooltip */}
-            <span className="absolute -top-9 right-1/2 translate-x-1/2 px-2.5 py-1 text-[10px] font-medium text-[#FAF7F2] bg-[#2D211B] border border-[#6F5144] rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none">
+            <span className="absolute -top-9 right-1/2 translate-x-1/2 px-2.5 py-1 text-[10px] font-medium text-[#1E1B2E] bg-[#F3EFFE] border border-[#E6DEFA] rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none">
               Back to top
             </span>
           </motion.button>

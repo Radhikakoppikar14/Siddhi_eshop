@@ -1,26 +1,46 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
+
+/* Refined, tighter radius + softer shadow scale for a minimal look */
+@theme {
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.625rem;
+  --radius-2xl: 0.875rem;
+  --radius-3xl: 1.125rem;
+  --shadow-2xs: 0 1px 1px rgb(30 27 46 / 0.03);
+  --shadow-xs: 0 1px 2px rgb(30 27 46 / 0.04);
+  --shadow-sm: 0 1px 3px rgb(30 27 46 / 0.06);
+  --shadow-md: 0 4px 12px -2px rgb(30 27 46 / 0.07);
+  --shadow-lg: 0 10px 24px -6px rgb(30 27 46 / 0.08);
+  --shadow-xl: 0 16px 36px -10px rgb(30 27 46 / 0.10);
+  --shadow-2xl: 0 24px 56px -16px rgb(30 27 46 / 0.16);
+}
 
 @layer base {
   :root {
-    --color-cream-white: #FAF7F2;
-    --color-warm-beige: #E8D5C4;
-    --color-light-mocha: #A67C63;
-    --color-soft-brown: #6F5144;
-    --color-dark-brown: #2D211B;
+    --color-surface: #FCFBFF;
+    --color-line: #E6DEFA;
+    --color-accent: #6D3FD6;
+    --color-body: #55516B;
+    --color-ink: #1E1B2E;
   }
 
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    background-color: #FAF7F2;
-    color: #2D211B;
+    background-color: #FCFBFF;
+    color: #1E1B2E;
   }
 
-  /* Font pairing: Playfair Display for main headings, Inter for everything else */
+  /* Single modern sans family; headings get tighter tracking */
   h1, h2, .font-editorial {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.025em;
+    font-weight: 600;
   }
+  h3 { letter-spacing: -0.015em; }
   h3, h4, h5, h6, button, input, select, textarea {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
@@ -28,27 +48,29 @@
 
 /* Unlayered so these always win over Tailwind's font-* utilities */
 .font-editorial, .font-serif {
-  font-family: 'Playfair Display', Georgia, serif !important;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  letter-spacing: -0.025em;
 }
+.italic { font-style: normal; }
 .font-mono, .font-sans {
   font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
 }
 .font-mono { font-variant-numeric: tabular-nums; }
 
-/* Custom Scrollbar - Warm Beige & Soft Brown */
+/* Custom Scrollbar - slate */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FAF7F2;
+  background: #FCFBFF;
 }
 ::-webkit-scrollbar-thumb {
-  background: #E8D5C4;
+  background: #E6DEFA;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #A67C63;
+  background: #6D3FD6;
 }
 
 /* =====================================================================
@@ -87,8 +109,8 @@
   100% { background-position: 0% 50%; }
 }
 @keyframes livePulseRing {
-  0%   { box-shadow: 0 0 0 0 rgba(166, 124, 99, 0.45); }
-  100% { box-shadow: 0 0 0 16px rgba(166, 124, 99, 0); }
+  0%   { box-shadow: 0 0 0 0 rgba(109, 63, 214, 0.45); }
+  100% { box-shadow: 0 0 0 16px rgba(109, 63, 214, 0); }
 }
 @keyframes liveDropdown {
   from { opacity: 0; translate: 0 -8px; scale: 0.97; }
@@ -106,14 +128,7 @@
   /* Helpers you can add to any element */
   .live-float { animation: liveFloat 4.5s ease-in-out infinite; }
   .live-pulse-ring { animation: livePulseRing 2.2s ease-out infinite; }
-  .live-gradient-text {
-    background-image: linear-gradient(90deg, #6F5144, #A67C63, #E8D5C4, #A67C63, #6F5144);
-    background-size: 250% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: liveGradientPan 7s ease-in-out infinite;
-  }
+  .live-gradient-text { color: #6D3FD6; }
 
   /* ---------- Buttons & links: lift, glow, press ---------- */
   :is(main, header, footer) :is(button, a)[class*="rounded"]:not(:disabled) {
@@ -121,16 +136,16 @@
       background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
   }
   :is(main, header, footer) :is(button, a)[class*="rounded"]:not(:disabled):hover {
-    translate: 0 -2px;
-    box-shadow: 0 12px 26px -10px rgba(111, 81, 68, 0.55);
+    translate: 0 -1px;
+    box-shadow: 0 8px 18px -8px rgba(30, 27, 46, 0.28);
   }
   :is(main, header, footer) :is(button, a)[class*="rounded"]:not(:disabled):active {
     translate: 0 0;
     scale: 0.96;
-    box-shadow: 0 3px 8px -4px rgba(111, 81, 68, 0.5);
+    box-shadow: 0 3px 8px -4px rgba(85, 81, 107, 0.5);
   }
   :is(main, header, footer) :is(button, a):focus-visible {
-    outline: 2px solid #A67C63;
+    outline: 2px solid #6D3FD6;
     outline-offset: 3px;
   }
 
@@ -148,7 +163,7 @@
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.38) 50%, transparent 70%);
+    background: none; display: none;
     translate: -130% 0;
     transition: translate 0.8s cubic-bezier(0.22, 1, 0.36, 1);
     pointer-events: none;
@@ -171,8 +186,7 @@
   }
   :is(main, footer) [class*="overflow-hidden"]:hover > img:not(.no-zoom):not([class*="object-contain"]),
   :is(main, footer) [class*="overflow-hidden"]:hover > picture > img:not(.no-zoom) {
-    scale: 1.07;
-    filter: saturate(1.1) contrast(1.03);
+    scale: 1.03;
   }
   /* Logos / contained images get a gentle pop instead */
   :is(main, footer) img[class*="object-contain"] { transition: scale 0.35s ease, filter 0.35s ease; }
@@ -183,15 +197,16 @@
     transition: translate 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, border-color 0.3s ease, background-color 0.3s ease;
   }
   :is(main) :is(div, article, li)[class*="bg-white"][class*="border"][class*="rounded-"]:not([class*="max-w-"]):not([class*="fixed"]):not(:has(input, textarea, select)):hover {
-    translate: 0 -4px;
-    box-shadow: 0 22px 40px -22px rgba(111, 81, 68, 0.45), 0 0 0 1px rgba(166, 124, 99, 0.25);
+    translate: 0 -2px;
+    box-shadow: 0 14px 28px -16px rgba(30, 27, 46, 0.22);
+    border-color: #D9CFF5;
   }
 
   /* Icon tiles wiggle when their card is hovered */
   :is(main) .group:hover > [class*="rounded-2xl"] > svg,
   :is(main) .group:hover > [class*="rounded-xl"] > svg {
-    rotate: -8deg;
-    scale: 1.12;
+    rotate: 0deg;
+    scale: 1.04;
   }
   :is(main) .group > [class*="rounded-2xl"] > svg,
   :is(main) .group > [class*="rounded-xl"] > svg { transition: rotate 0.35s ease, scale 0.35s ease; }
@@ -211,20 +226,19 @@
 
   /* ---------- Scroll progress bar + cursor glow ---------- */
   .live-progress {
-    position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 70;
-    background: linear-gradient(90deg, #6F5144, #A67C63, #E8D5C4);
+    position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 70;
+    background: linear-gradient(90deg, #6D3FD6, #F5B83D);
     transform-origin: 0 50%; transform: scaleX(0);
     pointer-events: none;
-    box-shadow: 0 0 10px rgba(166, 124, 99, 0.6);
   }
   .live-glow {
     position: fixed; top: 0; left: 0; width: 520px; height: 520px; z-index: 30;
     margin: -260px 0 0 -260px; border-radius: 9999px; pointer-events: none;
-    background: radial-gradient(circle, rgba(166, 124, 99, 0.16) 0%, rgba(166, 124, 99, 0) 62%);
+    background: radial-gradient(circle, rgba(109, 63, 214, 0.16) 0%, rgba(109, 63, 214, 0) 62%);
     opacity: 0; transition: opacity 0.4s ease;
     will-change: transform;
   }
-  .live-glow.is-on { opacity: 1; }
+  .live-glow, .live-glow.is-on { display: none; }
   @media (hover: none), (pointer: coarse) { .live-glow { display: none; } }
 }
 
@@ -233,4 +247,37 @@
   .live-in, .live-in-left, .live-in-right, .live-in-zoom,
   .live-float, .live-pulse-ring, .live-gradient-text, .live-dropdown { animation: none !important; }
   .live-progress, .live-glow { display: none; }
+}
+
+/* Soft selection tint */
+::selection { background: #E4DAFB; color: #1E1B2E; }
+
+/* ===== Colour accents: brand blue + logo red ===== */
+/* Primary buttons: subtle violet gradient */
+:is(button, a)[class*="bg-[#6D3FD6]"]:not([class*="bg-[#6D3FD6]/"]):not([class*="bg-[#F5B83D]"]) {
+  background-image: linear-gradient(135deg, #6D3FD6 0%, #8B63F0 100%);
+}
+:is(button, a)[class*="bg-[#6D3FD6]"]:not([class*="bg-[#6D3FD6]/"]):hover {
+  background-image: linear-gradient(135deg, #4F2AB0 0%, #6D3FD6 100%);
+}
+
+/* Content cards: coloured top edge, violet and amber alternating */
+main :is(div, article, li)[class*="bg-white"][class*="border"]:is([class*="rounded-2xl"], [class*="rounded-3xl"]):not([class*="fixed"]):not([class*="max-w-"]):not(:has(input, textarea, select)) {
+  border-top: 3px solid #6D3FD6;
+}
+main :is(div, article, li)[class*="bg-white"][class*="border"]:is([class*="rounded-2xl"], [class*="rounded-3xl"]):not([class*="fixed"]):not([class*="max-w-"]):not(:has(input, textarea, select)):nth-child(even) {
+  border-top-color: #F5B83D;
+}
+
+/* Icon tiles pick up a soft red tint on alternate cards */
+main .group:nth-child(even) > [class*="bg-[#F3EFFE]"][class*="rounded-"] {
+  background-color: #FFF6E0;
+}
+main .group:nth-child(even) > [class*="bg-[#F3EFFE]"][class*="rounded-"] > svg { color: #B7791F; }
+
+/* Section headings: short violet-to-amber rule under centred titles */
+main section h2.text-center::after,
+main section .text-center > h2::after {
+  content: ""; display: block; width: 56px; height: 3px; margin: 14px auto 0; border-radius: 3px;
+  background: linear-gradient(90deg, #6D3FD6, #F5B83D);
 }

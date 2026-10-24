@@ -11,10 +11,10 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenRfq }) =
   const [selectedService, setSelectedService] = useState<ServiceItem | null>(null);
 
   return (
-    <section id="services" className="py-20 lg:py-28 bg-[#FAF7F2] border-b border-[#E8D5C4] relative overflow-hidden">
+    <section id="services" className="py-20 lg:py-28 bg-white border-b border-[#E6DEFA] relative overflow-hidden">
       {/* Ambient background glows */}
-      <div className="absolute top-1/4 -left-20 w-80 h-80 bg-[#E8D5C4]/40 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-0 w-96 h-96 bg-[#A67C63]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 -left-20 w-80 h-80 bg-[#F3EFFE] rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 right-0 w-96 h-96 bg-[#6D3FD6]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
         {/* Section Header */}
@@ -25,11 +25,11 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenRfq }) =
             viewport={{ once: false, amount: 0.05 }}
             transition={{ duration: 0.55 }}
           >
-            <div className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-widest uppercase text-[#6F5144] mb-2 px-3 py-1 rounded-full bg-[#E8D5C4]/35 border border-[#E8D5C4]">
-              <Sparkles className="w-3.5 h-3.5 text-[#A67C63]" />
+            <div className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-widest uppercase text-[#55516B] mb-2 px-3 py-1 rounded-full bg-[#F3EFFE] border border-[#E6DEFA]">
+              <Sparkles className="w-3.5 h-3.5 text-[#6D3FD6]" />
               <span>Engineering Capabilities</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-normal text-[#2D211B] font-editorial tracking-tight">
+            <h2 className="text-3xl sm:text-5xl font-normal text-[#1E1B2E] font-editorial tracking-tight">
               Services For Industries
             </h2>
           </motion.div>
@@ -39,7 +39,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenRfq }) =
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, amount: 0.05 }}
             transition={{ duration: 0.55 }}
-            className="text-sm sm:text-base text-[#6F5144]/80 max-w-md font-light leading-relaxed"
+            className="text-sm sm:text-base text-[#55516B]/80 max-w-md font-light leading-relaxed"
           >
             Get benefited with our unique industrial solutions specially designed for Indian industries to enhance electrical performance and safety compliance.
           </motion.p>
@@ -57,7 +57,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenRfq }) =
                 viewport={{ once: false, amount: 0.05 }}
                 transition={{ duration: 0.6, delay: index * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
                 whileHover={{ y: -6 }}
-                className="bg-white rounded-3xl border border-[#E8D5C4] hover:border-[#6F5144] overflow-hidden shadow-xs hover:shadow-2xl transition-all duration-300"
+                className="bg-white rounded-3xl border border-[#E6DEFA] hover:border-[#E6DEFA] overflow-hidden shadow-xs hover:shadow-2xl transition-all duration-300"
               >
                 <div
                   className={`grid grid-cols-1 lg:grid-cols-12 gap-8 items-center ${
@@ -67,15 +67,15 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenRfq }) =
                   {/* Text Container */}
                   <div className={`p-8 lg:p-12 space-y-6 ${isReversed ? 'lg:col-span-7 lg:order-2' : 'lg:col-span-7'}`}>
                     <div className="space-y-2">
-                      <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#6F5144] px-2.5 py-1 rounded-md bg-[#E8D5C4]/35 border border-[#E8D5C4]">
+                      <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#55516B] px-2.5 py-1 rounded-md bg-[#F3EFFE] border border-[#E6DEFA]">
                         {service.subtitle}
                       </span>
-                      <h3 className="text-2xl sm:text-3xl font-normal text-[#2D211B] font-editorial leading-tight">
+                      <h3 className="text-2xl sm:text-3xl font-normal text-[#1E1B2E] font-editorial leading-tight">
                         {service.title}
                       </h3>
                     </div>
 
-                    <p className="text-sm sm:text-base text-[#2D211B]/85 font-light leading-relaxed">
+                    <p className="text-sm sm:text-base text-[#1E1B2E]/85 font-light leading-relaxed">
                       {service.description}
                     </p>
 
@@ -85,10 +85,10 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenRfq }) =
                         <motion.div
                           key={fIdx}
                           whileHover={{ x: 4 }}
-                          className="flex items-start gap-2.5 text-xs text-[#2D211B] p-2 rounded-lg hover:bg-[#FAF7F2] transition-colors"
+                          className="flex items-start gap-2.5 text-xs text-[#1E1B2E] p-2 rounded-lg hover:bg-[#FCFBFF] transition-colors"
                         >
-                          <div className="mt-0.5 p-0.5 bg-[#E8D5C4]/50 text-[#6F5144] rounded-full shrink-0">
-                            <Check className="w-3.5 h-3.5 text-[#6F5144]" />
+                          <div className="mt-0.5 p-0.5 bg-[#E6DEFA]/50 text-[#55516B] rounded-full shrink-0">
+                            <Check className="w-3.5 h-3.5 text-[#55516B]" />
                           </div>
                           <span>{feat}</span>
                         </motion.div>
@@ -100,7 +100,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenRfq }) =
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                         onClick={() => onOpenRfq(service.title)}
-                        className="inline-flex items-center gap-2 px-6 py-3 text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] bg-[#6F5144] hover:bg-[#5C4337] rounded-xl transition-all shadow-sm cursor-pointer"
+                        className="inline-flex items-center gap-2 px-6 py-3 text-xs font-semibold uppercase tracking-wider text-[#FCFBFF] bg-[#6D3FD6] hover:bg-[#4F2AB0] rounded-xl transition-all shadow-sm cursor-pointer"
                       >
                         <span>Inquire for {service.subtitle}</span>
                         <ArrowRight className="w-3.5 h-3.5" />
@@ -108,9 +108,9 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenRfq }) =
 
                       <button
                         onClick={() => setSelectedService(service)}
-                        className="inline-flex items-center gap-1.5 px-4 py-3 text-xs font-medium text-[#2D211B] hover:text-[#6F5144] bg-[#FAF7F2] hover:bg-[#E8D5C4]/30 rounded-xl border border-[#E8D5C4] transition-colors cursor-pointer"
+                        className="inline-flex items-center gap-1.5 px-4 py-3 text-xs font-medium text-[#1E1B2E] hover:text-[#55516B] bg-[#FCFBFF] hover:bg-[#6D3FD6]/8 rounded-xl border border-[#E6DEFA] transition-colors cursor-pointer"
                       >
-                        <ZoomIn className="w-3.5 h-3.5 text-[#6F5144]" />
+                        <ZoomIn className="w-3.5 h-3.5 text-[#55516B]" />
                         <span>View Work Photo</span>
                       </button>
                     </div>
@@ -131,10 +131,10 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenRfq }) =
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#2D211B]/60 via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#FCFBFF]/60 via-transparent to-transparent pointer-events-none" />
 
-                    <div className="absolute bottom-4 right-4 px-3 py-1 rounded-full bg-[#FAF7F2]/95 backdrop-blur-xs text-[11px] font-medium text-[#2D211B] flex items-center gap-1.5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity border border-[#E8D5C4]">
-                      <ZoomIn className="w-3 h-3 text-[#6F5144]" />
+                    <div className="absolute bottom-4 right-4 px-3 py-1 rounded-full bg-[#FCFBFF]/95 backdrop-blur-xs text-[11px] font-medium text-[#1E1B2E] flex items-center gap-1.5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity border border-[#E6DEFA]">
+                      <ZoomIn className="w-3 h-3 text-[#55516B]" />
                       <span>Click to Enlarge</span>
                     </div>
                   </div>
@@ -153,7 +153,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenRfq }) =
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedService(null)}
-            className="fixed inset-0 z-50 bg-[#2D211B]/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6"
+            className="fixed inset-0 z-50 bg-[#F3EFFE] backdrop-blur-sm backdrop-blur-md flex items-center justify-center p-4 sm:p-6"
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
@@ -161,9 +161,9 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenRfq }) =
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative max-w-4xl w-full bg-[#FAF7F2] rounded-3xl overflow-hidden shadow-2xl border border-[#E8D5C4]"
+              className="relative max-w-4xl w-full bg-[#FCFBFF] rounded-3xl overflow-hidden shadow-2xl border border-[#E6DEFA]"
             >
-              <div className="relative bg-[#2D211B] max-h-[60vh] flex items-center justify-center overflow-hidden">
+              <div className="relative bg-[#F3EFFE] max-h-[60vh] flex items-center justify-center overflow-hidden">
                 <img
                   src={selectedService.image}
                   alt={selectedService.title}
@@ -171,26 +171,26 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenRfq }) =
                 />
                 <button
                   onClick={() => setSelectedService(null)}
-                  className="absolute top-4 right-4 p-2.5 rounded-full bg-[#2D211B]/80 hover:bg-[#2D211B] text-[#FAF7F2] transition-colors cursor-pointer"
+                  className="absolute top-4 right-4 p-2.5 rounded-full bg-white/80 hover:bg-white text-[#1E1B2E] transition-colors cursor-pointer"
                   aria-label="Close image popup"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
-              <div className="p-6 sm:p-8 space-y-3 bg-[#FAF7F2]">
-                <div className="flex items-center gap-2 text-xs font-semibold text-[#6F5144] uppercase tracking-wider">
-                  <span className="px-2 py-0.5 rounded bg-[#E8D5C4]/35 border border-[#E8D5C4]">{selectedService.subtitle}</span>
+              <div className="p-6 sm:p-8 space-y-3 bg-[#FCFBFF]">
+                <div className="flex items-center gap-2 text-xs font-semibold text-[#55516B] uppercase tracking-wider">
+                  <span className="px-2 py-0.5 rounded bg-[#F3EFFE] border border-[#E6DEFA]">{selectedService.subtitle}</span>
                 </div>
-                <h3 className="text-xl sm:text-2xl font-normal text-[#2D211B] font-editorial">
+                <h3 className="text-xl sm:text-2xl font-normal text-[#1E1B2E] font-editorial">
                   {selectedService.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-[#6F5144]/80 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#55516B]/80 font-light leading-relaxed">
                   {selectedService.description}
                 </p>
 
-                <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-[#E8D5C4]">
-                  <span className="text-xs text-[#A67C63] font-light">
+                <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-[#E6DEFA]">
+                  <span className="text-xs text-[#6D3FD6] font-light">
                     Factory trained engineers &amp; certified testing equipment.
                   </span>
                   <button
@@ -199,7 +199,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenRfq }) =
                       setSelectedService(null);
                       onOpenRfq(title);
                     }}
-                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#6F5144] hover:bg-[#5C4337] text-[#FAF7F2] text-xs font-semibold uppercase tracking-wider transition-all shadow-sm cursor-pointer"
+                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#6D3FD6] hover:bg-[#4F2AB0] text-[#FCFBFF] text-xs font-semibold uppercase tracking-wider transition-all shadow-sm cursor-pointer"
                   >
                     <Send className="w-3.5 h-3.5" />
                     <span>Inquire About This Service</span>
