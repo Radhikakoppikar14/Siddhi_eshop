@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
@@ -19,4 +20,19 @@ export default defineConfig(() => {
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
     },
   };
+=======
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+
+// https://vite.dev/config/
+export default defineConfig({
+  base: process.env.GITHUB_ACTIONS ? "/Siddhi-Eshop/" : "/",
+  plugins: [tailwindcss(), react()],
+  server: {
+    host: "0.0.0.0",
+    port: 3000,
+    allowedHosts: true,
+  },
+>>>>>>> origin/main
 });

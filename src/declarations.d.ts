@@ -1,0 +1,1 @@
+declare module '../../assets/js/olflex-subgroups-data.js';
