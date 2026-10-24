@@ -46,7 +46,11 @@ export const BrandSelector: React.FC<BrandSelectorProps> = ({ onSelectBrand }) =
                       src={brand.logo}
                       alt={brand.name}
                       className="max-h-14 max-w-full object-contain"
-                      referrerPolicy="no-referrer"
+                      loading="eager"
+                      decoding="async"
+                      fetchPriority="high"
+                      width={160}
+                      height={56}
                     />
                   </div>
 

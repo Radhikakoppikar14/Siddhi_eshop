@@ -72,17 +72,17 @@ export const ContactModal: React.FC<ContactModalProps> = ({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.94, y: 20 }}
             transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
-            className="relative bg-[#FFF1E8] rounded-3xl shadow-2xl border border-[#F1D9CA] max-w-3xl w-full my-auto overflow-hidden text-[#231815]"
+            className="relative bg-[#EBC4A8] rounded-3xl shadow-2xl border border-[#CF9770] max-w-3xl w-full my-auto overflow-hidden text-[#231815]"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Top Bar with Contact Title & Subtext */}
-            <div className="bg-[#FFF1E8] px-6 sm:px-8 py-5 border-b border-[#F1D9CA] flex items-center justify-between">
+            <div className="bg-[#E4B28E] px-6 sm:px-8 py-5 border-b border-[#CF9770] flex items-center justify-between">
               <div>
                 <span className="text-sm sm:text-base font-bold uppercase tracking-widest text-[#231815] flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#D2430F]" />
                   CONTACT SIDDHI KABEL
                 </span>
-                <p className="text-[11px] sm:text-xs text-[#5F524C] font-light mt-1">
+                <p className="text-[11px] sm:text-xs text-[#3D2F28] font-normal mt-1">
                   Get in touch with us for any questions about our products or solutions.
                 </p>
               </div>
@@ -91,7 +91,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                 whileTap={{ scale: 0.9 }}
                 transition={{ duration: 0.2 }}
                 onClick={onClose}
-                className="p-2 rounded-full bg-white hover:bg-[#FFF1E8] text-[#231815] transition-colors cursor-pointer"
+                className="p-2 rounded-full bg-white hover:bg-[#F8E1D2] text-[#231815] transition-colors cursor-pointer"
                 aria-label="Close modal"
               >
                 <X className="w-5 h-5" />
@@ -99,9 +99,9 @@ export const ContactModal: React.FC<ContactModalProps> = ({
             </div>
 
             {/* Modal Body */}
-            <div className="p-4 sm:p-6 max-h-[82vh] overflow-y-auto space-y-4 bg-[#FFF1E8]">
+            <div className="p-4 sm:p-6 max-h-[82vh] overflow-y-auto space-y-4 bg-[#EBC4A8]">
               {/* Head Office Quick Info Strip */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 p-4 bg-white rounded-2xl border border-[#F1D9CA] text-xs text-[#231815]">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 p-4 bg-[#F8E1D2] rounded-2xl border border-[#CF9770] shadow-sm text-xs text-[#231815]">
                 <div className="flex items-start gap-2.5">
                   <MapPin className="w-4 h-4 text-[#D2430F] shrink-0 mt-0.5" />
                   <div>
@@ -166,9 +166,9 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                 </motion.div>
               ) : (
                 /* Contact Message Form in Crisp Light Contrast Container */
-                <div className="bg-[#FFFAF6] rounded-2xl p-5 sm:p-6 border border-[#F1D9CA] shadow-xl space-y-4">
+                <div className="bg-[#F8E1D2] rounded-2xl p-5 sm:p-6 border border-[#CF9770] shadow-xl space-y-4">
                   <form onSubmit={handleSubmit} className="space-y-4 text-xs">
-                    <div className="flex items-center justify-between pb-2 border-b border-[#F1D9CA]">
+                    <div className="flex items-center justify-between pb-2 border-b border-[#CF9770]">
                       <h4 className="text-xs sm:text-sm font-bold text-[#231815] uppercase tracking-wider">
                         Send an Inquiry Message
                       </h4>
@@ -190,7 +190,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                           placeholder="Enter your name"
                           value={formState.name}
                           onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                          className="w-full px-3.5 py-2.5 bg-white border border-[#F1D9CA] rounded-xl focus:outline-hidden focus:border-[#F1D9CA] focus:ring-2 focus:ring-[#5F524C]/20 text-[#231815] transition-all"
+                          className="w-full px-3.5 py-2.5 bg-white border border-[#C58C64] rounded-xl focus:outline-hidden focus:border-[#D2430F] focus:ring-2 focus:ring-[#D2430F]/25 text-[#231815] transition-all"
                         />
                       </div>
                       <div>
@@ -203,7 +203,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                           placeholder="Enter your mobile number"
                           value={formState.phone}
                           onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
-                          className="w-full px-3.5 py-2.5 bg-white border border-[#F1D9CA] rounded-xl focus:outline-hidden focus:border-[#F1D9CA] focus:ring-2 focus:ring-[#5F524C]/20 text-[#231815] transition-all"
+                          className="w-full px-3.5 py-2.5 bg-white border border-[#C58C64] rounded-xl focus:outline-hidden focus:border-[#D2430F] focus:ring-2 focus:ring-[#D2430F]/25 text-[#231815] transition-all"
                         />
                       </div>
                     </div>
@@ -219,7 +219,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                           placeholder="name@company.com"
                           value={formState.email}
                           onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                          className="w-full px-3.5 py-2.5 bg-white border border-[#F1D9CA] rounded-xl focus:outline-hidden focus:border-[#F1D9CA] focus:ring-2 focus:ring-[#5F524C]/20 text-[#231815] transition-all"
+                          className="w-full px-3.5 py-2.5 bg-white border border-[#C58C64] rounded-xl focus:outline-hidden focus:border-[#D2430F] focus:ring-2 focus:ring-[#D2430F]/25 text-[#231815] transition-all"
                         />
                       </div>
                       <div>
@@ -231,7 +231,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                           placeholder="e.g. Lapp Cable Quote / Switchgear"
                           value={formState.subject}
                           onChange={(e) => setFormState({ ...formState, subject: e.target.value })}
-                          className="w-full px-3.5 py-2.5 bg-white border border-[#F1D9CA] rounded-xl focus:outline-hidden focus:border-[#F1D9CA] focus:ring-2 focus:ring-[#5F524C]/20 text-[#231815] transition-all"
+                          className="w-full px-3.5 py-2.5 bg-white border border-[#C58C64] rounded-xl focus:outline-hidden focus:border-[#D2430F] focus:ring-2 focus:ring-[#D2430F]/25 text-[#231815] transition-all"
                         />
                       </div>
                     </div>
@@ -246,11 +246,11 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                         placeholder="Specify item quantities, technical queries, or project delivery deadline..."
                         value={formState.message}
                         onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                        className="w-full px-3.5 py-2.5 bg-white border border-[#F1D9CA] rounded-xl focus:outline-hidden focus:border-[#F1D9CA] focus:ring-2 focus:ring-[#5F524C]/20 text-[#231815] transition-all"
+                        className="w-full px-3.5 py-2.5 bg-white border border-[#C58C64] rounded-xl focus:outline-hidden focus:border-[#D2430F] focus:ring-2 focus:ring-[#D2430F]/25 text-[#231815] transition-all"
                       />
                     </div>
 
-                    <div className="pt-2 flex items-center justify-end gap-3 border-t border-[#F1D9CA]">
+                    <div className="pt-2 flex items-center justify-end gap-3 border-t border-[#CF9770]">
                       <button
                         type="button"
                         onClick={onClose}

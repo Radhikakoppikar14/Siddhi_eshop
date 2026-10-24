@@ -21,7 +21,18 @@ import { OffersPage } from './pages/OffersPage';
 import { ServicesPage } from './pages/ServicesPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 
-import { ProductItem } from './data/siddhiData';
+import { ProductItem, BRANDS_DATA } from './data/siddhiData';
+
+// Warm the browser cache so brand logos and the video thumbnail appear instantly
+if (typeof window !== 'undefined') {
+  BRANDS_DATA.forEach((b) => {
+    const img = new Image();
+    img.decoding = 'async';
+    img.src = b.logo;
+  });
+  const thumb = new Image();
+  thumb.src = 'https://i.ytimg.com/vi/e3a0qpri5NA/hqdefault.jpg';
+}
 
 function AppContent() {
   const navigate = useNavigate();

@@ -43,41 +43,6 @@ const SLIDES: SlideItem[] = [
   },
 ];
 
-// Live Typewriter Effect Component
-const TypewriterText: React.FC<{ words: string[] }> = ({ words }) => {
-  const [wordIndex, setWordIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-
-  useEffect(() => {
-    const currentWord = words[wordIndex % words.length];
-    let timeout: NodeJS.Timeout;
-
-    if (!isDeleting && charIndex < currentWord.length) {
-      timeout = setTimeout(() => setCharIndex((prev) => prev + 1), 60);
-    } else if (!isDeleting && charIndex === currentWord.length) {
-      timeout = setTimeout(() => setIsDeleting(true), 1400);
-    } else if (isDeleting && charIndex > 0) {
-      timeout = setTimeout(() => setCharIndex((prev) => prev - 1), 35);
-    } else if (isDeleting && charIndex === 0) {
-      setIsDeleting(false);
-      setWordIndex((prev) => (prev + 1) % words.length);
-    }
-
-    return () => clearTimeout(timeout);
-  }, [charIndex, isDeleting, wordIndex, words]);
-
-  const currentWord = words[wordIndex % words.length];
-  const displayed = currentWord.substring(0, charIndex);
-
-  return (
-    <span className="inline-flex items-center text-[#D2430F] font-semibold tracking-wide">
-      <span>{displayed}</span>
-      <span className="inline-block w-0.5 h-4 bg-[#D2430F] ml-1 animate-pulse" />
-    </span>
-  );
-};
-
 export const Hero: React.FC<HeroProps> = ({ onOpenRfq }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
@@ -204,20 +169,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRfq }) => {
             transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
             className="max-w-3xl space-y-4"
           >
-            {/* Live Kicker & Rotating Typewriter Tag */}
-            <div className="flex flex-wrap items-center gap-2.5">
-              <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold tracking-widest uppercase text-[#D2430F] py-1 px-3 rounded-full bg-white/90 border border-[#D2430F]/25 shadow-xs backdrop-blur-md">
-                <Sparkles className="w-3 h-3 text-[#D2430F]" />
-                <span>{slide.badge}</span>
-              </span>
-
-              <div className="inline-flex items-center gap-2 text-xs text-[#5F524C] py-1 px-3 rounded-full bg-white/90 border border-[#F1D9CA] backdrop-blur-md shadow-xs">
-                <span className="text-[#5F524C] font-medium">{slide.tag}</span>
-                <span className="text-[#5F524C]/30">|</span>
-                <TypewriterText words={slide.rotatingWords} />
-              </div>
-            </div>
-
             {/* Headline with Live Fade & Scale */}
             <motion.h1
               initial={{ opacity: 0, y: 15 }}

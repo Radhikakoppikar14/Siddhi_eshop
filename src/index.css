@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
 /* Refined, tighter radius + softer shadow scale for a minimal look */
@@ -29,31 +29,31 @@
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
-    font-family: 'Barlow', system-ui, -apple-system, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     background-color: #FFFAF6;
     color: #231815;
   }
 
   /* Single modern sans family; headings get tighter tracking */
   h1, h2, .font-editorial {
-    font-family: 'Barlow Condensed', system-ui, -apple-system, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     letter-spacing: -0.025em;
     font-weight: 600;
   }
   h3 { letter-spacing: -0.015em; }
   h3, h4, h5, h6, button, input, select, textarea {
-    font-family: 'Barlow', system-ui, -apple-system, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
 }
 
 /* Unlayered so these always win over Tailwind's font-* utilities */
 .font-editorial, .font-serif {
-  font-family: 'Barlow Condensed', system-ui, -apple-system, sans-serif !important;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
   letter-spacing: -0.025em;
 }
 .italic { font-style: normal; }
 .font-mono, .font-sans {
-  font-family: 'Barlow', system-ui, -apple-system, sans-serif !important;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
 }
 .font-mono { font-variant-numeric: tabular-nums; }
 

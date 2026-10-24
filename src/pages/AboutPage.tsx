@@ -27,6 +27,7 @@ const AUTHORIZED_PARTNERS = [
 ];
 
 export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
+  const [videoActive, setVideoActive] = useState(false);
   const [lightboxImage, setLightboxImage] = useState<{ src: string; alt: string; caption: string } | null>(null);
 
   const handleInquire = (topic: string) => {
@@ -345,13 +346,36 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
             className="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-[#F1D9CA] bg-black relative group"
           >
             <div className="relative pb-[56.25%] h-0 overflow-hidden">
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/e3a0qpri5NA?rel=0&modestbranding=1"
-                title="Siddhi Kabel Corporate Overview"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="absolute top-0 left-0 w-full h-full border-0"
-              />
+              {videoActive ? (
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/e3a0qpri5NA?rel=0&modestbranding=1&autoplay=1"
+                  title="Siddhi Kabel Corporate Overview"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute top-0 left-0 w-full h-full border-0"
+                />
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setVideoActive(true)}
+                  aria-label="Play Siddhi Kabel corporate video"
+                  className="absolute inset-0 w-full h-full cursor-pointer group/play"
+                >
+                  <img
+                    src="https://i.ytimg.com/vi/e3a0qpri5NA/hqdefault.jpg"
+                    alt="Siddhi Kabel Corporate Overview video thumbnail"
+                    loading="lazy"
+                    decoding="async"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <span className="absolute inset-0 bg-black/25 group-hover/play:bg-black/10 transition-colors" />
+                  <span className="absolute inset-0 flex items-center justify-center">
+                    <span className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#D2430F] flex items-center justify-center shadow-xl group-hover/play:scale-110 transition-transform">
+                      <Play className="w-7 h-7 sm:w-8 sm:h-8 text-white fill-white ml-1" />
+                    </span>
+                  </span>
+                </button>
+              )}
             </div>
 
             {/* Video footer bar */}

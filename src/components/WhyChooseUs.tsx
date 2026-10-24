@@ -2,6 +2,35 @@ import React, { useState } from 'react';
 import { Target, Shield, Award, Users, Warehouse, FileCheck, HeartHandshake, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+const STAT_THEMES = [
+  {
+    card: 'bg-gradient-to-br from-[#FFF7F0] to-[#FDE5D3] border-[#F1CDB3]',
+    num: 'text-[#1E293B]',
+    suffix: 'text-[#D2430F]',
+    label: 'text-[#1E293B]',
+    sub: 'text-[#475569]',
+    dot: 'bg-[#D2430F]',
+  },
+  {
+    card: 'bg-gradient-to-br from-[#FFF7F0] to-[#FDE5D3] border-[#F1CDB3]',
+    num: 'text-[#1E293B]',
+    suffix: 'text-[#D2430F]',
+    label: 'text-[#1E293B]',
+    sub: 'text-[#475569]',
+    dot: 'bg-[#D2430F]',
+  },
+  {
+    card: 'bg-gradient-to-br from-[#FFF7F0] to-[#FDE5D3] border-[#F1CDB3]',
+    num: 'text-[#1E293B]',
+    suffix: 'text-[#D2430F]',
+    label: 'text-[#1E293B]',
+    sub: 'text-[#475569]',
+    dot: 'bg-[#D2430F]',
+  },
+];
+
+const CARD_TINTS = ['bg-[#FFF1E8]', 'bg-[#FFF4D6]', 'bg-[#FDE3D3]', 'bg-[#F6EBDD]'];
+
 const REASONS = [
   {
     num: '01',
@@ -58,8 +87,10 @@ const AnimatedCounterCard: React.FC<{
   suffix: string;
   label: string;
   subLabel?: string;
-}> = ({ target, suffix, label, subLabel }) => {
+  theme?: number;
+}> = ({ target, suffix, label, subLabel, theme = 0 }) => {
   const [count, setCount] = useState(0);
+  const t = STAT_THEMES[theme % STAT_THEMES.length];
 
   return (
     <motion.div
@@ -85,30 +116,30 @@ const AnimatedCounterCard: React.FC<{
       }}
       whileHover={{ y: -7, scale: 1.04 }}
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-      className="relative p-5 sm:p-6 bg-white/95 backdrop-blur-md rounded-2xl border border-[#F1D9CA] shadow-xs hover:border-[#F1D9CA] hover:shadow-xl transition-all duration-300 cursor-default group overflow-hidden"
+      className={`relative p-5 sm:p-6 rounded-2xl border shadow-sm hover:shadow-lg transition-all duration-300 cursor-default group overflow-hidden ${t.card}`}
     >
       {/* Top glowing accent border shimmer */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#FFF1E8] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       {/* Ambient background hover flare */}
-      <div className="absolute -bottom-10 -right-10 w-28 h-28 bg-[#F1D9CA]/60 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+      <div className="absolute -bottom-10 -right-10 w-28 h-28 bg-white/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
       <div className="relative z-10">
         <div className="flex items-baseline justify-between">
           <div className="flex items-baseline">
-            <span className="text-3xl sm:text-4xl lg:text-5xl font-light font-editorial text-[#5F524C] tabular-nums tracking-tight">
+            <span className={`text-3xl sm:text-4xl lg:text-5xl font-light font-editorial ${t.num} tabular-nums tracking-tight`}>
               {count}
             </span>
-            <span className="text-2xl sm:text-3xl font-light text-[#D2430F] font-editorial ml-0.5">
+            <span className={`text-2xl sm:text-3xl font-light ${t.suffix} font-editorial ml-0.5`}>
               {suffix}
             </span>
           </div>
-          <span className="w-2.5 h-2.5 rounded-full bg-[#D2430F] shadow-sm shadow-[#5F524C]/40 group-hover:scale-125 transition-transform" />
+          <span className={`w-2.5 h-2.5 rounded-full ${t.dot} group-hover:scale-125 transition-transform`} />
         </div>
-        <span className="text-xs sm:text-sm text-[#231815] font-semibold mt-2.5 block tracking-tight">
+        <span className={`text-xs sm:text-sm ${t.label} font-semibold mt-2.5 block tracking-tight`}>
           {label}
         </span>
         {subLabel && (
-          <span className="text-[11px] text-[#D2430F] font-light block mt-0.5">
+          <span className={`text-[11px] ${t.sub} font-light block mt-0.5`}>
             {subLabel}
           </span>
         )}
@@ -156,18 +187,21 @@ export const WhyChooseUs: React.FC = () => {
               <AnimatedCounterCard
                 target={15}
                 suffix="+"
+                theme={0}
                 label="Years Experience"
                 subLabel="Since 2008 in Karnataka"
               />
               <AnimatedCounterCard
                 target={25}
                 suffix="+"
+                theme={1}
                 label="Industrial segments"
                 subLabel="Pharma, Solar, OEM & Power"
               />
               <AnimatedCounterCard
                 target={500}
                 suffix="+"
+                theme={2}
                 label="Customers served"
                 subLabel="Pan-India Corporate Clients"
               />
@@ -210,12 +244,12 @@ export const WhyChooseUs: React.FC = () => {
                   viewport={{ once: false, amount: 0.05 }}
                   transition={{ duration: 0.35, delay: index * 0.04, ease: [0.21, 0.47, 0.32, 0.98] }}
                   whileHover={{ y: -3, scale: 1.01, transition: { duration: 0.2, ease: 'easeOut' } }}
-                  className="relative bg-white rounded-2xl p-4 border border-[#F1D9CA] hover:border-[#F1D9CA] shadow-2xs hover:shadow-md transition-all duration-200 flex flex-col justify-between group overflow-hidden cursor-default"
+                  className={`relative ${CARD_TINTS[index % CARD_TINTS.length]} rounded-2xl p-4 border border-[#F1D9CA] hover:border-[#D2430F]/50 shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between group overflow-hidden cursor-default`}
                 >
                   {/* Subtle top accent bar */}
-                  <div className="absolute top-0 left-0 right-0 h-0.5 bg-[#D2430F] opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-[#D2430F] opacity-70 group-hover:opacity-100 transition-opacity duration-200" />
 
-                  <div>
+                  <div className="relative z-10">
                     {/* Compact Icon + Index Row */}
                     <div className="flex items-center justify-between mb-2.5">
                       <div className="w-8 h-8 rounded-xl bg-[#FFFAF6] border border-[#F1D9CA] flex items-center justify-center text-[#5F524C] group-hover:bg-[#D2430F] group-hover:text-[#FFFAF6] transition-colors duration-200 shadow-2xs">

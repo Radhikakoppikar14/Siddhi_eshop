@@ -60,7 +60,7 @@ export const BrandPage: React.FC<BrandPageProps> = ({ onOpenSpecs, onGoToContact
 
           <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-6">
             <div className="bg-white rounded-md w-52 h-20 flex items-center justify-center shrink-0">
-              <img src={brand.logo} alt={brand.name} className="max-h-12 max-w-[80%] object-contain" />
+              <img src={brand.logo} alt={brand.name} loading="eager" decoding="async" fetchPriority="high" className="max-h-12 max-w-[80%] object-contain" />
             </div>
             <div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-editorial leading-none">{brand.name}</h1>
