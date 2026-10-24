@@ -27,7 +27,7 @@ const SLIDES: SlideItem[] = [
     subtext:
       'Authorised engineering solutions and direct distribution for Lapp, Eaton, Mennekes, and world-class industrial automation lines across India.',
     badge: 'AUTHORISED INDUSTRIAL DISTRIBUTOR',
-    accent: '#E6DEFA',
+    accent: '#F1D9CA',
     rotatingWords: ['Precision Harnessing', 'High-Speed Bus Lines', 'Zero Downtime', 'German Quality'],
   },
   {
@@ -38,7 +38,7 @@ const SLIDES: SlideItem[] = [
     subtext:
       'Direct ex-stock availability of control, flexible, optical, and heavy-duty industrial cables with same-day dispatch from our central Bangalore warehouse.',
     badge: 'CENTRAL BANGALORE WAREHOUSE',
-    accent: '#F3EFFE',
+    accent: '#FFF1E8',
     rotatingWords: ['Ex-Stock Drums', 'Same-Day Dispatch', 'Banashankari Hub', '500+ Clients'],
   },
 ];
@@ -71,9 +71,9 @@ const TypewriterText: React.FC<{ words: string[] }> = ({ words }) => {
   const displayed = currentWord.substring(0, charIndex);
 
   return (
-    <span className="inline-flex items-center text-[#6D3FD6] font-semibold tracking-wide">
+    <span className="inline-flex items-center text-[#D2430F] font-semibold tracking-wide">
       <span>{displayed}</span>
-      <span className="inline-block w-0.5 h-4 bg-[#6D3FD6] ml-1 animate-pulse" />
+      <span className="inline-block w-0.5 h-4 bg-[#D2430F] ml-1 animate-pulse" />
     </span>
   );
 };
@@ -126,7 +126,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRfq }) => {
   const slide = SLIDES[currentSlide];
 
   return (
-    <section className="relative bg-[#F3EFFE] text-[#1E1B2E] overflow-hidden select-none">
+    <section className="relative bg-[#FFF1E8] text-[#231815] overflow-hidden select-none">
       {/* Background Media Slider with Smooth Transitions */}
       <div className="absolute inset-0 z-0">
         {SLIDES.map((s, idx) => {
@@ -163,8 +163,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRfq }) => {
               )}
 
               {/* Lighter Scrim Overlay: allows background video to be clearly visible while maintaining contrast */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#FCFBFF]/88 via-[#FCFBFF]/45 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#FCFBFF]/35 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FFFAF6]/88 via-[#FFFAF6]/45 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#FFFAF6]/35 via-transparent to-transparent" />
             </div>
           );
         })}
@@ -179,7 +179,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRfq }) => {
           y: [0, -15, 0],
         }}
         transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute top-1/4 -right-16 w-96 h-96 bg-[#6D3FD6]/10 rounded-full blur-3xl pointer-events-none"
+        className="absolute top-1/4 -right-16 w-96 h-96 bg-[#D2430F]/10 rounded-full blur-3xl pointer-events-none"
       />
       <motion.div
         animate={{
@@ -205,14 +205,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRfq }) => {
           >
             {/* Live Kicker & Rotating Typewriter Tag */}
             <div className="flex flex-wrap items-center gap-2.5">
-              <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold tracking-widest uppercase text-[#6D3FD6] py-1 px-3 rounded-full bg-white/90 border border-[#6D3FD6]/25 shadow-xs backdrop-blur-md">
-                <Sparkles className="w-3 h-3 text-[#6D3FD6]" />
+              <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold tracking-widest uppercase text-[#D2430F] py-1 px-3 rounded-full bg-white/90 border border-[#D2430F]/25 shadow-xs backdrop-blur-md">
+                <Sparkles className="w-3 h-3 text-[#D2430F]" />
                 <span>{slide.badge}</span>
               </span>
 
-              <div className="inline-flex items-center gap-2 text-xs text-[#55516B] py-1 px-3 rounded-full bg-white/90 border border-[#E6DEFA] backdrop-blur-md shadow-xs">
-                <span className="text-[#55516B] font-medium">{slide.tag}</span>
-                <span className="text-[#55516B]/30">|</span>
+              <div className="inline-flex items-center gap-2 text-xs text-[#5F524C] py-1 px-3 rounded-full bg-white/90 border border-[#F1D9CA] backdrop-blur-md shadow-xs">
+                <span className="text-[#5F524C] font-medium">{slide.tag}</span>
+                <span className="text-[#5F524C]/30">|</span>
                 <TypewriterText words={slide.rotatingWords} />
               </div>
             </div>
@@ -222,7 +222,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRfq }) => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.5 }}
-              className="text-3xl sm:text-5xl lg:text-6xl font-normal leading-[1.12] tracking-tight text-[#1E1B2E] font-editorial"
+              className="text-3xl sm:text-5xl lg:text-6xl font-normal leading-[1.12] tracking-tight text-[#231815] font-editorial"
               style={{ textWrap: 'balance' }}
             >
               {slide.headline}
@@ -233,7 +233,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRfq }) => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.18, duration: 0.45 }}
-              className="text-sm sm:text-base lg:text-lg text-[#55516B] max-w-2xl font-normal leading-relaxed"
+              className="text-sm sm:text-base lg:text-lg text-[#5F524C] max-w-2xl font-normal leading-relaxed"
             >
               {slide.subtext}
             </motion.p>
@@ -248,11 +248,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRfq }) => {
               <motion.button
                 whileHover={{
                   scale: 1.03,
-                  boxShadow: '0 0 25px rgba(109, 63, 214, 0.5)',
+                  boxShadow: '0 0 25px rgba(210, 67, 15, 0.5)',
                 }}
                 whileTap={{ scale: 0.96 }}
                 onClick={() => onOpenRfq(slide.headline)}
-                className="inline-flex items-center justify-center gap-2.5 px-6 py-3 text-xs font-semibold uppercase tracking-wider text-white bg-[#6D3FD6] hover:bg-[#4F2AB0] rounded-xl transition-all shadow-lg border border-[#6D3FD6] group cursor-pointer"
+                className="inline-flex items-center justify-center gap-2.5 px-6 py-3 text-xs font-semibold uppercase tracking-wider text-white bg-[#D2430F] hover:bg-[#A8340A] rounded-xl transition-all shadow-lg border border-[#D2430F] group cursor-pointer"
               >
                 <span>Inquire / Contact Us</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -260,7 +260,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRfq }) => {
 
               <Link
                 to="/products"
-                className="inline-flex items-center justify-center px-5 py-3 text-xs font-semibold uppercase tracking-wider text-[#6D3FD6] hover:text-[#4F2AB0] bg-white/85 hover:bg-white border border-[#6D3FD6]/30 rounded-xl transition-all hover:scale-102 shadow-sm"
+                className="inline-flex items-center justify-center px-5 py-3 text-xs font-semibold uppercase tracking-wider text-[#D2430F] hover:text-[#A8340A] bg-white/85 hover:bg-white border border-[#D2430F]/30 rounded-xl transition-all hover:scale-102 shadow-sm"
               >
                 Browse Catalog
               </Link>
@@ -269,50 +269,50 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRfq }) => {
         </AnimatePresence>
 
         {/* Modern Enterprise Capability Highlights Strip */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3.5 py-4 mt-6 border-t border-[#6D3FD6]/15">
-          <div className="flex items-center gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white/90 backdrop-blur-md border border-[#E6DEFA] shadow-xs">
-            <div className="w-8 h-8 rounded-lg bg-[#F3EFFE] flex items-center justify-center text-[#6D3FD6] shrink-0 border border-[#6D3FD6]/20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3.5 py-4 mt-6 border-t border-[#D2430F]/15">
+          <div className="flex items-center gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white/90 backdrop-blur-md border border-[#F1D9CA] shadow-xs">
+            <div className="w-8 h-8 rounded-lg bg-[#FFF1E8] flex items-center justify-center text-[#D2430F] shrink-0 border border-[#D2430F]/20">
               <ShieldCheck className="w-4 h-4" />
             </div>
             <div className="min-w-0">
-              <span className="block text-xs font-semibold text-[#1E1B2E] tracking-tight">15+ Years Experience</span>
-              <span className="block text-[10px] text-[#55516B] truncate">Since 2008 in Karnataka</span>
+              <span className="block text-xs font-semibold text-[#231815] tracking-tight">15+ Years Experience</span>
+              <span className="block text-[10px] text-[#5F524C] truncate">Since 2008 in Karnataka</span>
             </div>
           </div>
 
-          <div className="flex items-center gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white/90 backdrop-blur-md border border-[#E6DEFA] shadow-xs">
-            <div className="w-8 h-8 rounded-lg bg-[#F3EFFE] flex items-center justify-center text-[#6D3FD6] shrink-0 border border-[#6D3FD6]/20">
+          <div className="flex items-center gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white/90 backdrop-blur-md border border-[#F1D9CA] shadow-xs">
+            <div className="w-8 h-8 rounded-lg bg-[#FFF1E8] flex items-center justify-center text-[#D2430F] shrink-0 border border-[#D2430F]/20">
               <Sparkles className="w-4 h-4" />
             </div>
             <div className="min-w-0">
-              <span className="block text-xs font-semibold text-[#1E1B2E] tracking-tight">8 Global OEM Brands</span>
-              <span className="block text-[10px] text-[#55516B] truncate">Lapp, Eaton, Havells, Hager</span>
+              <span className="block text-xs font-semibold text-[#231815] tracking-tight">4 Global OEM Brands</span>
+              <span className="block text-[10px] text-[#5F524C] truncate">Lapp, Eaton, Partex, Mennekes</span>
             </div>
           </div>
 
-          <div className="flex items-center gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white/90 backdrop-blur-md border border-[#E6DEFA] shadow-xs">
-            <div className="w-8 h-8 rounded-lg bg-[#F3EFFE] flex items-center justify-center text-[#6D3FD6] shrink-0 border border-[#6D3FD6]/20">
+          <div className="flex items-center gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white/90 backdrop-blur-md border border-[#F1D9CA] shadow-xs">
+            <div className="w-8 h-8 rounded-lg bg-[#FFF1E8] flex items-center justify-center text-[#D2430F] shrink-0 border border-[#D2430F]/20">
               <Zap className="w-4 h-4" />
             </div>
             <div className="min-w-0">
-              <span className="block text-xs font-semibold text-[#1E1B2E] tracking-tight">Central Bangalore Hub</span>
-              <span className="block text-[10px] text-[#55516B] truncate">Banashankari Ex-Stock Drums</span>
+              <span className="block text-xs font-semibold text-[#231815] tracking-tight">Central Bangalore Hub</span>
+              <span className="block text-[10px] text-[#5F524C] truncate">Banashankari Ex-Stock Drums</span>
             </div>
           </div>
 
-          <div className="flex items-center gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white/90 backdrop-blur-md border border-[#E6DEFA] shadow-xs">
-            <div className="w-8 h-8 rounded-lg bg-[#F3EFFE] flex items-center justify-center text-[#6D3FD6] shrink-0 border border-[#6D3FD6]/20">
+          <div className="flex items-center gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white/90 backdrop-blur-md border border-[#F1D9CA] shadow-xs">
+            <div className="w-8 h-8 rounded-lg bg-[#FFF1E8] flex items-center justify-center text-[#D2430F] shrink-0 border border-[#D2430F]/20">
               <Award className="w-4 h-4" />
             </div>
             <div className="min-w-0">
-              <span className="block text-xs font-semibold text-[#1E1B2E] tracking-tight">Statutory Compliant</span>
-              <span className="block text-[10px] text-[#55516B] truncate">IS & IEC Certified Supply</span>
+              <span className="block text-xs font-semibold text-[#231815] tracking-tight">Statutory Compliant</span>
+              <span className="block text-[10px] text-[#5F524C] truncate">IS & IEC Certified Supply</span>
             </div>
           </div>
         </div>
 
         {/* Live Slide Controls with 10-Second Linear Progress Bars */}
-        <div className="pt-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-t border-[#6D3FD6]/15">
+        <div className="pt-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-t border-[#D2430F]/15">
           {/* Slider Indicators */}
           <div className="flex items-center gap-2.5">
             {SLIDES.map((s, i) => {
@@ -322,7 +322,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRfq }) => {
                   key={i}
                   onClick={() => setCurrentSlide(i)}
                   className={`relative h-2 rounded-full overflow-hidden transition-all duration-300 cursor-pointer ${
-                    isActive ? 'w-16 bg-[#6D3FD6]/20' : 'w-5 bg-[#6D3FD6]/12 hover:bg-[#6D3FD6]/25'
+                    isActive ? 'w-16 bg-[#D2430F]/20' : 'w-5 bg-[#D2430F]/12 hover:bg-[#D2430F]/25'
                   }`}
                   aria-label={`Slide ${i + 1} - ${s.tag}`}
                 >
@@ -342,7 +342,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRfq }) => {
               );
             })}
 
-            <span className="text-[11px] font-mono text-[#55516B] ml-2">
+            <span className="text-[11px] font-mono text-[#5F524C] ml-2">
               0{currentSlide + 1} / 0{SLIDES.length}
             </span>
           </div>
@@ -353,7 +353,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRfq }) => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setCurrentSlide((prev) => (prev - 1 + SLIDES.length) % SLIDES.length)}
-              className="p-2 rounded-full border border-[#6D3FD6]/25 bg-white/70 hover:bg-white transition-colors text-[#6D3FD6] cursor-pointer"
+              className="p-2 rounded-full border border-[#D2430F]/25 bg-white/70 hover:bg-white transition-colors text-[#D2430F] cursor-pointer"
               aria-label="Previous slide"
             >
               <ChevronLeft className="w-4 h-4" />
@@ -363,7 +363,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRfq }) => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setCurrentSlide((prev) => (prev + 1) % SLIDES.length)}
-              className="p-2 rounded-full border border-[#6D3FD6]/25 bg-white/70 hover:bg-white transition-colors text-[#6D3FD6] cursor-pointer"
+              className="p-2 rounded-full border border-[#D2430F]/25 bg-white/70 hover:bg-white transition-colors text-[#D2430F] cursor-pointer"
               aria-label="Next slide"
             >
               <ChevronRight className="w-4 h-4" />

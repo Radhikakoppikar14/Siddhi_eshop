@@ -1,13 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=swap");
 @import "tailwindcss";
 
 /* Refined, tighter radius + softer shadow scale for a minimal look */
 @theme {
   --radius-md: 0.375rem;
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.625rem;
-  --radius-2xl: 0.875rem;
-  --radius-3xl: 1.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.375rem;
+  --radius-2xl: 0.375rem;
+  --radius-3xl: 0.5rem;
   --shadow-2xs: 0 1px 1px rgb(30 27 46 / 0.03);
   --shadow-xs: 0 1px 2px rgb(30 27 46 / 0.04);
   --shadow-sm: 0 1px 3px rgb(30 27 46 / 0.06);
@@ -19,41 +19,41 @@
 
 @layer base {
   :root {
-    --color-surface: #FCFBFF;
-    --color-line: #E6DEFA;
-    --color-accent: #6D3FD6;
-    --color-body: #55516B;
-    --color-ink: #1E1B2E;
+    --color-surface: #FFFAF6;
+    --color-line: #F1D9CA;
+    --color-accent: #D2430F;
+    --color-body: #5F524C;
+    --color-ink: #231815;
   }
 
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    background-color: #FCFBFF;
-    color: #1E1B2E;
+    font-family: 'Barlow', system-ui, -apple-system, sans-serif;
+    background-color: #FFFAF6;
+    color: #231815;
   }
 
   /* Single modern sans family; headings get tighter tracking */
   h1, h2, .font-editorial {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Barlow Condensed', system-ui, -apple-system, sans-serif;
     letter-spacing: -0.025em;
     font-weight: 600;
   }
   h3 { letter-spacing: -0.015em; }
   h3, h4, h5, h6, button, input, select, textarea {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Barlow', system-ui, -apple-system, sans-serif;
   }
 }
 
 /* Unlayered so these always win over Tailwind's font-* utilities */
 .font-editorial, .font-serif {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-family: 'Barlow Condensed', system-ui, -apple-system, sans-serif !important;
   letter-spacing: -0.025em;
 }
 .italic { font-style: normal; }
 .font-mono, .font-sans {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-family: 'Barlow', system-ui, -apple-system, sans-serif !important;
 }
 .font-mono { font-variant-numeric: tabular-nums; }
 
@@ -63,14 +63,14 @@
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FCFBFF;
+  background: #FFFAF6;
 }
 ::-webkit-scrollbar-thumb {
-  background: #E6DEFA;
+  background: #F1D9CA;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #6D3FD6;
+  background: #D2430F;
 }
 
 /* =====================================================================
@@ -109,8 +109,8 @@
   100% { background-position: 0% 50%; }
 }
 @keyframes livePulseRing {
-  0%   { box-shadow: 0 0 0 0 rgba(109, 63, 214, 0.45); }
-  100% { box-shadow: 0 0 0 16px rgba(109, 63, 214, 0); }
+  0%   { box-shadow: 0 0 0 0 rgba(210, 67, 15, 0.45); }
+  100% { box-shadow: 0 0 0 16px rgba(210, 67, 15, 0); }
 }
 @keyframes liveDropdown {
   from { opacity: 0; translate: 0 -8px; scale: 0.97; }
@@ -128,7 +128,7 @@
   /* Helpers you can add to any element */
   .live-float { animation: liveFloat 4.5s ease-in-out infinite; }
   .live-pulse-ring { animation: livePulseRing 2.2s ease-out infinite; }
-  .live-gradient-text { color: #6D3FD6; }
+  .live-gradient-text { color: #D2430F; }
 
   /* ---------- Buttons & links: lift, glow, press ---------- */
   :is(main, header, footer) :is(button, a)[class*="rounded"]:not(:disabled) {
@@ -137,15 +137,15 @@
   }
   :is(main, header, footer) :is(button, a)[class*="rounded"]:not(:disabled):hover {
     translate: 0 -1px;
-    box-shadow: 0 8px 18px -8px rgba(30, 27, 46, 0.28);
+    box-shadow: 0 8px 18px -8px rgba(35, 24, 21, 0.28);
   }
   :is(main, header, footer) :is(button, a)[class*="rounded"]:not(:disabled):active {
     translate: 0 0;
     scale: 0.96;
-    box-shadow: 0 3px 8px -4px rgba(85, 81, 107, 0.5);
+    box-shadow: 0 3px 8px -4px rgba(95, 82, 76, 0.5);
   }
   :is(main, header, footer) :is(button, a):focus-visible {
-    outline: 2px solid #6D3FD6;
+    outline: 2px solid #D2430F;
     outline-offset: 3px;
   }
 
@@ -198,8 +198,8 @@
   }
   :is(main) :is(div, article, li)[class*="bg-white"][class*="border"][class*="rounded-"]:not([class*="max-w-"]):not([class*="fixed"]):not(:has(input, textarea, select)):hover {
     translate: 0 -2px;
-    box-shadow: 0 14px 28px -16px rgba(30, 27, 46, 0.22);
-    border-color: #D9CFF5;
+    box-shadow: 0 14px 28px -16px rgba(35, 24, 21, 0.22);
+    border-color: #EBCBB9;
   }
 
   /* Icon tiles wiggle when their card is hovered */
@@ -227,14 +227,14 @@
   /* ---------- Scroll progress bar + cursor glow ---------- */
   .live-progress {
     position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 70;
-    background: linear-gradient(90deg, #6D3FD6, #F5B83D);
+    background: linear-gradient(90deg, #D2430F, #F5B83D);
     transform-origin: 0 50%; transform: scaleX(0);
     pointer-events: none;
   }
   .live-glow {
     position: fixed; top: 0; left: 0; width: 520px; height: 520px; z-index: 30;
     margin: -260px 0 0 -260px; border-radius: 9999px; pointer-events: none;
-    background: radial-gradient(circle, rgba(109, 63, 214, 0.16) 0%, rgba(109, 63, 214, 0) 62%);
+    background: radial-gradient(circle, rgba(210, 67, 15, 0.16) 0%, rgba(210, 67, 15, 0) 62%);
     opacity: 0; transition: opacity 0.4s ease;
     will-change: transform;
   }
@@ -250,34 +250,11 @@
 }
 
 /* Soft selection tint */
-::selection { background: #E4DAFB; color: #1E1B2E; }
+::selection { background: #F5DFD2; color: #231815; }
 
-/* ===== Colour accents: brand blue + logo red ===== */
-/* Primary buttons: subtle violet gradient */
-:is(button, a)[class*="bg-[#6D3FD6]"]:not([class*="bg-[#6D3FD6]/"]):not([class*="bg-[#F5B83D]"]) {
-  background-image: linear-gradient(135deg, #6D3FD6 0%, #8B63F0 100%);
-}
-:is(button, a)[class*="bg-[#6D3FD6]"]:not([class*="bg-[#6D3FD6]/"]):hover {
-  background-image: linear-gradient(135deg, #4F2AB0 0%, #6D3FD6 100%);
-}
-
-/* Content cards: coloured top edge, violet and amber alternating */
-main :is(div, article, li)[class*="bg-white"][class*="border"]:is([class*="rounded-2xl"], [class*="rounded-3xl"]):not([class*="fixed"]):not([class*="max-w-"]):not(:has(input, textarea, select)) {
-  border-top: 3px solid #6D3FD6;
-}
-main :is(div, article, li)[class*="bg-white"][class*="border"]:is([class*="rounded-2xl"], [class*="rounded-3xl"]):not([class*="fixed"]):not([class*="max-w-"]):not(:has(input, textarea, select)):nth-child(even) {
-  border-top-color: #F5B83D;
-}
-
-/* Icon tiles pick up a soft red tint on alternate cards */
-main .group:nth-child(even) > [class*="bg-[#F3EFFE]"][class*="rounded-"] {
-  background-color: #FFF6E0;
-}
-main .group:nth-child(even) > [class*="bg-[#F3EFFE]"][class*="rounded-"] > svg { color: #B7791F; }
-
-/* Section headings: short violet-to-amber rule under centred titles */
+/* ===== Colour accents: flat reddish-orange, no gradients ===== */
 main section h2.text-center::after,
 main section .text-center > h2::after {
-  content: ""; display: block; width: 56px; height: 3px; margin: 14px auto 0; border-radius: 3px;
-  background: linear-gradient(90deg, #6D3FD6, #F5B83D);
+  content: ""; display: block; width: 56px; height: 3px; margin: 14px auto 0;
+  background: #D2430F;
 }

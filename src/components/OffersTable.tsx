@@ -16,20 +16,20 @@ export const OffersTable: React.FC<OffersTableProps> = ({ onOpenRfq }) => {
   });
 
   return (
-    <section id="offers" className="py-20 lg:py-24 bg-[#F3EFFE] border-b border-[#E6DEFA]">
+    <section id="offers" className="py-20 lg:py-24 bg-[#FFF1E8] border-b border-[#F1D9CA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
-            <div className="flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-[#55516B] mb-2 px-3 py-1 rounded-full bg-[#F3EFFE] border border-[#E6DEFA] inline-block">
-              <Tag className="w-3.5 h-3.5 text-[#6D3FD6]" />
+            <div className="flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-[#5F524C] mb-2 px-3 py-1 rounded-full bg-[#FFF1E8] border border-[#F1D9CA] inline-block">
+              <Tag className="w-3.5 h-3.5 text-[#D2430F]" />
               <span>Special Factory Stock Lot</span>
             </div>
-            <h2 className="text-2xl sm:text-4xl font-normal text-[#1E1B2E] font-editorial tracking-tight mt-2">
+            <h2 className="text-2xl sm:text-4xl font-normal text-[#231815] font-editorial tracking-tight mt-2">
               Products On Special Offer
             </h2>
           </div>
-          <p className="text-sm text-[#55516B]/80 max-w-md font-light">
+          <p className="text-sm text-[#5F524C]/80 max-w-md font-light">
             Discounted inventory available for immediate dispatch from our Bangalore warehouse while stocks last.
           </p>
         </div>
@@ -38,30 +38,30 @@ export const OffersTable: React.FC<OffersTableProps> = ({ onOpenRfq }) => {
         <motion.div
           whileHover={{ y: -2 }}
           transition={{ duration: 0.2 }}
-          className="bg-[#F3EFFE] text-[#1E1B2E] rounded-3xl p-6 sm:p-8 mb-8 border border-[#E6DEFA] shadow-md relative overflow-hidden group"
+          className="bg-[#FFF1E8] text-[#231815] rounded-3xl p-6 sm:p-8 mb-8 border border-[#F1D9CA] shadow-md relative overflow-hidden group"
         >
-          <div className="absolute top-0 right-0 w-80 h-80 bg-[#F3EFFE] rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#FFF1E8] rounded-full blur-3xl pointer-events-none" />
           <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
             <div className="space-y-2 max-w-2xl">
-              <span className="text-xs font-semibold uppercase tracking-wider text-[#55516B]">
+              <span className="text-xs font-semibold uppercase tracking-wider text-[#5F524C]">
                 Customer Notice
               </span>
-              <p className="text-sm text-[#55516B] font-light leading-relaxed">
+              <p className="text-sm text-[#5F524C] font-light leading-relaxed">
                 Dear Customers, greetings… We are pleased to offer the below list of items with a very special rates, this offer is valid till the stock is available, we request you to kindly select the items required and send us your requirement or order for confirmation on the stock status.
               </p>
             </div>
             {/* Value Props */}
-            <div className="flex flex-wrap gap-4 text-xs text-[#1E1B2E]">
-              <div className="flex items-center gap-1.5 p-2 rounded-xl bg-white border border-[#E6DEFA]">
-                <Truck className="w-4 h-4 text-[#6D3FD6]" />
+            <div className="flex flex-wrap gap-4 text-xs text-[#231815]">
+              <div className="flex items-center gap-1.5 p-2 rounded-xl bg-white border border-[#F1D9CA]">
+                <Truck className="w-4 h-4 text-[#D2430F]" />
                 <span>Free Bangalore Delivery</span>
               </div>
-              <div className="flex items-center gap-1.5 p-2 rounded-xl bg-white border border-[#E6DEFA]">
-                <ShieldCheck className="w-4 h-4 text-[#6D3FD6]" />
+              <div className="flex items-center gap-1.5 p-2 rounded-xl bg-white border border-[#F1D9CA]">
+                <ShieldCheck className="w-4 h-4 text-[#D2430F]" />
                 <span>12 Months Warranty</span>
               </div>
-              <div className="flex items-center gap-1.5 p-2 rounded-xl bg-white border border-[#E6DEFA]">
-                <Clock className="w-4 h-4 text-[#6D3FD6]" />
+              <div className="flex items-center gap-1.5 p-2 rounded-xl bg-white border border-[#F1D9CA]">
+                <Clock className="w-4 h-4 text-[#D2430F]" />
                 <span>Ready for Dispatch</span>
               </div>
             </div>
@@ -70,15 +70,15 @@ export const OffersTable: React.FC<OffersTableProps> = ({ onOpenRfq }) => {
 
         {/* Filter Controls */}
         <div className="flex items-center gap-2 mb-6 overflow-x-auto pb-1 scrollbar-none">
-          {['all', 'Lapp', 'Eaton', 'Mennekes', 'JEF Eco Safe', 'Luker'].map((brand) => (
+          {['all', 'Lapp', 'Eaton', 'Partex', 'Mennekes'].map((brand) => (
             <motion.button
               key={brand}
               whileTap={{ scale: 0.96 }}
               onClick={() => setFilterBrand(brand)}
               className={`px-3.5 py-1.5 text-xs font-medium rounded-xl transition-all whitespace-nowrap shrink-0 cursor-pointer ${
                 filterBrand === brand
-                  ? 'bg-[#6D3FD6] text-[#FCFBFF] shadow-xs'
-                  : 'bg-white text-[#1E1B2E] border border-[#E6DEFA] hover:bg-[#FCFBFF]'
+                  ? 'bg-[#D2430F] text-[#FFFAF6] shadow-xs'
+                  : 'bg-white text-[#231815] border border-[#F1D9CA] hover:bg-[#FFFAF6]'
               }`}
             >
               {brand === 'all' ? 'All Brands' : brand}
@@ -87,10 +87,10 @@ export const OffersTable: React.FC<OffersTableProps> = ({ onOpenRfq }) => {
         </div>
 
         {/* Table Container */}
-        <div className="bg-white rounded-3xl border border-[#E6DEFA] overflow-hidden shadow-xs">
+        <div className="bg-white rounded-3xl border border-[#F1D9CA] overflow-hidden shadow-xs">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
-              <thead className="bg-[#FCFBFF] text-[#1E1B2E] font-semibold border-b border-[#E6DEFA] uppercase tracking-wider text-[11px]">
+              <thead className="bg-[#FFFAF6] text-[#231815] font-semibold border-b border-[#F1D9CA] uppercase tracking-wider text-[11px]">
                 <tr>
                   <th className="py-3.5 px-4">Part No</th>
                   <th className="py-3.5 px-4">Description</th>
@@ -100,7 +100,7 @@ export const OffersTable: React.FC<OffersTableProps> = ({ onOpenRfq }) => {
                   <th className="py-3.5 px-4 text-right">Inquiry</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#E6DEFA]/60 font-light text-[#1E1B2E]">
+              <tbody className="divide-y divide-[#F1D9CA]/60 font-light text-[#231815]">
                 <AnimatePresence>
                   {filteredOffers.map((item) => (
                     <motion.tr
@@ -109,23 +109,23 @@ export const OffersTable: React.FC<OffersTableProps> = ({ onOpenRfq }) => {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="hover:bg-[#FCFBFF] transition-colors"
+                      className="hover:bg-[#FFFAF6] transition-colors"
                     >
-                      <td className="py-3.5 px-4 font-mono font-medium text-[#1E1B2E]">
+                      <td className="py-3.5 px-4 font-mono font-medium text-[#231815]">
                         {item.partNo}
                       </td>
-                      <td className="py-3.5 px-4 font-medium text-[#1E1B2E] max-w-sm">
+                      <td className="py-3.5 px-4 font-medium text-[#231815] max-w-sm">
                         {item.description}
                       </td>
-                      <td className="py-3.5 px-4 text-[#55516B] font-semibold">
+                      <td className="py-3.5 px-4 text-[#5F524C] font-semibold">
                         {item.brand}
                       </td>
                       <td className="py-3.5 px-4">
                         {item.unit}
                       </td>
                       <td className="py-3.5 px-4">
-                        <span className="inline-flex items-center gap-1 text-[#1E1B2E] font-medium">
-                          <CheckCircle className="w-3.5 h-3.5 text-[#55516B]" />
+                        <span className="inline-flex items-center gap-1 text-[#231815] font-medium">
+                          <CheckCircle className="w-3.5 h-3.5 text-[#5F524C]" />
                           <span>{item.status}</span>
                         </span>
                       </td>
@@ -134,7 +134,7 @@ export const OffersTable: React.FC<OffersTableProps> = ({ onOpenRfq }) => {
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                           onClick={() => onOpenRfq(`${item.partNo} - ${item.description}`)}
-                          className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#FCFBFF] bg-[#6D3FD6] hover:bg-[#4F2AB0] rounded-lg transition-colors shadow-2xs cursor-pointer"
+                          className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#FFFAF6] bg-[#D2430F] hover:bg-[#A8340A] rounded-lg transition-colors shadow-2xs cursor-pointer"
                         >
                           <span>Quote</span>
                           <ArrowUpRight className="w-3 h-3" />
@@ -148,11 +148,11 @@ export const OffersTable: React.FC<OffersTableProps> = ({ onOpenRfq }) => {
           </div>
 
           {/* Terms & Conditions Footer */}
-          <div className="bg-[#FCFBFF] p-4 sm:p-6 border-t border-[#E6DEFA] text-xs text-[#55516B]/80 space-y-2">
-            <span className="font-semibold text-[#1E1B2E] uppercase tracking-wider text-[11px]">
+          <div className="bg-[#FFFAF6] p-4 sm:p-6 border-t border-[#F1D9CA] text-xs text-[#5F524C]/80 space-y-2">
+            <span className="font-semibold text-[#231815] uppercase tracking-wider text-[11px]">
               Terms &amp; Conditions:
             </span>
-            <ul className="list-disc list-inside space-y-1 text-[#55516B]/80 font-light">
+            <ul className="list-disc list-inside space-y-1 text-[#5F524C]/80 font-light">
               <li>The above special Prices are discounted; GST Extra as applicable.</li>
               <li>Payment 100% through bank transfer along with the order after confirmation.</li>
               <li>Delivery: Free Delivery to Bangalore urban and industrial area.</li>

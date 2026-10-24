@@ -13,6 +13,7 @@ import { LiveEffects } from './components/LiveEffects';
 // The Exact Pages from the Original Website
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
+import { BrandPage } from './pages/BrandPage';
 import { ProductsPage } from './pages/ProductsPage';
 import { IndustriesPage } from './pages/IndustriesPage';
 import { ContactPage } from './pages/ContactPage';
@@ -52,7 +53,7 @@ function AppContent() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FCFBFF] text-[#1E1B2E] relative">
+    <div className="min-h-screen flex flex-col bg-[#FFFAF6] text-[#231815] relative">
       {/* Starting Logo Intro Splash Reveal (as requested) */}
       {showIntro && <IntroSplash onFinish={() => setShowIntro(false)} />}
 
@@ -97,6 +98,15 @@ function AppContent() {
                   />
                 }
               />
+
+              <Route
+                path="/products/:brandId"
+                element={<BrandPage onOpenSpecs={handleOpenSpecs} onGoToContact={handleOpenContactModal} />}
+              />
+              <Route path="/products_lapp.html" element={<Navigate to="/products/lapp" replace />} />
+              <Route path="/products_eaton.html" element={<Navigate to="/products/eaton" replace />} />
+              <Route path="/products_partex.html" element={<Navigate to="/products/partex" replace />} />
+              <Route path="/products_mennekes.html" element={<Navigate to="/products/mennekes" replace />} />
 
               <Route path="/industries" element={<IndustriesPage />} />
               <Route path="/industries.html" element={<IndustriesPage />} />

@@ -95,13 +95,13 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenRf
   return (
     <section
       id="projects"
-      className="py-16 sm:py-20 lg:py-24 bg-[#F3EFFE] border-b border-[#E6DEFA] relative overflow-hidden"
+      className="py-16 sm:py-20 lg:py-24 bg-[#FFF1E8] border-b border-[#F1D9CA] relative overflow-hidden"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
       {/* Subtle ambient lighting */}
-      <div className="absolute top-10 right-0 w-80 h-80 bg-[#F3EFFE] rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#6D3FD6]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-10 right-0 w-80 h-80 bg-[#FFF1E8] rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#D2430F]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
         {/* Section Header with Carousel Navigation Controls */}
@@ -112,11 +112,11 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenRf
             viewport={{ once: false, amount: 0.05 }}
             transition={{ duration: 0.55 }}
           >
-            <div className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-widest uppercase text-[#55516B] mb-2 px-3 py-1 rounded-full bg-[#F3EFFE] border border-[#E6DEFA]">
-              <Sparkles className="w-3.5 h-3.5 text-[#6D3FD6]" />
+            <div className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-widest uppercase text-[#5F524C] mb-2 px-3 py-1 rounded-full bg-[#FFF1E8] border border-[#F1D9CA]">
+              <Sparkles className="w-3.5 h-3.5 text-[#D2430F]" />
               <span>Proven Industrial Field Projects</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-normal text-[#1E1B2E] font-editorial tracking-tight">
+            <h2 className="text-3xl sm:text-5xl font-normal text-[#231815] font-editorial tracking-tight">
               Recent Projects
             </h2>
           </motion.div>
@@ -130,14 +130,14 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenRf
             className="flex items-center gap-4"
           >
             {/* Slide Indicator Dots */}
-            <div className="flex items-center gap-1.5 bg-white/80 px-3 py-1.5 rounded-full border border-[#E6DEFA]">
+            <div className="flex items-center gap-1.5 bg-white/80 px-3 py-1.5 rounded-full border border-[#F1D9CA]">
               {CASE_STUDIES.map((_, i) => (
                 <button
                   key={i}
                   type="button"
                   onClick={() => setActiveSlide(i)}
                   className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                    activeSlide === i ? 'w-6 bg-[#6D3FD6]' : 'w-2 bg-[#E6DEFA] hover:bg-[#6D3FD6]'
+                    activeSlide === i ? 'w-6 bg-[#D2430F]' : 'w-2 bg-[#F1D9CA] hover:bg-[#D2430F]'
                   }`}
                   aria-label={`Go to project ${i + 1}`}
                 />
@@ -149,7 +149,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenRf
               <button
                 type="button"
                 onClick={handlePrev}
-                className="w-10 h-10 rounded-full bg-white border border-[#E6DEFA] flex items-center justify-center text-[#55516B] hover:bg-[#6D3FD6] hover:text-[#FCFBFF] hover:border-[#E6DEFA] shadow-xs transition-all cursor-pointer"
+                className="w-10 h-10 rounded-full bg-white border border-[#F1D9CA] flex items-center justify-center text-[#5F524C] hover:bg-[#D2430F] hover:text-[#FFFAF6] hover:border-[#F1D9CA] shadow-xs transition-all cursor-pointer"
                 aria-label="Previous project"
               >
                 <ChevronLeft className="w-5 h-5" />
@@ -157,7 +157,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenRf
               <button
                 type="button"
                 onClick={handleNext}
-                className="w-10 h-10 rounded-full bg-white border border-[#E6DEFA] flex items-center justify-center text-[#55516B] hover:bg-[#6D3FD6] hover:text-[#FCFBFF] hover:border-[#E6DEFA] shadow-xs transition-all cursor-pointer"
+                className="w-10 h-10 rounded-full bg-white border border-[#F1D9CA] flex items-center justify-center text-[#5F524C] hover:bg-[#D2430F] hover:text-[#FFFAF6] hover:border-[#F1D9CA] shadow-xs transition-all cursor-pointer"
                 aria-label="Next project"
               >
                 <ChevronRight className="w-5 h-5" />
@@ -195,7 +195,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenRf
                   }`}
                 >
                   {/* ================= FRONT SIDE ================= */}
-                  <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [-webkit-backface-visibility:hidden] bg-white rounded-3xl border border-[#E6DEFA] hover:border-[#E6DEFA] overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-xl transition-all duration-300">
+                  <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [-webkit-backface-visibility:hidden] bg-white rounded-3xl border border-[#F1D9CA] hover:border-[#F1D9CA] overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-xl transition-all duration-300">
                     <div>
                       {/* Project Photography */}
                       <div
@@ -203,7 +203,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenRf
                           e.stopPropagation();
                           setSelectedProject(project);
                         }}
-                        className="h-48 w-full relative overflow-hidden bg-[#6D3FD6]/8 cursor-zoom-in group/img"
+                        className="h-48 w-full relative overflow-hidden bg-[#D2430F]/8 cursor-zoom-in group/img"
                       >
                         <img
                           src={project.image}
@@ -211,51 +211,51 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenRf
                           className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
                           referrerPolicy="no-referrer"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#FCFBFF]/70 via-transparent to-transparent opacity-60 group-hover/img:opacity-80 transition-opacity" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#FFFAF6]/70 via-transparent to-transparent opacity-60 group-hover/img:opacity-80 transition-opacity" />
 
                         {/* Category Badge */}
-                        <div className="absolute top-3.5 left-3.5 px-3 py-1 bg-white/90 backdrop-blur-xs text-[#1E1B2E] text-xs font-medium rounded-full shadow-sm border border-[#E6DEFA]/30">
+                        <div className="absolute top-3.5 left-3.5 px-3 py-1 bg-white/90 backdrop-blur-xs text-[#231815] text-xs font-medium rounded-full shadow-sm border border-[#F1D9CA]/30">
                           {project.category}
                         </div>
 
                         {/* Primary Key Metric Pill */}
-                        <div className="absolute top-3.5 right-3.5 px-2.5 py-1 bg-white/90 backdrop-blur-xs text-[#55516B] text-[11px] font-mono font-bold rounded-full shadow-sm border border-[#E6DEFA]">
+                        <div className="absolute top-3.5 right-3.5 px-2.5 py-1 bg-white/90 backdrop-blur-xs text-[#5F524C] text-[11px] font-mono font-bold rounded-full shadow-sm border border-[#F1D9CA]">
                           {tech.primaryMetric.value}
                         </div>
 
                         {/* Zoom Indicator */}
-                        <div className="absolute bottom-3 right-3 px-2.5 py-1 bg-[#FCFBFF]/90 backdrop-blur-xs text-[#1E1B2E] text-[11px] font-medium rounded-full opacity-0 group-hover/img:opacity-100 transition-opacity duration-200 flex items-center gap-1 shadow-sm border border-[#E6DEFA]">
-                          <ZoomIn className="w-3 h-3 text-[#55516B]" />
+                        <div className="absolute bottom-3 right-3 px-2.5 py-1 bg-[#FFFAF6]/90 backdrop-blur-xs text-[#231815] text-[11px] font-medium rounded-full opacity-0 group-hover/img:opacity-100 transition-opacity duration-200 flex items-center gap-1 shadow-sm border border-[#F1D9CA]">
+                          <ZoomIn className="w-3 h-3 text-[#5F524C]" />
                           <span>Inspect</span>
                         </div>
                       </div>
 
                       {/* Content */}
                       <div className="p-5 space-y-3">
-                        <h3 className="text-lg font-normal text-[#1E1B2E] font-editorial leading-snug">
+                        <h3 className="text-lg font-normal text-[#231815] font-editorial leading-snug">
                           {project.title}
                         </h3>
 
                         {/* Clients Involved */}
-                        <div className="p-2.5 bg-[#FCFBFF] rounded-xl border border-[#E6DEFA]">
-                          <div className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-[#55516B] mb-0.5">
+                        <div className="p-2.5 bg-[#FFFAF6] rounded-xl border border-[#F1D9CA]">
+                          <div className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-[#5F524C] mb-0.5">
                             <Building2 className="w-3.5 h-3.5" />
                             <span>Clients:</span>
                           </div>
-                          <p className="text-xs font-medium text-[#1E1B2E] leading-relaxed line-clamp-1">
+                          <p className="text-xs font-medium text-[#231815] leading-relaxed line-clamp-1">
                             {project.clients}
                           </p>
                         </div>
 
-                        <p className="text-xs text-[#55516B]/80 font-light leading-relaxed line-clamp-3">
+                        <p className="text-xs text-[#5F524C]/80 font-light leading-relaxed line-clamp-3">
                           {project.summary}
                         </p>
 
                         {/* Highlights */}
-                        <div className="space-y-1.5 pt-1 border-t border-[#E6DEFA]/60">
+                        <div className="space-y-1.5 pt-1 border-t border-[#F1D9CA]/60">
                           {project.highlights.map((h, i) => (
-                            <div key={i} className="flex items-start gap-1.5 text-xs text-[#1E1B2E]/85">
-                              <CheckCircle2 className="w-3.5 h-3.5 text-[#55516B] shrink-0 mt-0.5" />
+                            <div key={i} className="flex items-start gap-1.5 text-xs text-[#231815]/85">
+                              <CheckCircle2 className="w-3.5 h-3.5 text-[#5F524C] shrink-0 mt-0.5" />
                               <span className="line-clamp-1">{h}</span>
                             </div>
                           ))}
@@ -265,7 +265,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenRf
 
                     {/* Bottom Action Area (No flip buttons) */}
                     <div className="p-5 pt-0 space-y-2">
-                      <div className="text-[11px] text-[#6D3FD6] text-center font-light">
+                      <div className="text-[11px] text-[#D2430F] text-center font-light">
                         Click card anytime to flip datasheet
                       </div>
 
@@ -276,7 +276,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenRf
                             e.stopPropagation();
                             onOpenRfq(`Project Consultation: ${project.title}`);
                           }}
-                          className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 text-xs font-semibold uppercase tracking-wider text-[#FCFBFF] bg-[#6D3FD6] hover:bg-[#4F2AB0] rounded-xl transition-all shadow-sm cursor-pointer"
+                          className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 text-xs font-semibold uppercase tracking-wider text-[#FFFAF6] bg-[#D2430F] hover:bg-[#A8340A] rounded-xl transition-all shadow-sm cursor-pointer"
                         >
                           <span>Consult on Similar Project</span>
                           <ArrowUpRight className="w-3.5 h-3.5" />
@@ -286,33 +286,33 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenRf
                   </div>
 
                   {/* ================= BACK SIDE (TECHNICAL SPECS) ================= */}
-                  <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [-webkit-backface-visibility:hidden] [transform:rotateY(180deg)] rounded-3xl bg-[#F3EFFE] text-[#1E1B2E] border border-[#E6DEFA] overflow-hidden flex flex-col justify-between p-6 shadow-2xl relative">
+                  <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [-webkit-backface-visibility:hidden] [transform:rotateY(180deg)] rounded-3xl bg-[#FFF1E8] text-[#231815] border border-[#F1D9CA] overflow-hidden flex flex-col justify-between p-6 shadow-2xl relative">
                     {/* Decorative ambient background glows */}
-                    <div className="absolute top-0 right-0 w-48 h-48 bg-[#F3EFFE] rounded-full blur-2xl pointer-events-none" />
-                    <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#6D3FD6]/8 rounded-full blur-2xl pointer-events-none" />
+                    <div className="absolute top-0 right-0 w-48 h-48 bg-[#FFF1E8] rounded-full blur-2xl pointer-events-none" />
+                    <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#D2430F]/8 rounded-full blur-2xl pointer-events-none" />
 
                     <div className="relative z-10 space-y-3.5">
                       {/* Top Header */}
-                      <div className="flex items-center justify-between gap-2 pb-2.5 border-b border-[#E6DEFA]/20">
-                        <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#6D3FD6]/8 border border-[#E6DEFA]/30 text-[11px] font-semibold uppercase tracking-wider text-[#55516B]">
-                          <Zap className="w-3 h-3 text-[#6D3FD6]" />
+                      <div className="flex items-center justify-between gap-2 pb-2.5 border-b border-[#F1D9CA]/20">
+                        <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#D2430F]/8 border border-[#F1D9CA]/30 text-[11px] font-semibold uppercase tracking-wider text-[#5F524C]">
+                          <Zap className="w-3 h-3 text-[#D2430F]" />
                           <span>Engineering Datasheet</span>
                         </div>
-                        <span className="text-[11px] text-[#55516B] font-light">
+                        <span className="text-[11px] text-[#5F524C] font-light">
                           Click to flip back
                         </span>
                       </div>
 
                       {/* Title & Primary KPI Banner */}
                       <div>
-                        <h4 className="text-base font-normal text-[#1E1B2E] font-editorial leading-snug">
+                        <h4 className="text-base font-normal text-[#231815] font-editorial leading-snug">
                           {project.title}
                         </h4>
-                        <div className="mt-2 p-2 rounded-xl bg-[#FCFBFF]/10 border border-[#E6DEFA]/30 flex items-center justify-between">
-                          <span className="text-[11px] text-[#55516B] uppercase tracking-wider font-medium">
+                        <div className="mt-2 p-2 rounded-xl bg-[#FFFAF6]/10 border border-[#F1D9CA]/30 flex items-center justify-between">
+                          <span className="text-[11px] text-[#5F524C] uppercase tracking-wider font-medium">
                             {tech.primaryMetric.label}
                           </span>
-                          <span className="text-xs font-bold text-[#FCFBFF] font-mono bg-[#6D3FD6] px-2 py-0.5 rounded-md border border-[#E6DEFA]/40">
+                          <span className="text-xs font-bold text-[#FFFAF6] font-mono bg-[#D2430F] px-2 py-0.5 rounded-md border border-[#F1D9CA]/40">
                             {tech.primaryMetric.value}
                           </span>
                         </div>
@@ -320,14 +320,14 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenRf
 
                       {/* Technical Specs List */}
                       <div className="space-y-1.5">
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-[#55516B] block">
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-[#5F524C] block">
                           Technical Parameters:
                         </span>
                         <div className="space-y-1">
                           {tech.specs.map((s, sIdx) => (
-                            <div key={sIdx} className="p-1.5 rounded-lg bg-white/[0.04] border border-[#E6DEFA] flex items-center justify-between text-[11px]">
-                              <span className="text-[#55516B] font-light">{s.label}:</span>
-                              <span className="text-[#1E1B2E] font-medium text-right max-w-[60%] truncate">{s.value}</span>
+                            <div key={sIdx} className="p-1.5 rounded-lg bg-white/[0.04] border border-[#F1D9CA] flex items-center justify-between text-[11px]">
+                              <span className="text-[#5F524C] font-light">{s.label}:</span>
+                              <span className="text-[#231815] font-medium text-right max-w-[60%] truncate">{s.value}</span>
                             </div>
                           ))}
                         </div>
@@ -335,12 +335,12 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenRf
 
                       {/* Standards Compliance Chips */}
                       <div>
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-[#55516B] block mb-1">
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-[#5F524C] block mb-1">
                           Standards:
                         </span>
                         <div className="flex flex-wrap gap-1">
                           {tech.standards.map((std, stdIdx) => (
-                            <span key={stdIdx} className="px-2 py-0.5 rounded bg-[#FCFBFF]/10 border border-[#E6DEFA]/30 text-[10px] text-[#1E1B2E] font-mono">
+                            <span key={stdIdx} className="px-2 py-0.5 rounded bg-[#FFFAF6]/10 border border-[#F1D9CA]/30 text-[10px] text-[#231815] font-mono">
                               {std}
                             </span>
                           ))}
@@ -348,9 +348,9 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenRf
                       </div>
 
                       {/* Execution Scope */}
-                      <div className="p-2 rounded-xl bg-white/[0.04] border border-[#E6DEFA] text-[11px] text-[#55516B] font-light leading-relaxed">
-                        <strong className="text-[#1E1B2E] font-medium block mb-0.5 flex items-center gap-1 text-[10px]">
-                          <FileCheck className="w-3 h-3 text-[#6D3FD6]" />
+                      <div className="p-2 rounded-xl bg-white/[0.04] border border-[#F1D9CA] text-[11px] text-[#5F524C] font-light leading-relaxed">
+                        <strong className="text-[#231815] font-medium block mb-0.5 flex items-center gap-1 text-[10px]">
+                          <FileCheck className="w-3 h-3 text-[#D2430F]" />
                           Scope Executed:
                         </strong>
                         <p className="line-clamp-2">{tech.scope}</p>
@@ -358,7 +358,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenRf
                     </div>
 
                     {/* Bottom Actions on Back Face */}
-                    <div className="relative z-10 pt-2 border-t border-[#E6DEFA]/20 space-y-1.5">
+                    <div className="relative z-10 pt-2 border-t border-[#F1D9CA]/20 space-y-1.5">
                       {onOpenRfq && (
                         <button
                           type="button"
@@ -366,7 +366,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenRf
                             e.stopPropagation();
                             onOpenRfq(`Engineering Datasheet Consultation: ${project.title}`);
                           }}
-                          className="w-full inline-flex items-center justify-center gap-2 py-2 px-3 rounded-xl bg-[#6D3FD6] hover:bg-[#4F2AB0] text-[#FCFBFF] text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer shadow-md border border-[#E6DEFA]/30"
+                          className="w-full inline-flex items-center justify-center gap-2 py-2 px-3 rounded-xl bg-[#D2430F] hover:bg-[#A8340A] text-[#FFFAF6] text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer shadow-md border border-[#F1D9CA]/30"
                         >
                           <Send className="w-3 h-3" />
                           <span>Request Quotation</span>
@@ -389,7 +389,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenRf
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedProject(null)}
-            className="fixed inset-0 z-50 bg-[#F3EFFE] backdrop-blur-sm backdrop-blur-md flex items-center justify-center p-4 sm:p-6"
+            className="fixed inset-0 z-50 bg-[#FFF1E8] backdrop-blur-sm backdrop-blur-md flex items-center justify-center p-4 sm:p-6"
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0, y: 20 }}
@@ -397,10 +397,10 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenRf
               exit={{ scale: 0.9, opacity: 0, y: 20 }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative max-w-4xl w-full bg-[#FCFBFF] rounded-3xl overflow-hidden shadow-2xl border border-[#E6DEFA]"
+              className="relative max-w-4xl w-full bg-[#FFFAF6] rounded-3xl overflow-hidden shadow-2xl border border-[#F1D9CA]"
             >
               {/* Image Preview with Close Button */}
-              <div className="relative bg-[#F3EFFE] max-h-[60vh] flex items-center justify-center overflow-hidden">
+              <div className="relative bg-[#FFF1E8] max-h-[60vh] flex items-center justify-center overflow-hidden">
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
@@ -409,32 +409,32 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenRf
                 <button
                   type="button"
                   onClick={() => setSelectedProject(null)}
-                  className="absolute top-4 right-4 p-2.5 rounded-full bg-white/80 hover:bg-white text-[#1E1B2E] transition-colors cursor-pointer"
+                  className="absolute top-4 right-4 p-2.5 rounded-full bg-white/80 hover:bg-white text-[#231815] transition-colors cursor-pointer"
                   aria-label="Close image popup"
                 >
                   <X className="w-5 h-5" />
                 </button>
-                <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#6D3FD6] text-[#FCFBFF] text-xs font-semibold tracking-wider uppercase border border-[#E6DEFA]/30">
+                <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#D2430F] text-[#FFFAF6] text-xs font-semibold tracking-wider uppercase border border-[#F1D9CA]/30">
                   {selectedProject.category}
                 </div>
               </div>
 
               {/* Details & Inquire Bar */}
-              <div className="p-6 sm:p-8 space-y-4 bg-[#FCFBFF]">
+              <div className="p-6 sm:p-8 space-y-4 bg-[#FFFAF6]">
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-normal text-[#1E1B2E] font-editorial mb-1">
+                  <h3 className="text-xl sm:text-2xl font-normal text-[#231815] font-editorial mb-1">
                     {selectedProject.title}
                   </h3>
-                  <p className="text-xs text-[#55516B] font-medium">
+                  <p className="text-xs text-[#5F524C] font-medium">
                     Clients: {selectedProject.clients}
                   </p>
                 </div>
-                <p className="text-xs sm:text-sm text-[#55516B]/80 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#5F524C]/80 font-light leading-relaxed">
                   {selectedProject.summary}
                 </p>
 
-                <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-[#E6DEFA]">
-                  <span className="text-xs text-[#6D3FD6] font-light">
+                <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-[#F1D9CA]">
+                  <span className="text-xs text-[#D2430F] font-light">
                     Siddhi Kabel engineering &amp; factory-certified materials supply.
                   </span>
                   <button
@@ -444,7 +444,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenRf
                       setSelectedProject(null);
                       onOpenRfq?.(`Project Consultation: ${projTitle}`);
                     }}
-                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#6D3FD6] hover:bg-[#4F2AB0] text-[#FCFBFF] text-xs font-semibold uppercase tracking-wider transition-all shadow-sm cursor-pointer"
+                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#D2430F] hover:bg-[#A8340A] text-[#FFFAF6] text-xs font-semibold uppercase tracking-wider transition-all shadow-sm cursor-pointer"
                   >
                     <Send className="w-3.5 h-3.5" />
                     <span>Inquire About This Implementation</span>

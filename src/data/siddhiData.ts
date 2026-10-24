@@ -7,6 +7,10 @@ export interface BrandInfo {
   featuredImg: string;
   categories: string[];
   productCount: string;
+  origin: string;
+  color: string;      // official brand colour
+  colorDark: string;  // darker shade for text on light backgrounds
+  colorTint: string;  // very light wash for card backgrounds
 }
 
 export interface ProductItem {
@@ -96,90 +100,62 @@ export const BRANDS_DATA: BrandInfo[] = [
   {
     id: "lapp",
     name: "Lapp Kabel",
-    shortDesc: "World leader in flexible power, control, automation, and industrial data communication cables.",
+    shortDesc: "Global pioneer in integrated cable and connection technology.",
     fullDesc:
-      "Lapp India produces cables and conductors for different industries and markets. Known worldwide for engineering benchmarks like ÖLFLEX®, UNITRONIC®, and ETHERLINE®.",
+      "Lapp produces cables and conductors for different industries and markets. Known worldwide for engineering benchmarks like ÖLFLEX®, UNITRONIC® and ETHERLINE®.",
     logo: "/images/clients/lapp.png",
     featuredImg: "/images/olflex.png",
     categories: ["Power & Control Cables", "Data Communication", "Cable Glands & Connectors"],
     productCount: "40,000+ Items",
-  },
-  {
-    id: "havells",
-    name: "Havells India",
-    shortDesc: "Leading Fast Moving Electrical Goods (FMEG) company and industrial switchgear pioneer.",
-    fullDesc:
-      "Havells India Limited is a leading Fast Moving Electrical Goods (FMEG) Company and a major global presence with extensive industrial switchgear, LED luminaires, and power distribution systems.",
-    logo: "/images/clients/havells.png",
-    featuredImg: "/images/header-img/havells-logo.png",
-    categories: ["Industrial Switchgear", "LED Luminaires", "Building Power"],
-    productCount: "Authorized Stockist",
+    origin: "Germany",
+    color: "#FF6A00",
+    colorDark: "#B34700",
+    colorTint: "#FFF3E8",
   },
   {
     id: "eaton",
     name: "Eaton - Moeller",
-    shortDesc: "Broad range of high-reliability products and engineering solutions for power and control.",
+    shortDesc: "World leader in intelligent motor control, switchgear, automation and power distribution.",
     fullDesc:
-      "Eaton produces a broad range of products and services for power and control applications, including motor-protective circuit breakers, contactors, pilot devices, and smart communication systems.",
+      "Eaton produces a broad range of products and services for power and control applications, including motor-protective circuit breakers, contactors, pilot devices and smart communication systems.",
     logo: "/images/clients/eaton.png",
     featuredImg: "/images/resource/et1.jpg",
     categories: ["Motor Protection (PKZ/PKE)", "Contactors & Relays", "Pilot Devices (RMQ 22.5)"],
     productCount: "Full Industrial Line",
+    origin: "Germany / USA",
+    color: "#0057B8",
+    colorDark: "#003F87",
+    colorTint: "#EAF2FC",
   },
   {
-    id: "jef",
-    name: "JEF Eco Safe",
-    shortDesc: "Comprehensive solutions for maintenance-free grounding, chemical earthing, and lightning protection.",
+    id: "partex",
+    name: "Partex",
+    shortDesc: "Precision wire, cable and component marking systems engineered in Sweden since 1948.",
     fullDesc:
-      "Specialized in carbon-based chemical earthing electrodes, early streamer emission (ESE) lightning arrestors, and exothermic welding engineered for 100% human and equipment safety.",
-    logo: "/images/clients/jef.png",
-    featuredImg: "/images/resource/jef1.png",
-    categories: ["Chemical Grounding", "Lightning Protection", "Exothermic Welding"],
-    productCount: "Safety Systems",
+      "Partex Marking Systems makes wire, cable and component identification for panels, machines and plants: sleeves, markers, labels and printers that keep installations traceable.",
+    logo: "/images/clients/partex.png",
+    featuredImg: "/images/clients/partex.png",
+    categories: ["Wire & Cable Markers", "Marking Sleeves", "Labels & Marking Printers"],
+    productCount: "Marking Systems",
+    origin: "Sweden",
+    color: "#E30613",
+    colorDark: "#A8040E",
+    colorTint: "#FDECEE",
   },
   {
     id: "mennekes",
     name: "Mennekes",
-    shortDesc: "Leading German manufacturer of standardized industrial plugs and sockets for harsh environments.",
+    shortDesc: "Industry-defining standard in industrial plugs, CEE receptacles and distribution units.",
     fullDesc:
-      "MENNEKES is a leading manufacturer of industrial plugs and sockets, CEE receptacles, and interlocked combination units designed for harsh mechanical and chemical industrial environments.",
+      "MENNEKES is a leading manufacturer of industrial plugs and sockets, CEE receptacles and interlocked combination units designed for harsh mechanical and chemical industrial environments.",
     logo: "/images/clients/mennekes.png",
     featuredImg: "/images/resource/me1.jpg",
-    categories: ["CEE Plugs & Sockets (16A–125A)", "Interlocked Combinations", "Industrial Ethernet"],
+    categories: ["CEE Plugs & Sockets (16A–125A)", "Interlocked Combinations", "Distribution Units"],
     productCount: "IP44 / IP67 Rated",
-  },
-  {
-    id: "hager",
-    name: "Hager",
-    shortDesc: "The specialist for electrical distribution and protection in residential and commercial sectors.",
-    fullDesc:
-      "Hager is the specialist for electrical installations, modular switchgear, enclosures, and energy management solutions across commercial and residential infrastructures.",
-    logo: "/images/clients/hager.png",
-    featuredImg: "/images/resource/ha1.jpg",
-    categories: ["Modular Switchgear", "Distribution Boards", "Energy Management"],
-    productCount: "Certified Protection",
-  },
-  {
-    id: "luker",
-    name: "Luker",
-    shortDesc: "Manufactures cost-effective and ultra high-efficiency LED lighting solutions in India.",
-    fullDesc:
-      "Luker Electric Technologies manufactures cost-effective LED luminaires in India for domestic, commercial, and high-bay industrial shop floor retrofit installations.",
-    logo: "/images/clients/luker.png",
-    featuredImg: "/images/header-img/luker-logo.png",
-    categories: ["Industrial High-Bay LED", "Commercial Battens", "Retrofit Systems"],
-    productCount: "Energy Star Class",
-  },
-  {
-    id: "neptune",
-    name: "Neptune India",
-    shortDesc: "Global products and solutions in the field of power quality, energy metering, and power management.",
-    fullDesc:
-      "Neptune India offers cutting-edge power quality capacitors, harmonic filters, APFC controllers, and industrial plugs and sockets based on latest energy management technology.",
-    logo: "/images/clients/neptune.png",
-    featuredImg: "/images/header-img/neptune-logo.png",
-    categories: ["Power Quality & APFC", "Harmonic Filtering", "Industrial Plugs"],
-    productCount: "Power Optimizers",
+    origin: "Germany",
+    color: "#D6001C",
+    colorDark: "#9E0015",
+    colorTint: "#FCEAEC",
   },
 ];
 
@@ -423,107 +399,47 @@ export const PRODUCTS_CATALOG: ProductItem[] = [
     standards: ["DIN EN 61439", "CE", "DNV-GL"],
   },
 
-  // JEF Eco Safe products
+  // Partex products
   {
-    id: "jef-earthing",
-    brandId: "jef",
-    brandName: "JEF Eco Safe",
-    name: "JEF Maintenance-Free Chemical Earthing Systems",
-    category: "Grounding & Lightning Protection",
-    code: "JEF-ECOSAFE-CP",
-    shortDesc: "Carbon-based advanced chemical grounding electrode with ultra-low earth resistance.",
+    id: "partex-sleeves",
+    brandId: "partex",
+    brandName: "Partex",
+    name: "PARTEX Marking Sleeves & Wire Markers",
+    category: "Wire & Cable Marking",
+    code: "PARTEX-PS-SLEEVE",
+    shortDesc: "Pre-printed and print-on-demand sleeves for clear, lasting wire identification.",
     details:
-      "Non-corrosive, non-polluting maintenance-free earth pit system. Utilizes high-conductivity carbonaceous backfill compound (Loresco Powerfill) guaranteeing stable low ohmic value for over 25 years.",
+      "Wire and cable markers for control panels, machine wiring and plant installations. Legible numbering that stays put through heat, oil and handling.",
     specifications: [
-      { label: "Electrode Material", value: "High-grade copper bonded / GI pipe" },
-      { label: "Backfill Compound", value: "Carbonaceous Loresco Powerfill" },
-      { label: "Expected Lifespan", value: "> 25 years maintenance-free" },
-      { label: "Earth Resistance", value: "< 1 Ohm achievable" },
+      { label: "Application", value: "Wire & cable identification" },
+      { label: "Formats", value: "Sleeves, clip-on markers, flat labels" },
+      { label: "Marking", value: "Pre-printed or printed on demand" },
+      { label: "Origin", value: "Sweden" },
     ],
-    image: "/images/resource/jef1.png",
-    standards: ["IS 3043", "IEEE 80", "IEC 62561-7"],
+    image: "/images/clients/partex.png",
+    standards: ["CE", "RoHS"],
     isFeatured: true,
   },
   {
-    id: "jef-lightning",
-    brandId: "jef",
-    brandName: "JEF Eco Safe",
-    name: "ESE Early Streamer Emission Lightning Arrestors",
-    category: "Grounding & Lightning Protection",
-    code: "JEF-ESE-STAR",
-    shortDesc: "Advanced active lightning terminal offering expanded protection radius for factories and commercial towers.",
+    id: "partex-printers",
+    brandId: "partex",
+    brandName: "Partex",
+    name: "PARTEX Marking Printers & Software",
+    category: "Wire & Cable Marking",
+    code: "PARTEX-PRINT",
+    shortDesc: "Printers and software for producing wire and component markers in-house.",
     details:
-      "Tested and certified to withstand multiple high-energy lightning discharges. Provides comprehensive umbrella shielding for industrial factory roofs, solar parks, and high-rise infrastructures.",
+      "Produce sleeves and labels on site with the sequence and legend your drawings call for, so panel shops spend less time on manual marking.",
     specifications: [
-      { label: "Triggering Advance Time", value: "Up to 60 microseconds" },
-      { label: "Protection Radius", value: "Up to 120 meters radius" },
-      { label: "Current Withstand", value: "200 kA (10/350 μs)" },
-      { label: "Material", value: "High-grade 316L Stainless Steel" },
+      { label: "Output", value: "Sleeves, labels, tags" },
+      { label: "Use", value: "Panel building, maintenance, projects" },
+      { label: "Origin", value: "Sweden" },
     ],
-    image: "/images/resource/jef4.jpg",
-    standards: ["NFC 17-102:2011", "IEC 62305", "CE"],
-  },
-
-  // Havells & Luker Energy Saving
-  {
-    id: "luker-highbay",
-    brandId: "luker",
-    brandName: "Luker",
-    name: "Industrial LED High-Bay Luminaires & Retrofit Fixtures",
-    category: "Energy Saving LED Solutions",
-    code: "LUKER-IND-HB-150W",
-    shortDesc: "High lumen efficacy LED fixtures for shop floors, warehouses, and heavy production plants.",
-    details:
-      "Cuts industrial lighting energy costs by up to 65%. Equipped with die-cast aluminum heat sinks, surge protection, and flicker-free isolated drivers for 24/7 continuous duty.",
-    specifications: [
-      { label: "Efficacy", value: "> 140 lm/Watt" },
-      { label: "Surge Protection", value: "6 kV / 10 kV inbuilt" },
-      { label: "Color Temperature", value: "4000K / 5700K / 6500K" },
-      { label: "Lifespan", value: "50,000 burning hours (L70)" },
-    ],
-    image: "/images/gallery/led.jpg",
-    standards: ["BIS Certified", "IP66", "IK08"],
-    isFeatured: true,
-  },
-  {
-    id: "hager-db",
-    brandId: "hager",
-    brandName: "Hager",
-    name: "Modular MCBs & Noveta Distribution Boards",
-    category: "Industrial Switchgear",
-    code: "HAGER-NOVETA-TPN",
-    shortDesc: "Precision modular miniature circuit breakers, RCCBs, and IP43/IP65 steel enclosures.",
-    details:
-      "Designed for seamless phase segregation, easy cabling, and dependable overload & short circuit tripping in modern manufacturing and commercial facilities.",
-    specifications: [
-      { label: "Breaking Capacity", value: "10 kA / 15 kA" },
-      { label: "Poles", value: "1P, 2P, 3P, 3P+N, 4P" },
-      { label: "Enclosure Ingress", value: "IP43 / IP54 double door" },
-      { label: "Busbar Type", value: "High conductivity insulated copper" },
-    ],
-    image: "/images/resource/ha1.jpg",
-    standards: ["IS/IEC 60898", "IEC 60947-2", "CE"],
-  },
-  {
-    id: "neptune-apfc",
-    brandId: "neptune",
-    brandName: "Neptune India",
-    name: "Automatic Power Factor Correction (APFC) & Heavy Capacitors",
-    category: "Energy Saving LED Solutions",
-    code: "NEPTUNE-DUC-HP",
-    shortDesc: "Heavy duty gas-filled and dry-type capacitors with intelligent microprocessor APFC relays.",
-    details:
-      "Eliminates low power factor penalties from electricity utilities, minimizes harmonic heating, and optimizes overall substation load distribution.",
-    specifications: [
-      { label: "Capacitor Technology", value: "Dry type MPP / Gas filled resin" },
-      { label: "Overcurrent Capacity", value: "Up to 2.5 x In continuously" },
-      { label: "Harmonic Filtering", value: "7% / 14% detuned reactors" },
-      { label: "Controller Steps", value: "6, 8, 12, 16 step micro-APFC" },
-    ],
-    image: "/images/header-img/neptune-logo.png",
-    standards: ["IEC 60831-1/-2", "IS 13340", "CE"],
+    image: "/images/clients/partex.png",
+    standards: ["CE"],
   },
 ];
+
 
 export const CLIENTS_LIST: ClientPartner[] = [
   { name: "Toyota Kirloskar", logo: "/images/clients/toyota.png", industry: "Automotive" },
@@ -592,7 +508,7 @@ export const SERVICES_DATA = [
       "Specialized auditing and precision installation of electrical earth pits, maintenance-free chemical grounding solutions, and active ESE lightning arrestor networks.",
     features: [
       "Auditing and testing of existing electrical earth pits",
-      "JEF Eco Safe carbonaceous chemical grounding installation",
+      "Maintenance-free chemical grounding installation",
       "Early Streamer Emission (ESE) lightning arrestors",
       "Exothermic welding for low-impedance permanent bonding",
     ],
@@ -682,14 +598,6 @@ export const SPECIAL_OFFERS: SpecialOfferItem[] = [
     unit: "Pack of 5",
   },
   {
-    partNo: "JEF-ECO-100",
-    description: "JEF Eco Safe Chemical Earth Electrode 3m with Carbon Loresco Compound",
-    category: "Grounding",
-    brand: "JEF Eco Safe",
-    status: "Direct Dispatch",
-    unit: "Set",
-  },
-  {
     partNo: "SKIN-MS-M25",
     description: "Lapp Skintop MS-M Nickel Plated Brass Cable Glands M25",
     category: "Cable Glands",
@@ -698,11 +606,11 @@ export const SPECIAL_OFFERS: SpecialOfferItem[] = [
     unit: "Box of 25",
   },
   {
-    partNo: "LUK-HB-100W",
-    description: "Luker 100W High Bay Industrial Shop Floor LED Luminaire",
-    category: "LED Lighting",
-    brand: "Luker",
-    status: "Project Lot",
-    unit: "Piece",
+    partNo: "PARTEX-PS-SLEEVE",
+    description: "Partex Wire Marking Sleeves, pre-printed numbering sets",
+    category: "Wire Marking",
+    brand: "Partex",
+    status: "Ready for Dispatch",
+    unit: "Packs",
   },
 ];

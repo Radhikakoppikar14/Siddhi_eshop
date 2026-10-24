@@ -57,40 +57,40 @@ export const ProductExplorer: React.FC<ProductExplorerProps> = ({
   }, [activeCategory, activeBrandFilter, searchQuery]);
 
   return (
-    <section id="products" className="py-20 lg:py-24 bg-[#F3EFFE] border-b border-[#E6DEFA]">
+    <section id="products" className="py-20 lg:py-24 bg-[#FFF1E8] border-b border-[#F1D9CA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
-            <div className="text-xs font-semibold tracking-widest uppercase text-[#55516B] mb-2 px-3 py-1 rounded-full bg-[#F3EFFE] border border-[#E6DEFA] inline-block">
+            <div className="text-xs font-semibold tracking-widest uppercase text-[#5F524C] mb-2 px-3 py-1 rounded-full bg-[#FFF1E8] border border-[#F1D9CA] inline-block">
               Comprehensive Product Portfolio
             </div>
-            <h2 className="text-2xl sm:text-4xl font-normal text-[#1E1B2E] font-editorial tracking-tight mt-2">
+            <h2 className="text-2xl sm:text-4xl font-normal text-[#231815] font-editorial tracking-tight mt-2">
               Products Catalog
             </h2>
           </div>
-          <p className="text-sm text-[#55516B]/80 max-w-md font-light">
+          <p className="text-sm text-[#5F524C]/80 max-w-md font-light">
             Engineered for high performance, electrical safety, continuous duty, and international compliance in harsh plant conditions.
           </p>
         </div>
 
         {/* Search & Filter Bar */}
-        <div className="bg-white rounded-2xl border border-[#E6DEFA] p-4 sm:p-5 mb-8 space-y-4 shadow-2xs">
+        <div className="bg-white rounded-2xl border border-[#F1D9CA] p-4 sm:p-5 mb-8 space-y-4 shadow-2xs">
           <div className="flex flex-col md:flex-row items-center gap-4">
             {/* Search Input */}
             <div className="relative w-full md:flex-1">
-              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#6D3FD6]" />
+              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#D2430F]" />
               <input
                 type="text"
                 placeholder="Search cables, part numbers, switchgears, earthing..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 text-xs bg-[#FCFBFF] border border-[#E6DEFA] rounded-xl focus:outline-hidden focus:border-[#E6DEFA] focus:ring-1 focus:ring-[#55516B] text-[#1E1B2E] transition-all"
+                className="w-full pl-10 pr-4 py-2.5 text-xs bg-[#FFFAF6] border border-[#F1D9CA] rounded-xl focus:outline-hidden focus:border-[#F1D9CA] focus:ring-1 focus:ring-[#5F524C] text-[#231815] transition-all"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-[#6D3FD6] hover:text-[#1E1B2E] cursor-pointer"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-[#D2430F] hover:text-[#231815] cursor-pointer"
                 >
                   Clear
                 </button>
@@ -103,7 +103,7 @@ export const ProductExplorer: React.FC<ProductExplorerProps> = ({
                 value={activeBrandFilter}
                 onChange={(e) => setActiveBrandFilter(e.target.value)}
                 aria-label="Filter by Brand"
-                className="w-full px-3 py-2.5 text-xs bg-[#FCFBFF] border border-[#E6DEFA] rounded-xl focus:outline-hidden focus:border-[#E6DEFA] text-[#1E1B2E] cursor-pointer"
+                className="w-full px-3 py-2.5 text-xs bg-[#FFFAF6] border border-[#F1D9CA] rounded-xl focus:outline-hidden focus:border-[#F1D9CA] text-[#231815] cursor-pointer"
               >
                 <option value="all">All Brands ({PRODUCTS_CATALOG.length} items)</option>
                 {BRANDS_DATA.map((brand) => (
@@ -126,8 +126,8 @@ export const ProductExplorer: React.FC<ProductExplorerProps> = ({
                   onClick={() => setActiveCategory(category)}
                   className={`px-3.5 py-1.5 rounded-xl text-xs font-medium whitespace-nowrap transition-all cursor-pointer ${
                     isActive
-                      ? 'bg-[#6D3FD6] text-[#FCFBFF] shadow-xs'
-                      : 'bg-[#FCFBFF] text-[#1E1B2E] border border-[#E6DEFA] hover:bg-[#6D3FD6]/8'
+                      ? 'bg-[#D2430F] text-[#FFFAF6] shadow-xs'
+                      : 'bg-[#FFFAF6] text-[#231815] border border-[#F1D9CA] hover:bg-[#D2430F]/8'
                   }`}
                 >
                   {category}
@@ -139,16 +139,16 @@ export const ProductExplorer: React.FC<ProductExplorerProps> = ({
 
         {/* Product Cards Grid */}
         {filteredProducts.length === 0 ? (
-          <div className="text-center py-16 bg-white rounded-2xl border border-dashed border-[#E6DEFA] p-8">
-            <p className="text-base font-medium text-[#1E1B2E]">No products match your search or filter.</p>
-            <p className="text-xs text-[#6D3FD6] mt-1">Try clearing filters or search terms.</p>
+          <div className="text-center py-16 bg-white rounded-2xl border border-dashed border-[#F1D9CA] p-8">
+            <p className="text-base font-medium text-[#231815]">No products match your search or filter.</p>
+            <p className="text-xs text-[#D2430F] mt-1">Try clearing filters or search terms.</p>
             <button
               onClick={() => {
                 setActiveCategory('All Categories');
                 setActiveBrandFilter('all');
                 setSearchQuery('');
               }}
-              className="mt-4 px-4 py-2 bg-[#6D3FD6] text-[#FCFBFF] text-xs rounded-xl hover:bg-[#4F2AB0] transition-colors cursor-pointer"
+              className="mt-4 px-4 py-2 bg-[#D2430F] text-[#FFFAF6] text-xs rounded-xl hover:bg-[#A8340A] transition-colors cursor-pointer"
             >
               Reset all filters
             </button>
@@ -170,21 +170,21 @@ export const ProductExplorer: React.FC<ProductExplorerProps> = ({
                     transition: { type: 'spring', stiffness: 350, damping: 25 },
                   }}
                   whileTap={{ scale: 0.985 }}
-                  className="group bg-white rounded-3xl border border-[#E6DEFA] hover:border-[#E6DEFA] shadow-xs hover:shadow-[0_16px_36px_-10px_rgba(85, 81, 107,0.18)] transition-colors duration-300 p-5 sm:p-6 flex flex-col justify-between relative overflow-hidden"
+                  className="group bg-white rounded-3xl border border-[#F1D9CA] hover:border-[#F1D9CA] shadow-xs hover:shadow-[0_16px_36px_-10px_rgba(95, 82, 76,0.18)] transition-colors duration-300 p-5 sm:p-6 flex flex-col justify-between relative overflow-hidden"
                 >
                   {/* Subtle diagonal ambient light sheen on hover */}
-                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-[#E6DEFA]/25 to-transparent pointer-events-none z-10 skew-x-12" />
+                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-[#F1D9CA]/25 to-transparent pointer-events-none z-10 skew-x-12" />
 
                   {/* Top glowing accent bar that expands smoothly on hover */}
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#F3EFFE] via-[#6D3FD6] to-[#F3EFFE] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FFF1E8] via-[#D2430F] to-[#FFF1E8] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                   <div>
                     {/* Product Image Slot with Lightbox Trigger & Smooth Float */}
                     <motion.div
                       onClick={() => setLightboxProduct(product)}
-                      whileHover={{ backgroundColor: '#F3EFFE' }}
+                      whileHover={{ backgroundColor: '#FFF1E8' }}
                       transition={{ duration: 0.2 }}
-                      className="relative w-full h-48 bg-[#FCFBFF] rounded-2xl border border-[#E6DEFA] p-4 flex items-center justify-center mb-4 overflow-hidden cursor-zoom-in group/img"
+                      className="relative w-full h-48 bg-[#FFFAF6] rounded-2xl border border-[#F1D9CA] p-4 flex items-center justify-center mb-4 overflow-hidden cursor-zoom-in group/img"
                     >
                       <motion.img
                         whileHover={{ scale: 1.1, y: -2 }}
@@ -199,37 +199,37 @@ export const ProductExplorer: React.FC<ProductExplorerProps> = ({
                       <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileHover={{ scale: 1.05 }}
-                        className="absolute top-2.5 right-2.5 opacity-0 group-hover/img:opacity-100 transition-all duration-200 bg-white/85 text-[#1E1B2E] px-2 py-1 rounded-lg text-xs backdrop-blur-xs flex items-center gap-1 shadow-sm border border-[#E6DEFA]/30"
+                        className="absolute top-2.5 right-2.5 opacity-0 group-hover/img:opacity-100 transition-all duration-200 bg-white/85 text-[#231815] px-2 py-1 rounded-lg text-xs backdrop-blur-xs flex items-center gap-1 shadow-sm border border-[#F1D9CA]/30"
                       >
-                        <Maximize2 className="w-3.5 h-3.5 text-[#6D3FD6]" />
+                        <Maximize2 className="w-3.5 h-3.5 text-[#D2430F]" />
                         <span className="text-[10px] font-medium">Zoom</span>
                       </motion.div>
 
                       {product.code && (
-                        <span className="absolute bottom-2.5 left-2.5 px-2 py-0.5 bg-white/95 backdrop-blur-xs border border-[#E6DEFA] rounded-md text-[10px] font-mono text-[#1E1B2E] shadow-2xs group-hover:border-[#E6DEFA] transition-colors">
+                        <span className="absolute bottom-2.5 left-2.5 px-2 py-0.5 bg-white/95 backdrop-blur-xs border border-[#F1D9CA] rounded-md text-[10px] font-mono text-[#231815] shadow-2xs group-hover:border-[#F1D9CA] transition-colors">
                           {product.code}
                         </span>
                       )}
                     </motion.div>
 
                     {/* Brand & Category */}
-                    <div className="flex items-center justify-between text-xs text-[#6D3FD6] mb-1.5">
-                      <span className="font-semibold text-[#55516B] tracking-tight group-hover:text-[#3F3B57] transition-colors flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#6D3FD6] opacity-75 group-hover:scale-125 transition-transform" />
+                    <div className="flex items-center justify-between text-xs text-[#D2430F] mb-1.5">
+                      <span className="font-semibold text-[#5F524C] tracking-tight group-hover:text-[#43362F] transition-colors flex items-center gap-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#D2430F] opacity-75 group-hover:scale-125 transition-transform" />
                         {product.brandName}
                       </span>
-                      <span className="text-[11px] truncate max-w-[150px] text-[#6D3FD6] font-light">
+                      <span className="text-[11px] truncate max-w-[150px] text-[#D2430F] font-light">
                         {product.category}
                       </span>
                     </div>
 
                     {/* Product Title */}
-                    <h3 className="text-base font-semibold text-[#1E1B2E] mb-2 leading-snug line-clamp-2 group-hover:text-[#55516B] transition-colors">
+                    <h3 className="text-base font-semibold text-[#231815] mb-2 leading-snug line-clamp-2 group-hover:text-[#5F524C] transition-colors">
                       {product.name}
                     </h3>
 
                     {/* Short Description */}
-                    <p className="text-xs text-[#55516B]/80 font-light leading-relaxed line-clamp-3 mb-4">
+                    <p className="text-xs text-[#5F524C]/80 font-light leading-relaxed line-clamp-3 mb-4">
                       {product.shortDesc}
                     </p>
 
@@ -239,13 +239,13 @@ export const ProductExplorer: React.FC<ProductExplorerProps> = ({
                         <motion.span
                           key={i}
                           whileHover={{ scale: 1.05 }}
-                          className="px-2 py-0.5 text-[10px] font-medium bg-[#F3EFFE] text-[#55516B] rounded-md border border-[#E6DEFA] shadow-3xs cursor-default"
+                          className="px-2 py-0.5 text-[10px] font-medium bg-[#FFF1E8] text-[#5F524C] rounded-md border border-[#F1D9CA] shadow-3xs cursor-default"
                         >
                           {std}
                         </motion.span>
                       ))}
                       {product.standards.length > 3 && (
-                        <span className="text-[10px] text-[#6D3FD6] self-center">
+                        <span className="text-[10px] text-[#D2430F] self-center">
                           +{product.standards.length - 3} more
                         </span>
                       )}
@@ -253,25 +253,25 @@ export const ProductExplorer: React.FC<ProductExplorerProps> = ({
                   </div>
 
                   {/* Card Actions */}
-                  <div className="pt-3 border-t border-[#E6DEFA]/60 flex items-center justify-between gap-2">
+                  <div className="pt-3 border-t border-[#F1D9CA]/60 flex items-center justify-between gap-2">
                     <motion.button
                       whileHover={{ x: 2, scale: 1.04 }}
                       whileTap={{ scale: 0.96 }}
                       onClick={() => onOpenSpecs(product)}
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#55516B] hover:text-[#1E1B2E] py-1 transition-colors cursor-pointer group/specs"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#5F524C] hover:text-[#231815] py-1 transition-colors cursor-pointer group/specs"
                     >
-                      <FileText className="w-3.5 h-3.5 text-[#6D3FD6] group-hover/specs:text-[#55516B] transition-colors" />
+                      <FileText className="w-3.5 h-3.5 text-[#D2430F] group-hover/specs:text-[#5F524C] transition-colors" />
                       <span>View Specs</span>
                     </motion.button>
 
                     <motion.button
                       whileHover={{
                         scale: 1.05,
-                        boxShadow: '0 4px 14px rgba(85, 81, 107,0.3)',
+                        boxShadow: '0 4px 14px rgba(95, 82, 76,0.3)',
                       }}
                       whileTap={{ scale: 0.95 }}
                       onClick={() => onOpenRfq(product.name)}
-                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#FCFBFF] bg-[#6D3FD6] hover:bg-[#4F2AB0] rounded-xl transition-all shadow-xs hover:shadow-md cursor-pointer group/inq"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#FFFAF6] bg-[#D2430F] hover:bg-[#A8340A] rounded-xl transition-all shadow-xs hover:shadow-md cursor-pointer group/inq"
                     >
                       <span>Inquire / RFQ</span>
                       <ArrowUpRight className="w-3 h-3 transition-transform group-hover/inq:translate-x-0.5 group-hover/inq:-translate-y-0.5" />
@@ -291,7 +291,7 @@ export const ProductExplorer: React.FC<ProductExplorerProps> = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-[#F3EFFE] backdrop-blur-sm backdrop-blur-md"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-[#FFF1E8] backdrop-blur-sm backdrop-blur-md"
             onClick={() => setLightboxProduct(null)}
           >
             <motion.div
@@ -299,26 +299,26 @@ export const ProductExplorer: React.FC<ProductExplorerProps> = ({
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ duration: 0.25, ease: 'easeOut' }}
-              className="relative bg-[#FCFBFF] rounded-3xl max-w-2xl w-full p-6 sm:p-8 border border-[#E6DEFA] shadow-2xl text-[#1E1B2E]"
+              className="relative bg-[#FFFAF6] rounded-3xl max-w-2xl w-full p-6 sm:p-8 border border-[#F1D9CA] shadow-2xl text-[#231815]"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex items-center justify-between pb-4 border-b border-[#E6DEFA]">
+              <div className="flex items-center justify-between pb-4 border-b border-[#F1D9CA]">
                 <div>
-                  <span className="text-xs font-semibold uppercase tracking-wider text-[#55516B]">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-[#5F524C]">
                     {lightboxProduct.brandName} · High-Resolution Preview
                   </span>
-                  <h3 className="text-lg font-medium text-[#1E1B2E] mt-0.5">{lightboxProduct.name}</h3>
+                  <h3 className="text-lg font-medium text-[#231815] mt-0.5">{lightboxProduct.name}</h3>
                 </div>
                 <button
                   onClick={() => setLightboxProduct(null)}
-                  className="p-2 rounded-full hover:bg-[#F3EFFE] text-[#55516B] hover:text-[#1E1B2E] transition-colors cursor-pointer"
+                  className="p-2 rounded-full hover:bg-[#FFF1E8] text-[#5F524C] hover:text-[#231815] transition-colors cursor-pointer"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
               {/* Full Image */}
-              <div className="py-6 flex items-center justify-center bg-white rounded-2xl my-4 border border-[#E6DEFA]">
+              <div className="py-6 flex items-center justify-center bg-white rounded-2xl my-4 border border-[#F1D9CA]">
                 <img
                   src={lightboxProduct.image}
                   alt={lightboxProduct.name}
@@ -326,18 +326,18 @@ export const ProductExplorer: React.FC<ProductExplorerProps> = ({
                 />
               </div>
 
-              <p className="text-xs text-[#55516B]/80 font-light leading-relaxed mb-4">
+              <p className="text-xs text-[#5F524C]/80 font-light leading-relaxed mb-4">
                 {lightboxProduct.shortDesc}
               </p>
 
-              <div className="flex items-center justify-between gap-3 pt-3 border-t border-[#E6DEFA]">
+              <div className="flex items-center justify-between gap-3 pt-3 border-t border-[#F1D9CA]">
                 <button
                   onClick={() => {
                     const prod = lightboxProduct;
                     setLightboxProduct(null);
                     onOpenSpecs(prod);
                   }}
-                  className="text-xs font-medium text-[#55516B] hover:underline cursor-pointer"
+                  className="text-xs font-medium text-[#5F524C] hover:underline cursor-pointer"
                 >
                   View Full Technical Specs Table →
                 </button>
@@ -348,7 +348,7 @@ export const ProductExplorer: React.FC<ProductExplorerProps> = ({
                     setLightboxProduct(null);
                     onOpenRfq(name);
                   }}
-                  className="px-5 py-2 text-xs font-semibold uppercase tracking-wider text-[#FCFBFF] bg-[#6D3FD6] hover:bg-[#4F2AB0] rounded-xl shadow-xs transition-colors cursor-pointer"
+                  className="px-5 py-2 text-xs font-semibold uppercase tracking-wider text-[#FFFAF6] bg-[#D2430F] hover:bg-[#A8340A] rounded-xl shadow-xs transition-colors cursor-pointer"
                 >
                   Inquire / Contact Us
                 </button>

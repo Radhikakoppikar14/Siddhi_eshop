@@ -17,22 +17,22 @@ export const ClientsWall: React.FC = () => {
   const marqueeRow2 = [...row2, ...row2, ...row2];
 
   return (
-    <section className="py-20 lg:py-28 bg-[#FFF6E0] border-b border-[#E6DEFA] relative overflow-hidden select-none">
+    <section className="py-20 lg:py-28 bg-[#FFF1E8] border-b border-[#F1D9CA] relative overflow-hidden select-none">
       {/* Background radial gradient accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#F3EFFE] rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#FFF1E8] rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10 mb-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-[#55516B] px-3.5 py-1 rounded-full bg-[#F3EFFE] border border-[#E6DEFA] mb-3">
-            <Building2 className="w-3.5 h-3.5 text-[#6D3FD6]" />
-            <span>Enterprise Client Roster</span>
+          <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-[#5F524C] px-3.5 py-1 rounded-full bg-[#FFF1E8] border border-[#F1D9CA] mb-3">
+            <Building2 className="w-3.5 h-3.5 text-[#D2430F]" />
+            <span>Trusted by industry</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-normal text-[#1E1B2E] font-editorial tracking-tight">
-            We trusted by
+          <h2 className="text-3xl sm:text-5xl font-normal text-[#231815] font-editorial tracking-tight">
+            Our Clients
           </h2>
-          <div className="w-16 h-0.5 bg-[#6D3FD6] mx-auto mt-4 mb-4 rounded-full" />
-          <p className="text-sm sm:text-base text-[#55516B]/80 font-light max-w-xl mx-auto">
+          <div className="w-16 h-0.5 bg-[#D2430F] mx-auto mt-4 mb-4 rounded-full" />
+          <p className="text-sm sm:text-base text-[#5F524C]/80 font-light max-w-xl mx-auto">
             We are committed to provide safe industrial solutions to India's foremost engineering, automotive, defense, and manufacturing leaders.
           </p>
 
@@ -43,8 +43,8 @@ export const ClientsWall: React.FC = () => {
       {viewMode === 'marquee' ? (
         <div className="relative w-full overflow-hidden space-y-5">
           {/* Left and Right Fade Gradients */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-32 bg-gradient-to-r from-[#FCFBFF] via-[#FCFBFF]/80 to-transparent z-20" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-32 bg-gradient-to-l from-[#FCFBFF] via-[#FCFBFF]/80 to-transparent z-20" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-32 bg-gradient-to-r from-[#FFFAF6] via-[#FFFAF6]/80 to-transparent z-20" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-32 bg-gradient-to-l from-[#FFFAF6] via-[#FFFAF6]/80 to-transparent z-20" />
 
           {/* ROW 1: Moving Smoothly to the Left */}
           <motion.div
@@ -65,7 +65,7 @@ export const ClientsWall: React.FC = () => {
             {marqueeRow1.map((client, idx) => (
               <div
                 key={`row1-${client.name}-${idx}`}
-                className="group relative bg-white rounded-2xl border border-[#E6DEFA] hover:border-[#55516B] hover:bg-white hover:shadow-xl p-5 w-52 sm:w-60 h-28 flex flex-col items-center justify-center transition-all duration-300 overflow-hidden shrink-0 cursor-pointer"
+                className="group relative bg-white rounded-2xl border border-[#F1D9CA] hover:border-[#5F524C] hover:bg-white hover:shadow-xl p-5 w-52 sm:w-60 h-28 flex flex-col items-center justify-center transition-all duration-300 overflow-hidden shrink-0 cursor-pointer"
               >
                 <div className="h-10 w-full flex items-center justify-center">
                   <img
@@ -76,10 +76,10 @@ export const ClientsWall: React.FC = () => {
                   />
                 </div>
                 <div className="mt-2 text-center">
-                  <span className="block text-xs font-semibold text-[#1E1B2E] truncate max-w-[180px]">
+                  <span className="block text-xs font-semibold text-[#231815] truncate max-w-[180px]">
                     {client.name}
                   </span>
-                  <span className="block text-[10px] text-[#6D3FD6] font-light truncate">
+                  <span className="block text-[10px] text-[#D2430F] font-light truncate">
                     {client.industry}
                   </span>
                 </div>
@@ -106,7 +106,7 @@ export const ClientsWall: React.FC = () => {
             {marqueeRow2.map((client, idx) => (
               <div
                 key={`row2-${client.name}-${idx}`}
-                className="group relative bg-white rounded-2xl border border-[#E6DEFA] hover:border-[#55516B] hover:bg-white hover:shadow-xl p-5 w-52 sm:w-60 h-28 flex flex-col items-center justify-center transition-all duration-300 overflow-hidden shrink-0 cursor-pointer"
+                className="group relative bg-white rounded-2xl border border-[#F1D9CA] hover:border-[#5F524C] hover:bg-white hover:shadow-xl p-5 w-52 sm:w-60 h-28 flex flex-col items-center justify-center transition-all duration-300 overflow-hidden shrink-0 cursor-pointer"
               >
                 <div className="h-10 w-full flex items-center justify-center">
                   <img
@@ -117,10 +117,10 @@ export const ClientsWall: React.FC = () => {
                   />
                 </div>
                 <div className="mt-2 text-center">
-                  <span className="block text-xs font-semibold text-[#1E1B2E] truncate max-w-[180px]">
+                  <span className="block text-xs font-semibold text-[#231815] truncate max-w-[180px]">
                     {client.name}
                   </span>
-                  <span className="block text-[10px] text-[#6D3FD6] font-light truncate">
+                  <span className="block text-[10px] text-[#D2430F] font-light truncate">
                     {client.industry}
                   </span>
                 </div>
@@ -136,7 +136,7 @@ export const ClientsWall: React.FC = () => {
               <motion.div
                 key={client.name}
                 whileHover={{ y: -5, scale: 1.02 }}
-                className="group relative bg-white rounded-2xl border border-[#E6DEFA] hover:border-[#55516B] hover:bg-white hover:shadow-lg p-5 flex flex-col items-center justify-between min-h-[120px] transition-all duration-300"
+                className="group relative bg-white rounded-2xl border border-[#F1D9CA] hover:border-[#5F524C] hover:bg-white hover:shadow-lg p-5 flex flex-col items-center justify-between min-h-[120px] transition-all duration-300"
               >
                 <div className="h-12 w-full flex items-center justify-center my-auto">
                   <img
@@ -146,11 +146,11 @@ export const ClientsWall: React.FC = () => {
                     referrerPolicy="no-referrer"
                   />
                 </div>
-                <div className="w-full text-center pt-2 border-t border-[#E6DEFA]/50">
-                  <h4 className="text-xs font-semibold text-[#1E1B2E] truncate">
+                <div className="w-full text-center pt-2 border-t border-[#F1D9CA]/50">
+                  <h4 className="text-xs font-semibold text-[#231815] truncate">
                     {client.name}
                   </h4>
-                  <span className="text-[10px] text-[#6D3FD6] block truncate">
+                  <span className="text-[10px] text-[#D2430F] block truncate">
                     {client.industry}
                   </span>
                 </div>

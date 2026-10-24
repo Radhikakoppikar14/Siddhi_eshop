@@ -22,12 +22,8 @@ interface AboutPageProps {
 const AUTHORIZED_PARTNERS = [
   'LAPP INDIA PVT LTD',
   'EATON Power Quality Pvt Ltd',
-  'HAVELLS INDIA LTD',
-  'JEF Techno solutions Pvt Ltd',
-  'HAGER Electro Private Limited',
-  'LUKER Electric Technologies Pvt Ltd',
+  'PARTEX Marking Systems',
   'MENNEKES Electric India Pvt Ltd',
-  'NEPTUNE INDIA LTD',
 ];
 
 export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
@@ -40,9 +36,9 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
   };
 
   return (
-    <div className="bg-[#FCFBFF] text-[#1E1B2E] overflow-hidden">
+    <div className="bg-[#FFFAF6] text-[#231815] overflow-hidden">
       {/* 1. Header Banner with Modern Industrial Image Background */}
-      <section className="relative bg-[#FCFBFF] text-[#1E1B2E] py-10 sm:py-14 overflow-hidden border-b border-[#E6DEFA] select-none">
+      <section className="relative bg-[#FFFAF6] text-[#231815] py-10 sm:py-14 overflow-hidden border-b border-[#F1D9CA] select-none">
         {/* Background Image */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <video
@@ -58,11 +54,11 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
           />
 
           {/* Scrim Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#FCFBFF]/90 via-[#FCFBFF]/62 to-[#FCFBFF]/12" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FFFAF6]/90 via-[#FFFAF6]/62 to-[#FFFAF6]/12" />
           
           {/* Floating Animated Ambient Glows */}
-          <div className="absolute top-1/4 -right-16 w-96 h-96 bg-[#6D3FD6]/15 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-1/4 -left-16 w-80 h-80 bg-[#6D3FD6]/8 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-1/4 -right-16 w-96 h-96 bg-[#D2430F]/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-1/4 -left-16 w-80 h-80 bg-[#D2430F]/8 rounded-full blur-3xl pointer-events-none" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8">
@@ -75,26 +71,26 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
               className="lg:col-span-8 space-y-4"
             >
               {/* Clean Sleek Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/70 border border-[#E6DEFA] text-[#1E1B2E] text-xs font-semibold uppercase tracking-wider backdrop-blur-md shadow-sm">
-                <Sparkles className="w-3.5 h-3.5 text-[#55516B]" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/70 border border-[#F1D9CA] text-[#231815] text-xs font-semibold uppercase tracking-wider backdrop-blur-md shadow-sm">
+                <Sparkles className="w-3.5 h-3.5 text-[#5F524C]" />
                 <span>Established 2008 · Bangalore, India</span>
               </div>
 
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-light tracking-tight font-editorial text-[#1E1B2E] uppercase drop-shadow-md">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-light tracking-tight font-editorial text-[#231815] uppercase drop-shadow-md">
                 ABOUT SIDDHI KABEL
               </h1>
 
-              <p className="text-sm sm:text-base text-[#1E1B2E]/90 font-light max-w-2xl leading-relaxed drop-shadow-sm">
+              <p className="text-sm sm:text-base text-[#231815]/90 font-light max-w-2xl leading-relaxed drop-shadow-sm">
                 Dependable Electrical, Automation &amp; Safety Solutions for Indian Industry &amp; Multinationals.
               </p>
 
               {/* Breadcrumb: Home | About Us */}
-              <div className="pt-2 flex items-center gap-2 text-xs font-medium text-[#55516B]">
-                <Link to="/" className="hover:text-[#1E1B2E] transition-colors flex items-center gap-1">
+              <div className="pt-2 flex items-center gap-2 text-xs font-medium text-[#5F524C]">
+                <Link to="/" className="hover:text-[#231815] transition-colors flex items-center gap-1">
                   <span>Home</span>
                 </Link>
-                <span className="text-[#55516B]/60">|</span>
-                <span className="text-[#1E1B2E] font-semibold underline underline-offset-4 decoration-[#55516B]">
+                <span className="text-[#5F524C]/60">|</span>
+                <span className="text-[#231815] font-semibold underline underline-offset-4 decoration-[#5F524C]">
                   About Us
                 </span>
               </div>
@@ -107,23 +103,23 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
               transition={{ duration: 0.6, delay: 0.15 }}
               className="lg:col-span-4 hidden lg:flex flex-col gap-3"
             >
-              <div className="p-4 rounded-2xl bg-white/70 backdrop-blur-md border border-[#E6DEFA] shadow-lg flex items-center gap-3.5 hover:bg-white transition-all">
-                <div className="w-10 h-10 rounded-xl bg-[#E6DEFA]/70 border border-[#E6DEFA] flex items-center justify-center shrink-0">
-                  <CheckCircle2 className="w-5 h-5 text-[#55516B]" />
+              <div className="p-4 rounded-2xl bg-white/70 backdrop-blur-md border border-[#F1D9CA] shadow-lg flex items-center gap-3.5 hover:bg-white transition-all">
+                <div className="w-10 h-10 rounded-xl bg-[#F1D9CA]/70 border border-[#F1D9CA] flex items-center justify-center shrink-0">
+                  <CheckCircle2 className="w-5 h-5 text-[#5F524C]" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-[#1E1B2E] uppercase tracking-wider">Direct OEM Supply</h4>
-                  <p className="text-[11px] text-[#55516B] font-light">100% genuine factory certified products</p>
+                  <h4 className="text-xs font-bold text-[#231815] uppercase tracking-wider">Direct OEM Supply</h4>
+                  <p className="text-[11px] text-[#5F524C] font-light">100% genuine factory certified products</p>
                 </div>
               </div>
 
-              <div className="p-4 rounded-2xl bg-white/70 backdrop-blur-md border border-[#E6DEFA] shadow-lg flex items-center gap-3.5 hover:bg-white transition-all">
-                <div className="w-10 h-10 rounded-xl bg-[#E6DEFA]/70 border border-[#E6DEFA] flex items-center justify-center shrink-0">
-                  <Building2 className="w-5 h-5 text-[#55516B]" />
+              <div className="p-4 rounded-2xl bg-white/70 backdrop-blur-md border border-[#F1D9CA] shadow-lg flex items-center gap-3.5 hover:bg-white transition-all">
+                <div className="w-10 h-10 rounded-xl bg-[#F1D9CA]/70 border border-[#F1D9CA] flex items-center justify-center shrink-0">
+                  <Building2 className="w-5 h-5 text-[#5F524C]" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-[#1E1B2E] uppercase tracking-wider">Bangalore Central Hub</h4>
-                  <p className="text-[11px] text-[#55516B] font-light">Same-day Karnataka dispatch &amp; buffer stock</p>
+                  <h4 className="text-xs font-bold text-[#231815] uppercase tracking-wider">Bangalore Central Hub</h4>
+                  <p className="text-[11px] text-[#5F524C] font-light">Same-day Karnataka dispatch &amp; buffer stock</p>
                 </div>
               </div>
             </motion.div>
@@ -132,14 +128,14 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
       </section>
 
       {/* 2. Main About Section */}
-      <section className="py-14 sm:py-20 bg-[#FCFBFF] relative">
+      <section className="py-14 sm:py-20 bg-[#FFFAF6] relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           {/* Breadcrumb bar on top of content area */}
-          <div className="mb-8 flex items-center text-xs font-medium text-[#55516B]">
-            <span className="text-[#6D3FD6] mr-2">←</span>
-            <Link to="/" className="hover:text-[#1E1B2E] transition-colors">Home</Link>
-            <span className="mx-2 text-[#55516B]">|</span>
-            <span className="text-[#1E1B2E] font-semibold">About Us</span>
+          <div className="mb-8 flex items-center text-xs font-medium text-[#5F524C]">
+            <span className="text-[#D2430F] mr-2">←</span>
+            <Link to="/" className="hover:text-[#231815] transition-colors">Home</Link>
+            <span className="mx-2 text-[#5F524C]">|</span>
+            <span className="text-[#231815] font-semibold">About Us</span>
           </div>
 
           {/* Two-Column Layout */}
@@ -150,10 +146,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, amount: 0.05 }}
               transition={{ duration: 0.6 }}
-              className="space-y-6 text-sm sm:text-base text-[#1E1B2E]/85 leading-relaxed font-normal"
+              className="space-y-6 text-sm sm:text-base text-[#231815]/85 leading-relaxed font-normal"
             >
               <p className="text-justify">
-                <span className="font-semibold text-[#1E1B2E]">Siddhi Kabel</span> was established in the year 2008 by professionals with experience of more than 15 years in providing solutions for various needs of high quality Industrial electrical, automation and safety products.
+                <span className="font-semibold text-[#231815]">Siddhi Kabel</span> was established in the year 2008 by professionals with experience of more than 15 years in providing solutions for various needs of high quality Industrial electrical, automation and safety products.
               </p>
 
               <p className="text-justify">
@@ -167,12 +163,12 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
               {/* The Tree Graphic */}
               <motion.div
                 whileHover={{ scale: 1.01 }}
-                className="relative bg-white p-5 rounded-3xl border border-[#E6DEFA] shadow-xs group overflow-hidden mt-6"
+                className="relative bg-white p-5 rounded-3xl border border-[#F1D9CA] shadow-xs group overflow-hidden mt-6"
               >
-                <div className="flex items-center justify-between mb-3 pb-2 border-b border-[#E6DEFA]">
+                <div className="flex items-center justify-between mb-3 pb-2 border-b border-[#F1D9CA]">
                   <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#6D3FD6] animate-pulse" />
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#1E1B2E]">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#D2430F] animate-pulse" />
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#231815]">
                       Siddhi Kabel Core Strengths &amp; Pillars
                     </span>
                   </div>
@@ -184,15 +180,15 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
                         caption: 'Siddhi Kabel Value Proposition & Integrated Core Strengths',
                       })
                     }
-                    className="inline-flex items-center gap-1.5 text-xs text-[#55516B] hover:text-[#1E1B2E] font-semibold transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-1.5 text-xs text-[#5F524C] hover:text-[#231815] font-semibold transition-colors cursor-pointer"
                   >
-                    <ZoomIn className="w-3.5 h-3.5 text-[#55516B]" />
+                    <ZoomIn className="w-3.5 h-3.5 text-[#5F524C]" />
                     <span>Click to Zoom</span>
                   </button>
                 </div>
 
                 <div
-                  className="relative cursor-pointer overflow-hidden rounded-2xl bg-[#FCFBFF] flex items-center justify-center p-2"
+                  className="relative cursor-pointer overflow-hidden rounded-2xl bg-[#FFFAF6] flex items-center justify-center p-2"
                   onClick={() =>
                     setLightboxImage({
                       src: '/images/resource/about.jpg',
@@ -206,29 +202,29 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
                     alt="Siddhi Kabel Core Strengths Tree Graphic"
                     className="w-full max-h-[460px] object-contain transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-white/0 group-hover:bg-[#F3EFFE] transition-colors flex items-center justify-center">
-                    <span className="opacity-0 group-hover:opacity-100 transition-opacity px-4 py-2 bg-white/90 text-[#1E1B2E] rounded-xl text-xs font-semibold backdrop-blur-xs flex items-center gap-1.5 border border-[#E6DEFA]/30">
-                      <ZoomIn className="w-3.5 h-3.5 text-[#6D3FD6]" /> Click to enlarge infographic
+                  <div className="absolute inset-0 bg-white/0 group-hover:bg-[#FFF1E8] transition-colors flex items-center justify-center">
+                    <span className="opacity-0 group-hover:opacity-100 transition-opacity px-4 py-2 bg-white/90 text-[#231815] rounded-xl text-xs font-semibold backdrop-blur-xs flex items-center gap-1.5 border border-[#F1D9CA]/30">
+                      <ZoomIn className="w-3.5 h-3.5 text-[#D2430F]" /> Click to enlarge infographic
                     </span>
                   </div>
                 </div>
 
                 {/* Micro-pills for key tree branches */}
-                <div className="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-[#E6DEFA] text-[11px] text-[#1E1B2E]">
+                <div className="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-[#F1D9CA] text-[11px] text-[#231815]">
                   <div className="flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-[#6D3FD6] shrink-0" />
+                    <span className="w-2 h-2 rounded-full bg-[#D2430F] shrink-0" />
                     <span>Reliable Solution Provider</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-[#6D3FD6] shrink-0" />
+                    <span className="w-2 h-2 rounded-full bg-[#D2430F] shrink-0" />
                     <span>Ethical Business Compliance</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-[#6D3FD6] shrink-0" />
+                    <span className="w-2 h-2 rounded-full bg-[#D2430F] shrink-0" />
                     <span>Customized Inventory Buffer</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-[#6D3FD6] shrink-0" />
+                    <span className="w-2 h-2 rounded-full bg-[#D2430F] shrink-0" />
                     <span>Dedicated Technical Team</span>
                   </div>
                 </div>
@@ -241,15 +237,15 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, amount: 0.05 }}
               transition={{ duration: 0.6 }}
-              className="space-y-6 text-sm sm:text-base text-[#1E1B2E]/85 leading-relaxed font-normal flex flex-col justify-between h-full"
+              className="space-y-6 text-sm sm:text-base text-[#231815]/85 leading-relaxed font-normal flex flex-col justify-between h-full"
             >
               <p className="text-justify">
                 We constantly monitor and adjust each program so that when our customers' needs change our solutions change with them, our expertise lies in understanding the customer requirements and careful analysis of applications to provide the best possible techno commercial solutions, our team strives hard in planning and managing best inventory apart from arranging and sourcing of materials from our large and reliable network to offer uninterrupted services to our valued customers.
               </p>
 
               {/* Authorized Distributors Section */}
-              <div className="bg-white p-6 rounded-3xl border border-[#E6DEFA] space-y-4 shadow-2xs">
-                <h3 className="text-base sm:text-lg font-semibold text-[#1E1B2E] leading-snug">
+              <div className="bg-white p-6 rounded-3xl border border-[#F1D9CA] space-y-4 shadow-2xs">
+                <h3 className="text-base sm:text-lg font-semibold text-[#231815] leading-snug">
                   Siddhi is Authorized Distributors / Dealers / Channel partners / Importer with world class major manufacturing companies:
                 </h3>
 
@@ -259,16 +255,16 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
                       key={idx}
                       whileHover={{ x: 6 }}
                       transition={{ duration: 0.2 }}
-                      className="flex items-center gap-3 text-xs sm:text-sm font-semibold text-[#1E1B2E] group cursor-pointer"
+                      className="flex items-center gap-3 text-xs sm:text-sm font-semibold text-[#231815] group cursor-pointer"
                       onClick={() => handleInquire(`Authorized Line: ${partner}`)}
                     >
-                      <span className="w-2.5 h-2.5 rounded-full bg-[#6D3FD6] shrink-0 group-hover:scale-125 transition-transform" />
-                      <span className="group-hover:text-[#55516B] transition-colors">{partner}</span>
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#D2430F] shrink-0 group-hover:scale-125 transition-transform" />
+                      <span className="group-hover:text-[#5F524C] transition-colors">{partner}</span>
                     </motion.li>
                   ))}
                 </ul>
 
-                <div className="w-24 h-0.5 bg-[#6D3FD6] my-4" />
+                <div className="w-24 h-0.5 bg-[#D2430F] my-4" />
               </div>
 
               {/* Services Paragraph */}
@@ -285,31 +281,31 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
               <motion.div
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.2 }}
-                className="bg-white rounded-3xl border border-[#E6DEFA] shadow-xs hover:shadow-xl transition-all p-6 grid grid-cols-3 divide-x divide-[#E6DEFA] text-center mt-4"
+                className="bg-white rounded-3xl border border-[#F1D9CA] shadow-xs hover:shadow-xl transition-all p-6 grid grid-cols-3 divide-x divide-[#F1D9CA] text-center mt-4"
               >
                 <div className="px-2">
-                  <span className="block text-3xl sm:text-4xl font-normal text-[#55516B] font-editorial tabular-nums">
+                  <span className="block text-3xl sm:text-4xl font-normal text-[#5F524C] font-editorial tabular-nums">
                     15+
                   </span>
-                  <span className="block text-xs sm:text-sm text-[#6D3FD6] font-medium mt-1">
+                  <span className="block text-xs sm:text-sm text-[#D2430F] font-medium mt-1">
                     Years Experience
                   </span>
                 </div>
 
                 <div className="px-2">
-                  <span className="block text-3xl sm:text-4xl font-normal text-[#55516B] font-editorial tabular-nums">
+                  <span className="block text-3xl sm:text-4xl font-normal text-[#5F524C] font-editorial tabular-nums">
                     20+
                   </span>
-                  <span className="block text-xs sm:text-sm text-[#6D3FD6] font-medium mt-1">
+                  <span className="block text-xs sm:text-sm text-[#D2430F] font-medium mt-1">
                     Industrial Segments
                   </span>
                 </div>
 
                 <div className="px-2">
-                  <span className="block text-3xl sm:text-4xl font-normal text-[#55516B] font-editorial tabular-nums">
+                  <span className="block text-3xl sm:text-4xl font-normal text-[#5F524C] font-editorial tabular-nums">
                     300+
                   </span>
-                  <span className="block text-xs sm:text-sm text-[#6D3FD6] font-medium mt-1">
+                  <span className="block text-xs sm:text-sm text-[#D2430F] font-medium mt-1">
                     Customers Served
                   </span>
                 </div>
@@ -320,22 +316,22 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
       </section>
 
       {/* 2.5. Corporate Video Feature: Precision Industrial Infrastructure in Action (YouTube e3a0qpri5NA) */}
-      <section className="py-16 sm:py-24 bg-[#F3EFFE] border-y border-[#E6DEFA] relative overflow-hidden">
+      <section className="py-16 sm:py-24 bg-[#FFF1E8] border-y border-[#F1D9CA] relative overflow-hidden">
         {/* Subtle decorative ambient glows */}
-        <div className="absolute top-1/2 -right-20 w-96 h-96 bg-[#F3EFFE] rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 -left-20 w-80 h-80 bg-[#6D3FD6]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-1/2 -right-20 w-96 h-96 bg-[#FFF1E8] rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 -left-20 w-80 h-80 bg-[#D2430F]/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-10">
-            <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-[#55516B] px-3.5 py-1 rounded-full bg-[#F3EFFE] border border-[#E6DEFA] mb-3">
-              <Sparkles className="w-3.5 h-3.5 text-[#6D3FD6]" />
+            <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-[#5F524C] px-3.5 py-1 rounded-full bg-[#FFF1E8] border border-[#F1D9CA] mb-3">
+              <Sparkles className="w-3.5 h-3.5 text-[#D2430F]" />
               <span>Official Video Presentation</span>
             </div>
-            <h2 className="text-2xl sm:text-4xl font-normal text-[#1E1B2E] font-editorial tracking-tight">
+            <h2 className="text-2xl sm:text-4xl font-normal text-[#231815] font-editorial tracking-tight">
               Siddhi Kabel Industrial Capability in Action
             </h2>
-            <div className="w-16 h-0.5 bg-[#6D3FD6] mx-auto mt-3 mb-4 rounded-full" />
-            <p className="text-sm sm:text-base text-[#55516B]/80 font-light max-w-2xl mx-auto leading-relaxed">
+            <div className="w-16 h-0.5 bg-[#D2430F] mx-auto mt-3 mb-4 rounded-full" />
+            <p className="text-sm sm:text-base text-[#5F524C]/80 font-light max-w-2xl mx-auto leading-relaxed">
               Explore our comprehensive cable supply, specialized machine harness integration, and central Bangalore warehouse logistics.
             </p>
           </div>
@@ -346,7 +342,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-[#E6DEFA] bg-black relative group"
+            className="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-[#F1D9CA] bg-black relative group"
           >
             <div className="relative pb-[56.25%] h-0 overflow-hidden">
               <iframe
@@ -359,16 +355,16 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
             </div>
 
             {/* Video footer bar */}
-            <div className="p-4 sm:p-5 bg-[#F3EFFE] text-[#1E1B2E] flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-[#E6DEFA]">
+            <div className="p-4 sm:p-5 bg-[#FFF1E8] text-[#231815] flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-[#F1D9CA]">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-[#6D3FD6] flex items-center justify-center text-white shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-[#D2430F] flex items-center justify-center text-white shrink-0">
                   <Play className="w-4 h-4 fill-white" />
                 </div>
                 <div className="text-left">
-                  <span className="text-xs font-semibold text-[#1E1B2E] block">
+                  <span className="text-xs font-semibold text-[#231815] block">
                     Siddhi Kabel Corporate &amp; Engineering Reel
                   </span>
-                  <span className="text-[11px] text-[#55516B] font-light block">
+                  <span className="text-[11px] text-[#5F524C] font-light block">
                     Authorised Industrial Cables, Automation Switchgear &amp; Safety Systems
                   </span>
                 </div>
@@ -377,7 +373,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
               <button
                 type="button"
                 onClick={() => handleInquire('Corporate Video Inquiry')}
-                className="inline-flex items-center gap-2 px-5 py-2 text-xs font-semibold uppercase tracking-wider text-[#FCFBFF] bg-[#6D3FD6] hover:bg-[#4F2AB0] rounded-xl transition-colors cursor-pointer shadow-md shrink-0 border border-[#E6DEFA]/30"
+                className="inline-flex items-center gap-2 px-5 py-2 text-xs font-semibold uppercase tracking-wider text-[#FFFAF6] bg-[#D2430F] hover:bg-[#A8340A] rounded-xl transition-colors cursor-pointer shadow-md shrink-0 border border-[#F1D9CA]/30"
               >
                 <span>Request Facility Visit</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -388,22 +384,22 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
       </section>
 
       {/* 3. Vision & Mission Section */}
-      <section className="py-16 sm:py-24 bg-[#F3EFFE] relative overflow-hidden text-[#1E1B2E] border-b border-[#E6DEFA]">
+      <section className="py-16 sm:py-24 bg-[#FFF1E8] relative overflow-hidden text-[#231815] border-b border-[#F1D9CA]">
         {/* Ambient background glow */}
         <div className="absolute inset-0 z-0 opacity-25 pointer-events-none">
-          <div className="absolute top-0 right-1/4 w-80 h-80 bg-[#6D3FD6] rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-[#6D3FD6]/8 rounded-full blur-3xl" />
+          <div className="absolute top-0 right-1/4 w-80 h-80 bg-[#D2430F] rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-[#D2430F]/8 rounded-full blur-3xl" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#55516B] px-3 py-1 rounded-full bg-white border border-[#E6DEFA]/30">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#5F524C] px-3 py-1 rounded-full bg-white border border-[#F1D9CA]/30">
               Guiding Principles
             </span>
-            <h2 className="text-2xl sm:text-4xl font-light font-editorial mt-3 text-[#1E1B2E]">
+            <h2 className="text-2xl sm:text-4xl font-light font-editorial mt-3 text-[#231815]">
               Vision &amp; Mission of Siddhi Kabel
             </h2>
-            <div className="w-16 h-0.5 bg-[#E6DEFA] mx-auto mt-3" />
+            <div className="w-16 h-0.5 bg-[#F1D9CA] mx-auto mt-3" />
           </div>
 
           {/* 2x2 Grid */}
@@ -415,21 +411,21 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
               viewport={{ once: false, amount: 0.05 }}
               whileHover={{ y: -4 }}
               transition={{ duration: 0.4 }}
-              className="bg-[#FCFBFF] text-[#1E1B2E] p-8 sm:p-12 rounded-3xl shadow-xl flex flex-col justify-center items-center text-center relative group border border-[#E6DEFA]"
+              className="bg-[#FFFAF6] text-[#231815] p-8 sm:p-12 rounded-3xl shadow-xl flex flex-col justify-center items-center text-center relative group border border-[#F1D9CA]"
             >
-              <div className="p-3 bg-[#F3EFFE] rounded-2xl text-[#55516B] mb-4 group-hover:scale-110 transition-transform">
-                <Compass className="w-6 h-6 text-[#55516B]" />
+              <div className="p-3 bg-[#FFF1E8] rounded-2xl text-[#5F524C] mb-4 group-hover:scale-110 transition-transform">
+                <Compass className="w-6 h-6 text-[#5F524C]" />
               </div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-[#1E1B2E] font-editorial">
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#231815] font-editorial">
                 Vision
               </h3>
-              <div className="w-14 h-0.5 bg-[#6D3FD6] my-4" />
-              <p className="text-sm sm:text-base text-[#55516B]/80 font-light leading-relaxed max-w-sm">
+              <div className="w-14 h-0.5 bg-[#D2430F] my-4" />
+              <p className="text-sm sm:text-base text-[#5F524C]/80 font-light leading-relaxed max-w-sm">
                 To be a leading, preferred and respected solution partner to our valuable customers in the field of electrical products &amp; services.
               </p>
               <button
                 onClick={() => handleInquire('Vision & Solutions Inquiry')}
-                className="mt-6 text-xs font-semibold uppercase tracking-wider text-[#55516B] hover:text-[#1E1B2E] flex items-center gap-1.5 cursor-pointer"
+                className="mt-6 text-xs font-semibold uppercase tracking-wider text-[#5F524C] hover:text-[#231815] flex items-center gap-1.5 cursor-pointer"
               >
                 <span>Partner With Us</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -441,9 +437,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.05 }}
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.4 }}
-              className="relative rounded-3xl overflow-hidden shadow-xl border border-[#E6DEFA] group cursor-pointer min-h-[280px]"
+                            transition={{ duration: 0.4 }}
+              className="relative rounded-3xl overflow-hidden shadow-xl border border-[#F1D9CA] group cursor-pointer min-h-[280px]"
               onClick={() =>
                 setLightboxImage({
                   src: '/images/resource/about2.jpg',
@@ -453,16 +448,18 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
               }
             >
               <img
+                decoding="async"
+                loading="eager"
                 src="/images/resource/about2.jpg"
                 alt="Siddhi Kabel Team Photo"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#FCFBFF]/80 via-[#FCFBFF]/20 to-transparent flex flex-col justify-end p-5">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent flex flex-col justify-end p-5">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold text-[#1E1B2E] bg-white/80 px-3 py-1 rounded-full backdrop-blur-xs flex items-center gap-1.5 border border-[#E6DEFA]/30">
-                    <Users className="w-3.5 h-3.5 text-[#6D3FD6]" /> Leadership &amp; Engineering Team
+                  <span className="text-xs font-semibold text-[#231815] bg-white/80 px-3 py-1 rounded-full backdrop-blur-xs flex items-center gap-1.5 border border-[#F1D9CA]/30">
+                    <Users className="w-3.5 h-3.5 text-[#D2430F]" /> Leadership &amp; Engineering Team
                   </span>
-                  <span className="p-1.5 rounded-full bg-white text-white group-hover:bg-[#6D3FD6] transition-colors">
+                  <span className="p-1.5 rounded-full bg-white text-white group-hover:bg-[#D2430F] transition-colors">
                     <ZoomIn className="w-4 h-4" />
                   </span>
                 </div>
@@ -474,9 +471,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.05 }}
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.4 }}
-              className="relative rounded-3xl overflow-hidden shadow-xl border border-[#E6DEFA] group cursor-pointer min-h-[280px] order-last md:order-none"
+                            transition={{ duration: 0.4 }}
+              className="relative rounded-3xl overflow-hidden shadow-xl border border-[#F1D9CA] group cursor-pointer min-h-[280px] order-last md:order-none"
               onClick={() =>
                 setLightboxImage({
                   src: '/images/resource/about3.jpg',
@@ -486,16 +482,18 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
               }
             >
               <img
+                decoding="async"
+                loading="eager"
                 src="/images/resource/about3.jpg"
                 alt="Siddhi Kabel Team Meeting"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#FCFBFF]/80 via-[#FCFBFF]/20 to-transparent flex flex-col justify-end p-5">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent flex flex-col justify-end p-5">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold text-[#1E1B2E] bg-white/80 px-3 py-1 rounded-full backdrop-blur-xs flex items-center gap-1.5 border border-[#E6DEFA]/30">
-                    <Target className="w-3.5 h-3.5 text-[#6D3FD6]" /> Technical Review &amp; Client Support
+                  <span className="text-xs font-semibold text-[#231815] bg-white/80 px-3 py-1 rounded-full backdrop-blur-xs flex items-center gap-1.5 border border-[#F1D9CA]/30">
+                    <Target className="w-3.5 h-3.5 text-[#D2430F]" /> Technical Review &amp; Client Support
                   </span>
-                  <span className="p-1.5 rounded-full bg-white text-white group-hover:bg-[#6D3FD6] transition-colors">
+                  <span className="p-1.5 rounded-full bg-white text-white group-hover:bg-[#D2430F] transition-colors">
                     <ZoomIn className="w-4 h-4" />
                   </span>
                 </div>
@@ -509,21 +507,21 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
               viewport={{ once: false, amount: 0.05 }}
               whileHover={{ y: -4 }}
               transition={{ duration: 0.4 }}
-              className="bg-[#FCFBFF] text-[#1E1B2E] p-8 sm:p-12 rounded-3xl shadow-xl flex flex-col justify-center items-center text-center relative group border border-[#E6DEFA]"
+              className="bg-[#FFFAF6] text-[#231815] p-8 sm:p-12 rounded-3xl shadow-xl flex flex-col justify-center items-center text-center relative group border border-[#F1D9CA]"
             >
-              <div className="p-3 bg-[#F3EFFE] rounded-2xl text-[#55516B] mb-4 group-hover:scale-110 transition-transform">
-                <Target className="w-6 h-6 text-[#55516B]" />
+              <div className="p-3 bg-[#FFF1E8] rounded-2xl text-[#5F524C] mb-4 group-hover:scale-110 transition-transform">
+                <Target className="w-6 h-6 text-[#5F524C]" />
               </div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-[#1E1B2E] font-editorial">
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#231815] font-editorial">
                 Mission
               </h3>
-              <div className="w-14 h-0.5 bg-[#6D3FD6] my-4" />
-              <p className="text-sm sm:text-base text-[#55516B]/80 font-light leading-relaxed max-w-sm">
+              <div className="w-14 h-0.5 bg-[#D2430F] my-4" />
+              <p className="text-sm sm:text-base text-[#5F524C]/80 font-light leading-relaxed max-w-sm">
                 Work towards continuous improvement, stay focused on achieving customer satisfaction.
               </p>
               <button
                 onClick={() => handleInquire('Mission & Continuous Improvement')}
-                className="mt-6 text-xs font-semibold uppercase tracking-wider text-[#55516B] hover:text-[#1E1B2E] flex items-center gap-1.5 cursor-pointer"
+                className="mt-6 text-xs font-semibold uppercase tracking-wider text-[#5F524C] hover:text-[#231815] flex items-center gap-1.5 cursor-pointer"
               >
                 <span>Request Consultation</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -543,7 +541,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-[#F3EFFE] backdrop-blur-sm backdrop-blur-md flex items-center justify-center p-4 sm:p-8"
+            className="fixed inset-0 z-50 bg-[#FFF1E8] backdrop-blur-sm backdrop-blur-md flex items-center justify-center p-4 sm:p-8"
             onClick={() => setLightboxImage(null)}
           >
             <motion.div
@@ -551,24 +549,24 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              className="relative max-w-4xl w-full bg-[#FCFBFF] rounded-3xl overflow-hidden shadow-2xl border border-[#E6DEFA] p-4 text-[#1E1B2E]"
+              className="relative max-w-4xl w-full bg-[#FFFAF6] rounded-3xl overflow-hidden shadow-2xl border border-[#F1D9CA] p-4 text-[#231815]"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex items-center justify-between pb-3 px-2 border-b border-[#E6DEFA]">
+              <div className="flex items-center justify-between pb-3 px-2 border-b border-[#F1D9CA]">
                 <div className="flex items-center gap-2">
-                  <Sparkles className="w-3.5 h-3.5 text-[#6D3FD6]" />
+                  <Sparkles className="w-3.5 h-3.5 text-[#D2430F]" />
                   <span className="text-xs sm:text-sm font-semibold">{lightboxImage.caption}</span>
                 </div>
                 <button
                   onClick={() => setLightboxImage(null)}
-                  className="p-1.5 rounded-full bg-[#F3EFFE] hover:bg-[#E6DEFA] text-[#1E1B2E] transition-colors cursor-pointer"
+                  className="p-1.5 rounded-full bg-[#FFF1E8] hover:bg-[#F1D9CA] text-[#231815] transition-colors cursor-pointer"
                   aria-label="Close image modal"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
-              <div className="mt-3 overflow-auto max-h-[75vh] flex items-center justify-center bg-white rounded-2xl p-2 border border-[#E6DEFA]">
+              <div className="mt-3 overflow-auto max-h-[75vh] flex items-center justify-center bg-white rounded-2xl p-2 border border-[#F1D9CA]">
                 <img
                   src={lightboxImage.src}
                   alt={lightboxImage.alt}
@@ -576,14 +574,14 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onGoToContact }) => {
                 />
               </div>
 
-              <div className="mt-3 flex flex-wrap items-center justify-between gap-3 px-2 text-xs text-[#55516B]/80">
+              <div className="mt-3 flex flex-wrap items-center justify-between gap-3 px-2 text-xs text-[#5F524C]/80">
                 <span>Authorized Siddhi Kabel Corporate Archives</span>
                 <button
                   onClick={() => {
                     setLightboxImage(null);
                     handleInquire(`Inquiry from image: ${lightboxImage.caption}`);
                   }}
-                  className="px-4 py-2 bg-[#6D3FD6] hover:bg-[#4F2AB0] text-[#FCFBFF] rounded-xl font-semibold transition-colors cursor-pointer"
+                  className="px-4 py-2 bg-[#D2430F] hover:bg-[#A8340A] text-[#FFFAF6] rounded-xl font-semibold transition-colors cursor-pointer"
                 >
                   Inquire About This Service
                 </button>
